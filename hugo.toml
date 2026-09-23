@@ -4,6 +4,7 @@ title = "FirewallSync"
 
 [params]
   tagline = "Practical cybersecurity for teams that ship fast"
+  defaultAuthor = "FirewallSync Editorial"
 
 [taxonomies]
   tag = "tags"
