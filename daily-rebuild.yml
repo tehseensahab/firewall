@@ -1,0 +1,16 @@
+name: Daily rebuild for scheduled posts
+
+on:
+  schedule:
+    # Runs at 09:15 UTC every day — 15 minutes after the latest post
+    # publish time used in this batch (09:00 UTC), so today's post
+    # is already "past" by the time the rebuild fires.
+    - cron: "15 9 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Cloudflare Pages deploy hook
+        run: curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK_URL }}"
