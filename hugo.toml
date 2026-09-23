@@ -1,0 +1,9 @@
+baseURL = "https://firewallsync.com/"
+languageCode = "en-us"
+title = "FirewallSync"
+
+[params]
+  tagline = "Practical cybersecurity for teams that ship fast"
+
+[taxonomies]
+  tag = "tags"

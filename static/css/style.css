@@ -1,0 +1,45 @@
+:root{
+  --bg:#0b0e11; --panel:#12161b; --text:#dbe2e8; --muted:#8592a0;
+  --accent:#3ddc84; --border:#1f262d;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:760px; margin:0 auto; padding:0 20px}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.site-header{border-bottom:1px solid var(--border); padding:18px 0}
+.header-inner{display:flex; justify-content:space-between; align-items:center}
+.logo{font-weight:700; font-size:1.15rem; color:var(--text); letter-spacing:-0.02em}
+.logo span{color:var(--accent)}
+nav a{margin-left:22px; color:var(--muted); font-size:0.92rem}
+nav a:hover{color:var(--text)}
+
+.hero{padding:56px 0 36px; border-bottom:1px solid var(--border)}
+.hero h1{font-size:2rem; margin:0 0 14px; letter-spacing:-0.02em}
+.hero p{color:var(--muted); max-width:52ch}
+
+.post-list{padding:36px 0}
+.post-list h2{font-size:1rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:20px}
+.post-card{padding:22px 0; border-bottom:1px solid var(--border)}
+.post-card h3{margin:0 0 6px; font-size:1.15rem}
+.meta{color:var(--muted); font-size:.85rem; margin:0 0 8px}
+
+.post, .page{padding:44px 0}
+.post h1, .page h1{font-size:1.8rem; letter-spacing:-0.02em; margin-bottom:6px}
+.post h2{font-size:1.3rem; margin-top:2em}
+.post p, .page p{color:#c3ccd4}
+.post code, .page code{background:var(--panel); padding:2px 6px; border-radius:4px; font-size:.9em}
+.post pre{background:var(--panel); padding:16px; border-radius:8px; overflow-x:auto; border:1px solid var(--border)}
+
+.site-footer{border-top:1px solid var(--border); padding:28px 0; margin-top:40px}
+.site-footer p{color:var(--muted); font-size:.85rem; margin:0}
+
+@media (max-width:600px){
+  .header-inner{flex-direction:column; align-items:flex-start; gap:10px}
+  nav a{margin-left:0; margin-right:16px}
+}
