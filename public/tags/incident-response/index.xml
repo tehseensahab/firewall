@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Incident Response on FirewallSync</title>
+		<link>http://localhost:1313/tags/incident-response/</link>
+		<description>Recent content in Incident Response on FirewallSync</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/incident-response/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Why Your Incident Postmortems Aren&#39;t Preventing Repeats</title>
+				<link>http://localhost:1313/posts/why-your-incident-postmortems-arent-preventing-repeats/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/why-your-incident-postmortems-arent-preventing-repeats/</guid>
+				<description>Blameless postmortems became standard practice for good reasons, but most teams stopped halfway through adopting them — and it shows in the repeat incidents.</description>
+			</item>
+	</channel>
+</rss>

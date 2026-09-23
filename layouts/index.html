@@ -4,14 +4,41 @@
   <p>{{ .Site.Params.tagline }}. Field notes on threat modeling, access control, and the boring fixes that actually stop incidents.</p>
 </section>
 
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $posts = $posts.ByDate.Reverse }}
+{{ $featured := index $posts 0 }}
+{{ $rest := after 1 $posts }}
+
+{{ with $featured }}
+<section class="featured">
+  <p class="eyebrow">Latest</p>
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <p class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read{{ with .Params.author }} · {{ . }}{{ end }}</p>
+  <p class="featured-summary">{{ .Summary }}</p>
+  {{ with .Params.tags }}
+  <p class="tag-row">{{ range . }}<a class="tag-chip small" href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</p>
+  {{ end }}
+  <a class="read-more" href="{{ .RelPermalink }}">Read the article →</a>
+</section>
+{{ end }}
+
 <section class="post-list">
-  <h2>Latest articles</h2>
-  {{ range first 10 (where .Site.RegularPages "Section" "posts") }}
+  <h2>More articles</h2>
+  {{ range first 10 $rest }}
   <article class="post-card">
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p class="meta">{{ .Date.Format "Jan 2, 2006" }}</p>
+    <p class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read{{ with .Params.author }} · {{ . }}{{ end }}</p>
     <p>{{ .Summary }}</p>
+    {{ with .Params.tags }}
+    <p class="tag-row">{{ range . }}<a class="tag-chip small" href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</p>
+    {{ end }}
   </article>
   {{ end }}
+</section>
+
+<section class="contribute-cta">
+  <h2>Got a postmortem or process worth sharing?</h2>
+  <p>We publish practical security writing from engineers and practitioners — no vendor pitches.</p>
+  <a class="read-more" href="/write-for-us/">Write for FirewallSync →</a>
 </section>
 {{ end }}

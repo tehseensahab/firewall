@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The API Key Mistakes That Keep Making Breach Reports · FirewallSync</title>
+  <meta name="description" content="Practical cybersecurity for teams that ship fast">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">Firewall<span>Sync</span></a>
+    <nav>
+      <a href="/posts/">Articles</a>
+      <a href="/tags/">Topics</a>
+      <a href="/write-for-us/">Write for Us</a>
+      <a href="/about/">About</a>
+      <a href="/advertise/">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="wrap">
+    
+<article class="page">
+  <h1>The API Key Mistakes That Keep Making Breach Reports</h1>
+  <p>Secrets scanning is mature technology at this point — most CI pipelines can catch a hardcoded key before it merges. Yet leaked API keys remain one of the most common root causes in breach disclosures. The gap isn&rsquo;t tooling. It&rsquo;s three specific habits that scanners don&rsquo;t catch.</p>
+<h2 id="keys-with-no-expiry">Keys with no expiry</h2>
+<p>A scanner can tell you a key is exposed in a commit. It can&rsquo;t tell you that the key was never going to expire anyway, so rotating it after the leak doesn&rsquo;t actually close the window — the same key pattern gets reused in the next service, with the same no-expiry default. Default every new key to expire, and make the renewal request the normal path, not the exception.</p>
+<h2 id="shared-keys-across-environments">Shared keys across environments</h2>
+<p>Using the same API key for staging and production is still common because it&rsquo;s convenient — one less secret to manage. It also means a staging environment with weaker access controls becomes a direct path to production data. Environment-scoped keys should be a hard requirement in your provisioning process, not a &ldquo;best practice&rdquo; that gets skipped under deadline pressure.</p>
+<h2 id="keys-stored-in-places-scanners-dont-look">Keys stored in places scanners don&rsquo;t look</h2>
+<p>Secrets scanners are tuned for source code. They generally don&rsquo;t scan Slack messages, shared docs, or ticket comments — all places engineers paste a key &ldquo;just this once&rdquo; while debugging. That key often outlives the debugging session by months. If your threat model assumes secrets only live in git, you&rsquo;re missing the majority of where they actually leak from in practice.</p>
+<h2 id="where-to-focus-first">Where to focus first</h2>
+<ol>
+<li>Audit for non-expiring keys before adding more scanning tools</li>
+<li>Split shared staging/production keys this quarter, not next</li>
+<li>Treat chat and docs as a secrets surface, with periodic manual sweeps</li>
+</ol>
+<p>Scanning your repos is necessary. It was never sufficient.</p>
+
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col">
+      <p class="footer-heading">FirewallSync</p>
+      <p class="footer-desc">Practical security writing for engineering teams.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Topics</p>
+      
+      <a href="/tags/access-control/">access control</a>
+      
+      <a href="/tags/appsec/">appsec</a>
+      
+      <a href="/tags/iam/">iam</a>
+      
+      <a href="/tags/incident-response/">incident response</a>
+      
+      <a href="/tags/process/">process</a>
+      
+      <a href="/tags/secrets-management/">secrets management</a>
+      
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Recent</p>
+      
+      <a href="/posts/the-api-key-mistakes-that-keep-making-breach-reports/">The API Key Mistakes That Keep Making Breach Reports</a>
+      
+      <a href="/posts/why-your-incident-postmortems-arent-preventing-repeats/">Why Your Incident Postmortems Aren&#39;t Preventing Repeats</a>
+      
+      <a href="/posts/least-privilege-access-controls-that-dont-slow-teams-down/">Least-Privilege Access Controls That Don&#39;t Slow Teams Down</a>
+      
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Site</p>
+      <a href="/write-for-us/">Write for Us</a>
+      <a href="/advertise/">Advertise</a>
+      <a href="/about/">About</a>
+      <a href="/index.xml">RSS</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="copyright">&copy; 2026 FirewallSync. Practical security writing for engineering teams.</p>
+  </div>
+</footer>
+
+</body>
+</html>

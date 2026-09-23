@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Access Control on FirewallSync</title>
+		<link>http://localhost:1313/tags/access-control/</link>
+		<description>Recent content in Access Control on FirewallSync</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/access-control/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Least-Privilege Access Controls That Don&#39;t Slow Teams Down</title>
+				<link>http://localhost:1313/posts/least-privilege-access-controls-that-dont-slow-teams-down/</link>
+				<pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/least-privilege-access-controls-that-dont-slow-teams-down/</guid>
+				<description>Most least-privilege rollouts fail because they optimize for audit checklists instead of how engineers actually work. Here&amp;rsquo;s a rollout order that holds up.</description>
+			</item>
+	</channel>
+</rss>

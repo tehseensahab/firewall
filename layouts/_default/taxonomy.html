@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p class="page-content">Browse articles by topic.</p>
+<section class="tag-cloud">
+  {{ range .Site.Taxonomies.tags.ByCount }}
+  <a class="tag-chip" href="{{ $.Site.LanguagePrefix }}/tags/{{ .Name | urlize }}/">{{ .Name }} <span class="tag-count">{{ .Count }}</span></a>
+  {{ end }}
+</section>
+{{ end }}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Home on FirewallSync</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content in Home on FirewallSync</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The API Key Mistakes That Keep Making Breach Reports</title>
+				<link>http://localhost:1313/posts/the-api-key-mistakes-that-keep-making-breach-reports/</link>
+				<pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/the-api-key-mistakes-that-keep-making-breach-reports/</guid>
+				<description>Secrets scanning tools have gotten good. The breaches keep happening anyway, mostly for three preventable reasons.</description>
+			</item>
+			<item>
+				<title>Why Your Incident Postmortems Aren&#39;t Preventing Repeats</title>
+				<link>http://localhost:1313/posts/why-your-incident-postmortems-arent-preventing-repeats/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/why-your-incident-postmortems-arent-preventing-repeats/</guid>
+				<description>Blameless postmortems became standard practice for good reasons, but most teams stopped halfway through adopting them — and it shows in the repeat incidents.</description>
+			</item>
+			<item>
+				<title>Least-Privilege Access Controls That Don&#39;t Slow Teams Down</title>
+				<link>http://localhost:1313/posts/least-privilege-access-controls-that-dont-slow-teams-down/</link>
+				<pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/least-privilege-access-controls-that-dont-slow-teams-down/</guid>
+				<description>Most least-privilege rollouts fail because they optimize for audit checklists instead of how engineers actually work. Here&amp;rsquo;s a rollout order that holds up.</description>
+			</item>
+			<item>
+				<title>About</title>
+				<link>http://localhost:1313/about/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/about/</guid>
+				<description>&lt;p&gt;FirewallSync covers the parts of cybersecurity that actually change how engineering teams operate day to day — access control, incident response process, and secrets management — written for the people who have to implement it, not just the people auditing it.&lt;/p&gt;&#xA;&lt;p&gt;We publish practical, field-tested writing rather than vendor-sponsored listicles. Got something worth writing about? Reach out via the &lt;a href=&#34;http://localhost:1313/advertise/&#34;&gt;Advertise&lt;/a&gt; page.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Advertise / Guest Post</title>
+				<link>http://localhost:1313/advertise/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/advertise/</guid>
+				<description>&lt;p&gt;FirewallSync accepts a limited number of guest contributions from writers and agencies in the security and IT space.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What we&amp;rsquo;re looking for:&lt;/strong&gt; original, specific writing on cybersecurity, IT operations, or engineering process — no thin AI-generated filler, no more than one contextual link back to your site.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What we don&amp;rsquo;t accept:&lt;/strong&gt; gambling, adult, or unrelated affiliate content; guest posts with more than one promotional link; anything that reads like a press release.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Write for Us</title>
+				<link>http://localhost:1313/write-for-us/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/write-for-us/</guid>
+				<description>&lt;p&gt;FirewallSync publishes practical, field-tested security writing for engineering teams — not vendor whitepapers, not listicles. If you&amp;rsquo;ve shipped a fix, run an incident, or built a process that actually held up under pressure, we want to hear about it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-publish&#34;&gt;What we publish&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Postmortems and lessons learned (anonymized details are fine)&lt;/li&gt;&#xA;&lt;li&gt;Concrete how-tos: rollout plans, tooling comparisons, architecture decisions&lt;/li&gt;&#xA;&lt;li&gt;Opinionated takes on practices the industry treats as settled but shouldn&amp;rsquo;t&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-we-dont-publish&#34;&gt;What we don&amp;rsquo;t publish&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Generic &amp;ldquo;top 10 security tips&amp;rdquo; content&lt;/li&gt;&#xA;&lt;li&gt;Thinly-veiled product pitches&lt;/li&gt;&#xA;&lt;li&gt;Anything you can&amp;rsquo;t back with specifics&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;byline--links&#34;&gt;Byline &amp;amp; links&lt;/h2&gt;&#xA;&lt;p&gt;Accepted posts get a full author byline and one contextual link back to your site or profile. We don&amp;rsquo;t do paid placements or sponsored posts dressed up as articles — see our &lt;a href=&#34;http://localhost:1313/advertise/&#34;&gt;advertising page&lt;/a&gt; if that&amp;rsquo;s what you&amp;rsquo;re looking for instead.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -3,6 +3,7 @@ title = "Least-Privilege Access Controls That Don't Slow Teams Down"
 date = 2026-08-01
 tags = ["access control", "iam"]
 summary = "Most least-privilege rollouts fail because they optimize for audit checklists instead of how engineers actually work. Here's a rollout order that holds up."
+author = "FirewallSync Editorial"
 +++
 
 Most least-privilege initiatives stall for the same reason: security teams design the policy around what an auditor wants to see, not around how engineers request and use access day to day. The result is a system everyone routes around within a month.

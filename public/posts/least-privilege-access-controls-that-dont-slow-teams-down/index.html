@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Least-Privilege Access Controls That Don&#39;t Slow Teams Down · FirewallSync</title>
+  <meta name="description" content="Practical cybersecurity for teams that ship fast">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">Firewall<span>Sync</span></a>
+    <nav>
+      <a href="/posts/">Articles</a>
+      <a href="/tags/">Topics</a>
+      <a href="/write-for-us/">Write for Us</a>
+      <a href="/about/">About</a>
+      <a href="/advertise/">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="wrap">
+    
+<article class="page">
+  <h1>Least-Privilege Access Controls That Don&#39;t Slow Teams Down</h1>
+  <p>Most least-privilege initiatives stall for the same reason: security teams design the policy around what an auditor wants to see, not around how engineers request and use access day to day. The result is a system everyone routes around within a month.</p>
+<h2 id="start-with-role-mining-not-role-design">Start with role mining, not role design</h2>
+<p>Before writing a single policy, pull 90 days of actual access logs and group people by what they <em>use</em>, not what their job title implies they should use. You&rsquo;ll almost always find that job-title-based roles overprovision by 3-5x. Role mining gives you a baseline that reflects reality, which means the policy you eventually ship won&rsquo;t immediately break someone&rsquo;s workflow.</p>
+<h2 id="time-bound-elevated-access-by-default">Time-bound elevated access by default</h2>
+<p>Standing admin access is the single biggest reason least-privilege programs get undone six months later — someone gets temporary access for an incident, and it never gets revoked because revocation isn&rsquo;t anyone&rsquo;s job. Build expiry into the request, not into a quarterly review. A 24-hour default that requires re-justification is far more durable than a 90-day access review that nobody actually reads.</p>
+<h2 id="measure-friction-not-just-coverage">Measure friction, not just coverage</h2>
+<p>Track how many access requests get approved without modification versus how many get pushback or take more than a day. If your approval time creeps up, engineers will start requesting broader roles &ldquo;just in case&rdquo; to avoid asking twice — which quietly reverses the entire program. Friction is a leading indicator that your policy has drifted from actual need.</p>
+<h2 id="the-rollout-order-that-works">The rollout order that works</h2>
+<ol>
+<li>Mine current usage, not job descriptions</li>
+<li>Ship time-bound elevation before you touch standing roles</li>
+<li>Narrow standing roles only after elevation data shows what&rsquo;s actually needed</li>
+<li>Review friction metrics monthly, formal access reviews quarterly</li>
+</ol>
+<p>Teams that reverse this order — writing the policy first and measuring friction never — are the ones still running the same over-permissioned setup a year later, just with a nicer-looking spreadsheet.</p>
+
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col">
+      <p class="footer-heading">FirewallSync</p>
+      <p class="footer-desc">Practical security writing for engineering teams.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Topics</p>
+      
+      <a href="/tags/access-control/">access control</a>
+      
+      <a href="/tags/appsec/">appsec</a>
+      
+      <a href="/tags/iam/">iam</a>
+      
+      <a href="/tags/incident-response/">incident response</a>
+      
+      <a href="/tags/process/">process</a>
+      
+      <a href="/tags/secrets-management/">secrets management</a>
+      
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Recent</p>
+      
+      <a href="/posts/the-api-key-mistakes-that-keep-making-breach-reports/">The API Key Mistakes That Keep Making Breach Reports</a>
+      
+      <a href="/posts/why-your-incident-postmortems-arent-preventing-repeats/">Why Your Incident Postmortems Aren&#39;t Preventing Repeats</a>
+      
+      <a href="/posts/least-privilege-access-controls-that-dont-slow-teams-down/">Least-Privilege Access Controls That Don&#39;t Slow Teams Down</a>
+      
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Site</p>
+      <a href="/write-for-us/">Write for Us</a>
+      <a href="/advertise/">Advertise</a>
+      <a href="/about/">About</a>
+      <a href="/index.xml">RSS</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="copyright">&copy; 2026 FirewallSync. Practical security writing for engineering teams.</p>
+  </div>
+</footer>
+
+</body>
+</html>

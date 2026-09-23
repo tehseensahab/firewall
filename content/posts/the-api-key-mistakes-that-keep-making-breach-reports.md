@@ -3,6 +3,7 @@ title = "The API Key Mistakes That Keep Making Breach Reports"
 date = 2026-08-24
 tags = ["secrets management", "appsec"]
 summary = "Secrets scanning tools have gotten good. The breaches keep happening anyway, mostly for three preventable reasons."
+author = "FirewallSync Editorial"
 +++
 
 Secrets scanning is mature technology at this point — most CI pipelines can catch a hardcoded key before it merges. Yet leaked API keys remain one of the most common root causes in breach disclosures. The gap isn't tooling. It's three specific habits that scanners don't catch.
