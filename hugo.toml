@@ -8,3 +8,4 @@ title = "FirewallSync"
 
 [taxonomies]
   tag = "tags"
+  category = "categories"
