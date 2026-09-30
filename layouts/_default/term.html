@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1>Topic: {{ .Title }}</h1>
+<h1>{{ .Data.Singular | title }}: {{ .Title }}</h1>
 <section class="post-list">
   {{ range .Pages.ByDate.Reverse }}
   <article class="post-card">
