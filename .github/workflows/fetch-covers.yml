@@ -27,7 +27,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add content/posts
           grep -E '^(FAILED|MISSING)' fetch.log > scripts/covers-failed.txt || true
-          if [ -s scripts/covers-failed.txt ]; then git add scripts/covers-failed.txt; else git rm -q --ignore-unmatch scripts/covers-failed.txt; rm -f scripts/covers-failed.txt; fi
+          if [ -s scripts/covers-failed.txt ]; then git add scripts/covers-failed.txt; else git rm -qf --ignore-unmatch scripts/covers-failed.txt; rm -f scripts/covers-failed.txt; fi
           git diff --cached --quiet && { echo "Nothing new"; exit 0; }
           git commit -m "Add post cover images"
           git pull --rebase origin "${{ github.ref_name }}"
