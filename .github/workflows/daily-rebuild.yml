@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Cloudflare Pages deploy hook
-        run: curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK_URL }}"
+        run: curl --fail --show-error -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK_URL }}"
