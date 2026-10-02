@@ -6,6 +6,8 @@ categories = ["identity-access"]
 summary = "Most identity security programs were designed around human users logging in. Service accounts, API keys, and now AI agents don't fit that model, and it shows in how little oversight they typically get."
 description = "Non-human identities — service accounts, API keys, AI agents — now outnumber human users in most environments, but get a fraction of the identity governance."
 author = "FirewallSync Editorial"
+imageAlt = "Small robot standing on a table"
+imageCredit = "Photo by [Andrea De Santis](https://unsplash.com/photos/zwd435-ewb4) on Unsplash"
 +++
 
 Most identity security programs — MFA policies, access reviews, onboarding and offboarding workflows — were designed around a mental model of a human user logging in. Service accounts, API keys, workload identities, and now AI agents acting autonomously don't fit that model cleanly, and in most organizations, they receive a small fraction of the governance attention human identities do, despite frequently outnumbering human users by a wide margin in any modern cloud environment.

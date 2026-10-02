@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "These three get compared as competing options, but they solve different problems. Picking the wrong one for your actual use case is where most API auth trouble starts."
 description = "API keys, OAuth, and JWTs solve different problems. A practical comparison of what each is actually for, and where teams commonly pick the wrong one."
 author = "FirewallSync Editorial"
+imageAlt = "Keys held in a hand"
+imageCredit = "Photo by [Everyday basics](https://unsplash.com/photos/jJnZg7vBfMs) on Unsplash"
 +++
 
 API keys, OAuth, and JWTs get discussed as if choosing between them is a single decision with one right answer. In practice they answer different questions, and most real systems end up using more than one together. Picking the wrong one for a given use case — not picking "the wrong technology" in the abstract — is where most API authentication problems start.

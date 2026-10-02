@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "Overprivileged IAM identities aren't usually the result of one bad decision. They're the accumulated residue of a hundred small, reasonable-seeming ones. Here's how to actually find them."
 description = "How to find overprivileged AWS IAM users and roles using Access Analyzer, CloudTrail activity, and policy comparison — before an incident finds them for you."
 author = "FirewallSync Editorial"
+imageAlt = "Rows of server racks in a data center"
+imageCredit = "Photo by [imgix](https://unsplash.com/photos/klWUhr-wPJ8) on Unsplash"
 +++
 
 Overprivileged IAM identities rarely come from one obviously bad decision. They come from a hundred individually reasonable ones — a broad policy attached during setup, a permission added to unblock a deploy, a role copied from a template that itself was never trimmed. The result is an environment where almost every identity has more access than it uses, and nobody can say with confidence which ones without checking.

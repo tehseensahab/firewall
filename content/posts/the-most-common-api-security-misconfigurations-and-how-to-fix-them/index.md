@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "API misconfigurations don't usually come from a missing feature. They come from a default that was never revisited once the API left the prototype stage."
 description = "The most common API security misconfigurations — verbose errors, permissive CORS, exposed debug endpoints — and the fixes that actually close them."
 author = "FirewallSync Editorial"
+imageAlt = "Monitor displaying program code"
+imageCredit = "Photo by [Pankaj Patel](https://unsplash.com/photos/u2Ru4QBXA5Q) on Unsplash"
 +++
 
 API misconfigurations rarely come from a missing security feature. They come from a default that was fine during prototyping and never got revisited once the API left that stage and started handling real traffic. These are the ones that show up most often in production audits.

@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "GDPR compliance often gets treated as a legal problem handed to legal teams. Several of its core requirements are actually engineering decisions, and they're easier to satisfy if you know which ones fall on your desk."
 description = "What GDPR actually requires in practical terms for engineering teams: data minimization, the 72-hour breach rule, DPIAs, and what's genuinely an engineering decision versus a legal one."
 author = "Tehseen Arbab"
+imageAlt = "Sign reading privacy please"
+imageCredit = "Photo by [Jason Dent](https://unsplash.com/photos/JFk0dVyvdvw) on Unsplash"
 +++
 
 GDPR compliance often gets handed entirely to a legal or compliance team, with engineering treated as an implementation detail once the requirements are decided elsewhere. Several of GDPR's core requirements are actually engineering decisions at their core — not because engineers need to become lawyers, but because the requirement itself is about how systems are built, not just what policies exist on paper.

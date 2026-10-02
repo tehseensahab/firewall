@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "Excessive agency isn't about an agent doing something malicious on its own. It's about an agent being granted more autonomy, functionality, or permission than its actual task requires, and that surplus becoming the thing an attacker uses."
 description = "Excessive agency in AI agents explained: the three sources OWASP identifies — excessive functionality, permissions, and autonomy — and how to actually scope each one down."
 author = "FirewallSync Editorial"
+imageAlt = "White robot against a black background"
+imageCredit = "Photo by [Numan Ali](https://unsplash.com/photos/CjWsslYVnPI) on Unsplash"
 +++
 
 Excessive agency, as OWASP's Top 10 for LLM Applications defines it, is a vulnerability that exists when an application grants an LLM-based agent more autonomy, functionality, or system permission than the task it performs actually requires. It's worth being precise about what this risk actually is: it's not that the agent will maliciously decide to misuse its access on its own. It's that the surplus access — beyond what the task needs — becomes exactly what a successful manipulation (through prompt injection or any other means) can exploit, and the size of that surplus determines how bad a successful manipulation can be.

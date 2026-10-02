@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "Most security champions programs launch with energy and quietly die within two quarters. The failure pattern is predictable, and so is the fix."
 description = "Security champions programs usually fail within two quarters for the same predictable reasons. What to structure differently from the start."
 author = "FirewallSync Editorial"
+imageAlt = "Group of colleagues working together at a laptop"
+imageCredit = "Photo by [Annie Spratt](https://unsplash.com/photos/QckxruozjRg) on Unsplash"
 +++
 
 Security champions programs almost always launch well — volunteers sign up, there's a kickoff meeting, enthusiasm is genuinely high. Then within two quarters, champions stop showing up to the monthly sync, the security team stops preparing content for it, and the program quietly becomes a Slack channel nobody posts in. The failure pattern is consistent enough across companies that it's worth designing around from day one.

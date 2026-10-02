@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "Network segmentation still matters, but in a cloud environment, the thing standing between an attacker and your data is increasingly a permission check, not a firewall rule."
 description = "Why identity has become the primary security boundary in cloud environments, and where teams still over-invest in network controls at the expense of IAM."
 author = "FirewallSync Editorial"
+imageAlt = "Close-up of network equipment with connected cables"
+imageCredit = "Photo by [Albert Stoynov](https://unsplash.com/photos/dyUp7WPu5q4) on Unsplash"
 +++
 
 Traditional network security assumed a defensible boundary: a corporate network with a firewall at the edge, internal traffic implicitly more trusted than external traffic, and access controlled largely by what network segment you could physically or logically reach. Cloud environments break this assumption structurally — most cloud resources are reachable over the public internet by design, and what actually stands between an attacker and your data is increasingly a permission check evaluated by an identity provider, not a network path blocked by a firewall.

@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "A build pipeline trusts a long chain of things by default: the package registry, the CI runner, every plugin, every base image. Each link is a place a supply chain attack can enter without ever touching your own code."
 description = "Software supply chain attacks explained: where modern build pipelines actually break, from dependency resolution to CI runners to build-time script execution."
 author = "FirewallSync Editorial"
+imageAlt = "Rows of stacked intermodal shipping containers"
+imageCredit = "Photo by [frank mckenna](https://unsplash.com/photos/tjX_sniNzgQ) on Unsplash"
 +++
 
 A modern build pipeline trusts a long chain of things by default, mostly without anyone deciding to trust them explicitly: the package registry resolving your dependencies, the CI runner executing your build steps, every third-party action or plugin pulled into that process, the base image your container starts from. A supply chain attack doesn't need to compromise your own code at all — it just needs to compromise one link in that chain, because your pipeline will trust whatever that link delivers.

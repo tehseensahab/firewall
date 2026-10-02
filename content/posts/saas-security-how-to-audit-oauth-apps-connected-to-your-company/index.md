@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "Every time an employee clicks 'Allow' on an OAuth consent screen, a third-party application gets standing access to company data — and most organizations have no consolidated view of how many of these grants actually exist."
 description = "How to audit OAuth apps connected to your company's core SaaS platforms, find overprivileged and abandoned integrations, and build this into a recurring process."
 author = "FirewallSync Editorial"
+imageAlt = "Laptop showing a dashboard on a glass table"
+imageCredit = "Photo by [Carlos Muza](https://unsplash.com/photos/hpjSkU2UYSU) on Unsplash"
 +++
 
 Every time an employee clicks "Allow" on an OAuth consent screen — connecting a scheduling tool to their calendar, a productivity app to their email, a survey tool to their file storage — that third-party application gets standing access to company data, persisting until someone explicitly revokes it. Most organizations have no consolidated inventory of how many of these grants actually exist across their user base, which is exactly what makes this one of the least visible categories of third-party risk in a typical SaaS-heavy environment.

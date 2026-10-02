@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "Tabletop exercises satisfy the audit requirement but rarely test whether your team can actually execute under pressure. Here's the gap and how to close it."
 description = "Most incident response tabletop exercises test whether people know the plan, not whether the plan survives contact with a real incident. Here's the fix."
 author = "FirewallSync Editorial"
+imageAlt = "Team with laptops watching a colleague at a whiteboard"
+imageCredit = "Photo by [Austin Distel](https://unsplash.com/photos/wD1LRb9OeEo) on Unsplash"
 +++
 
 A tabletop exercise where everyone sits in a conference room and narrates what they'd do tests whether people remember the runbook. It doesn't test whether the runbook survives contact with a real incident — degraded communication tools, a key person on vacation, or an attacker who doesn't follow the scenario's script.

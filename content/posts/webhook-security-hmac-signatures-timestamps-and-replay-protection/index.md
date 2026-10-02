@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Nearly every major provider signs webhooks with HMAC-SHA256, but the implementation details differ enough between them that copying one provider's verification code for another is a common source of silent bugs."
 description = "A technical look at how HMAC webhook signatures actually work — Stripe, GitHub, and Shopify's implementations compared, and where verification code commonly breaks."
 author = "FirewallSync Editorial"
+imageAlt = "JavaScript code with syntax highlighting"
+imageCredit = "Photo by [Gabriel Heinzer](https://unsplash.com/photos/g5jpH62pwes) on Unsplash"
 +++
 
 Nearly every major provider — Stripe, GitHub, Shopify, Twilio — signs webhook payloads using HMAC-SHA256. The core mechanism is the same across all of them: compute a hash of the payload using a shared secret, send that hash alongside the request, and let the receiver recompute and compare it. The implementation details differ enough between providers that copying verification code written for one and pointing it at another is a common, quiet source of bugs.

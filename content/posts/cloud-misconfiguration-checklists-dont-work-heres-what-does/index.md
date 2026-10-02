@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "Checklist-based cloud security reviews catch what's on the list and miss everything that changed since it was written. Drift detection closes the gap a checklist can't."
 description = "Cloud misconfiguration is still the leading cause of cloud breaches. Static checklists miss drift — here's what to run instead."
 author = "FirewallSync Editorial"
+imageAlt = "Person writing a list in a notebook"
+imageCredit = "Photo by [Glenn Carstens-Peters](https://unsplash.com/photos/RLw-UC03Gwc) on Unsplash"
 +++
 
 Cloud misconfiguration remains one of the most common root causes behind cloud breaches, which is strange given how many teams run a security checklist against their environment. The problem isn't that the checklists are wrong — it's that a checklist is a snapshot, and cloud environments change constantly between the review that passed and the incident that didn't.

@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "Most SaaS vetting stops at a security questionnaire the vendor's sales team fills out. Here's what actually predicts third-party risk in practice."
 description = "Third-party SaaS risk assessment usually stops at a vendor questionnaire. A more useful vetting process focused on what actually predicts incidents."
 author = "FirewallSync Editorial"
+imageAlt = "Magnifying glass next to a laptop"
+imageCredit = "Photo by [Agence Olloweb](https://unsplash.com/photos/d9ILr-dbEdg) on Unsplash"
 +++
 
 A security questionnaire filled out by a vendor's sales or solutions team, then filed away unread, is the default third-party risk process at most companies — and it predicts almost nothing about actual risk, because the person answering it usually isn't the person who built the system or knows its real failure modes.

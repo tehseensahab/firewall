@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "A chatbot's worst-case failure is generating bad text. An agent's worst-case failure is taking a bad action, with real tool access, based on reasoning that isn't fully predictable in advance."
 description = "Why giving an AI agent tool access fundamentally changes its threat model, from a text-generation risk to a real-world action risk, and what that requires defensively."
 author = "FirewallSync Editorial"
+imageAlt = "Robot and human hands reaching toward each other"
+imageCredit = "Photo by [Cash Macanaya](https://unsplash.com/photos/X9Cemmq4YjM) on Unsplash"
 +++
 
 A text-only chatbot's worst-case failure mode is generating text that's wrong, harmful, or embarrassing. Give that same underlying model the ability to call tools — send an email, query a database, execute code, make a purchase, modify a file — and the worst-case failure mode becomes an actual, real-world action taken on the basis of reasoning that isn't fully predictable or auditable in advance. This is a categorically different security posture, not a incremental increase in risk from the same category.

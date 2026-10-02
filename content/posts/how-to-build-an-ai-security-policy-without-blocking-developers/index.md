@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "A policy that blanket-bans AI tools gets quietly worked around. A policy that gives developers a fast, clear path to use them safely actually gets followed."
 description = "How to build an AI security policy developers will actually follow: risk-tiered rules, fast approval paths, and concrete guidance instead of blanket restrictions."
 author = "FirewallSync Editorial"
+imageAlt = "Colleagues meeting around a table with laptops"
+imageCredit = "Photo by [Christina @ wocintechchat.com](https://unsplash.com/photos/faEfWCdOKIg) on Unsplash"
 +++
 
 An AI security policy that blanket-restricts or requires lengthy approval for every AI tool tends to produce exactly the outcome it's trying to prevent: developers and other employees route around it, using unapproved tools on personal devices or accounts, because the productivity gain from AI tooling is real and a policy that ignores that reality just pushes the activity underground rather than eliminating it. An effective policy has to actually compete with the convenience of the unsanctioned alternative, not just prohibit it.

@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "A credential leak is one of the most common incident types and one of the least consistently well-handled, precisely because teams improvise the response order every time rather than following a rehearsed sequence."
 description = "How to build a practical incident response playbook for a leaked credential: the correct sequencing of rotation, scoping, and cleanup, worked out in advance rather than improvised."
 author = "FirewallSync Editorial"
+imageAlt = "Presenter standing in front of a team with laptops"
+imageCredit = "Photo by [Campaign Creators](https://unsplash.com/photos/gMsnXqILjp4) on Unsplash"
 +++
 
 A leaked credential — an API key, a database password, a signing certificate — is one of the most common security incidents any organization will face, and one of the least consistently handled well, largely because the correct response sequence isn't intuitive and teams often improvise it under time pressure rather than following a playbook worked out calmly in advance.

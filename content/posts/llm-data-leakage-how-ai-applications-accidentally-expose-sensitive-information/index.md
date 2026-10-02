@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "Most LLM data leakage isn't caused by a model being hacked. It's caused by ordinary application design decisions that hand the model, or its output, more than the current user should see."
 description = "How LLM applications leak sensitive data in practice — training data exposure, cross-user context bleed, and overshared retrieval — and how to actually prevent it."
 author = "FirewallSync Editorial"
+imageAlt = "Phone photographing a screen showing an AI-generated face"
+imageCredit = "Photo by [Aidin Geranrekab](https://unsplash.com/photos/bV_P23FXxhI) on Unsplash"
 +++
 
 Sensitive information disclosure is its own distinct category in OWASP's Top 10 for LLM Applications, separate from prompt injection, and for good reason: most real-world LLM data leakage isn't caused by an attacker cleverly extracting something through manipulation. It's caused by ordinary application design decisions that hand the model, or the model's output, more information than the current user is actually supposed to see.

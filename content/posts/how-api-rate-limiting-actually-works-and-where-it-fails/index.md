@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Rate limiting is treated as a solved problem once it's implemented. In practice, the algorithm and the scope you choose determine whether it actually stops abuse or just adds latency to legitimate traffic."
 description = "How API rate limiting actually works: fixed window, sliding window, and token bucket algorithms compared, and where rate limiting fails in practice."
 author = "FirewallSync Editorial"
+imageAlt = "Fiber optic cables connected to a network switch"
+imageCredit = "Photo by [Kirill Sh](https://unsplash.com/photos/eVWWr6nmDf8) on Unsplash"
 +++
 
 Rate limiting is often treated as a solved problem the moment it's implemented — a number is picked, a library is wired in, and the box gets checked. In practice, the algorithm behind that limit and the scope it's applied at determine whether it actually stops abuse or just adds latency to legitimate traffic while doing little against a determined attacker.

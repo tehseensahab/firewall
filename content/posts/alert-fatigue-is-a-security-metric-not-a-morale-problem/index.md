@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "Teams treat alert fatigue as a burnout issue to manage around. It's actually a leading indicator that your detection pipeline is broken."
 description = "Alert fatigue in security operations isn't a staffing problem — it's a signal your detection tuning has failed. Here's how to measure and fix it."
 author = "FirewallSync Editorial"
+imageAlt = "Monitoring screen showing live metrics"
+imageCredit = "Photo by [Stephen Dawson](https://unsplash.com/photos/qwtCeJ5cLYs) on Unsplash"
 +++
 
 Most orgs respond to alert fatigue with rotation schedules, mental health check-ins, or hiring more analysts. All reasonable, none of them fix the actual problem: a detection pipeline generating more noise than signal, which is a tuning failure, not a staffing shortfall.

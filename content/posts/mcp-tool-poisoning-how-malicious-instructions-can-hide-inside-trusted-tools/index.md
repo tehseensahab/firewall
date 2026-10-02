@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "An AI agent decides how to use a tool by reading its description. Tool poisoning exploits exactly that: the description isn't documentation to the model, it's an instruction it will follow."
 description = "MCP tool poisoning explained: how attackers hide instructions in tool descriptions and parameters, why agents follow them, and how to defend against it."
 author = "FirewallSync Editorial"
+imageAlt = "Glowing chip on a circuit board"
+imageCredit = "Photo by [Immo Wegmann](https://unsplash.com/photos/w69Z8K-HGQU) on Unsplash"
 +++
 
 When an AI agent connects to an MCP server and decides how to use one of its tools, it reads that tool's metadata — its name, its natural-language description, its parameter definitions — and treats that text as guidance for how to call it correctly. Tool poisoning exploits exactly this mechanism: the description isn't documentation as far as the model is concerned, it's an instruction the model will follow, and a malicious or compromised server can write attacker-controlled instructions directly into that metadata rather than into any actual data the tool returns.

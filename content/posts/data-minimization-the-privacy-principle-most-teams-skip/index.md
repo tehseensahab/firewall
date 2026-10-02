@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "Collecting more data than you need feels harmless because storage is cheap. The actual cost shows up later, at breach time, at deletion-request time, and at audit time — and by then it's a much bigger job."
 description = "Data minimization explained: why collecting more than you need feels harmless upfront but creates compounding security and compliance costs, and how to actually practice it."
 author = "Tehseen Arbab"
+imageAlt = "The word DATA stenciled in dots on glass"
+imageCredit = "Photo by [Claudio Schwarz](https://unsplash.com/photos/fyeOxvYvIyY) on Unsplash"
 +++
 
 Collecting more personal data than a feature strictly needs rarely feels like a risky decision in the moment — storage is cheap, and the data might be useful for something later. The actual cost of over-collection doesn't show up at collection time. It shows up later: at breach time, when everything collected is now everything exposed; at deletion-request time, when every extra field is another thing to locate and remove; and at audit time, when every piece of collected data needs a justification that "it seemed useful" doesn't satisfy.

@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Most OAuth implementations follow the happy-path tutorial and skip the parts of the spec that exist specifically to stop token theft. Here's what the current best practice actually requires."
 description = "How to secure OAuth 2.0 tokens in production: PKCE, refresh token rotation, sender-constrained tokens, and the mistakes RFC 9700 was written to stop."
 author = "FirewallSync Editorial"
+imageAlt = "Laptop screen displaying colorful code"
+imageCredit = "Photo by [Mohammad Rahmani](https://unsplash.com/photos/8qEB0fTe9Vw) on Unsplash"
 +++
 
 Most OAuth implementations are built from a tutorial that gets the authorization flow working and stops there. The flow works, tokens get issued, and the implementation ships. What usually gets skipped is everything the specification's security guidance exists specifically to address: what happens when a token or authorization code is intercepted, replayed, or leaked.

@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "A static cloud key stored on a server is a credential that works until someone remembers to rotate it. Workload identity replaces that with a credential that's issued fresh, per request, and expires by design."
 description = "Workload identity explained: how it replaces static cloud keys with short-lived, automatically issued credentials, and how to actually migrate to it."
 author = "FirewallSync Editorial"
+imageAlt = "Close-up of a server in a server room"
+imageCredit = "Photo by [Tyler](https://unsplash.com/photos/vSprjjDbu60) on Unsplash"
 +++
 
 A static cloud credential — an access key downloaded once and placed in a configuration file, an environment variable, or a secrets manager — works exactly the same way for as long as it exists, whether it's being used by the legitimate service it was created for or by whoever else eventually gets hold of it. Workload identity replaces this model with credentials that are issued automatically, scoped narrowly, and expire on their own, removing the long-lived static secret from the equation entirely.

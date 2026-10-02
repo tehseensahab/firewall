@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Most public API breaches don't come from a novel attack technique. They come from a well-known control that was never actually implemented before launch."
 description = "A production checklist for securing a public REST API: authentication, rate limiting, input validation, and the access control gaps that get exploited most."
 author = "FirewallSync Editorial"
+imageAlt = "Computer screen with code"
+imageCredit = "Photo by [Chris Ried](https://unsplash.com/photos/ieic5Tq8YMk) on Unsplash"
 +++
 
 Most public API incidents don't trace back to a sophisticated or novel technique. They trace back to a well-known control — rate limiting, object-level authorization, input validation — that got deprioritized before launch and never circled back to. This is a checklist of the controls that actually matter, ordered roughly by how often skipping them causes real incidents.

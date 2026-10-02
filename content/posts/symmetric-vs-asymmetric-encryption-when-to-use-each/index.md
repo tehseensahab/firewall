@@ -6,6 +6,8 @@ categories = ["fundamentals"]
 summary = "Almost every real system uses both symmetric and asymmetric encryption together, each for the specific job it's actually good at. Understanding why explains a lot of how modern security protocols are built."
 description = "Symmetric vs asymmetric encryption explained: how each actually works, why they're almost always used together in practice, and where each one fits."
 author = "Tehseen Arbab"
+imageAlt = "Skeleton keys on a wooden table"
+imageCredit = "Photo by [Nerene Grobler](https://unsplash.com/photos/_sLxcfdsqLQ) on Unsplash"
 +++
 
 Symmetric and asymmetric encryption get presented as two competing approaches to the same problem, which makes it easy to miss that almost every real-world secure system uses both together, each handling the specific part of the problem it's actually suited for. Understanding why explains a surprising amount of how protocols like TLS, SSH, and most secure messaging systems are actually built.

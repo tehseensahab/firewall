@@ -1,0 +1,37 @@
+name: Fetch post cover images
+
+on:
+  push:
+    branches: [main, "claude/**"]
+    paths:
+      - "scripts/covers.tsv"
+      - "scripts/fetch-covers.sh"
+      - ".github/workflows/fetch-covers.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download covers listed in scripts/covers.tsv
+        id: fetch
+        run: scripts/fetch-covers.sh | tee fetch.log
+        continue-on-error: true
+      - name: Commit new covers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/posts
+          grep -E '^(FAILED|MISSING)' fetch.log > scripts/covers-failed.txt || true
+          if [ -s scripts/covers-failed.txt ]; then git add scripts/covers-failed.txt; else git rm -q --ignore-unmatch scripts/covers-failed.txt; rm -f scripts/covers-failed.txt; fi
+          git diff --cached --quiet && { echo "Nothing new"; exit 0; }
+          git commit -m "Add post cover images"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+      - name: Fail if any cover could not be downloaded
+        if: steps.fetch.outcome == 'failure'
+        run: cat fetch.log | grep -E '^(FAILED|MISSING)'; exit 1

@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Most JWT vulnerabilities aren't flaws in the standard — they're implementation shortcuts that trust the token to describe its own validity. Here's what to check."
 description = "9 real JWT security mistakes — algorithm confusion, the alg:none bypass, missing revocation, and more — with the fixes that actually close each one."
 author = "FirewallSync Editorial"
+imageAlt = "Code editor displaying source code"
+imageCredit = "Photo by [Juanjo Jaramillo](https://unsplash.com/photos/mZnx9429i94) on Unsplash"
 +++
 
 Most JWT vulnerabilities aren't flaws in the JWT standard itself. They come from implementations that trust information inside the token — like which algorithm to use for verification — that should never be trusted from an untrusted source in the first place. These nine account for the large majority of real-world JWT findings.

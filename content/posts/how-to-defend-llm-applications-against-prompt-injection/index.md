@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "There's no single fix that closes prompt injection completely. What actually reduces risk is layering several partial mitigations and, critically, limiting what a successful injection could accomplish."
 description = "Practical defenses against prompt injection in LLM applications: input handling, output validation, and — most importantly — limiting what a successful attack can actually do."
 author = "FirewallSync Editorial"
+imageAlt = "Computer chip on a circuit board"
+imageCredit = "Photo by [Igor Omilaev](https://unsplash.com/photos/eGGFZ5X2LnA) on Unsplash"
 +++
 
 There is no single control that fully closes prompt injection, because it exploits a structural property of how language models process input rather than a specific implementation bug. Effective defense means layering several partial mitigations, and — more important than any of them individually — limiting what a successful injection could actually accomplish, since some rate of successful injection should be assumed as a baseline rather than treated as fully preventable.

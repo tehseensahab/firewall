@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "Least privilege fails in practice because most teams have no visibility into which granted permissions are actually used. Here's how to find the gap and close it without breaking production."
 description = "A practical guide to AWS IAM least privilege: how to find unused permissions with IAM Access Analyzer and safely tighten policies without breaking access."
 author = "FirewallSync Editorial"
+imageAlt = "Network cabling in a data center"
+imageCredit = "Photo by [Taylor Vick](https://unsplash.com/photos/M5tzZtFCOfs) on Unsplash"
 +++
 
 Least privilege fails in practice for a simple reason: granting permissions is a one-time decision made under uncertainty, and revoking them requires confidence that nothing will break. Most teams grant broadly upfront because they don't know exactly what a role will need, and then never revisit it, because finding out what's actually being used requires visibility that doesn't exist by default.

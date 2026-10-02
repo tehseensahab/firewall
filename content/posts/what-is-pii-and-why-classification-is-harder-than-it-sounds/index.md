@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "PII sounds like it should be a simple list of field names to check for. In practice, whether something counts depends on context, combination with other data, and which regulation you're asking under."
 description = "What actually counts as PII, why classification is genuinely harder than checking a list of field names, and a practical approach to identifying it across real systems."
 author = "Tehseen Arbab"
+imageAlt = "Close-up of code on a computer screen"
+imageCredit = "Photo by [Markus Spiske](https://unsplash.com/photos/hvSr_CVecVI) on Unsplash"
 +++
 
 Personally identifiable information sounds like it should reduce to a simple list: name, email, phone number, check a box, done. In practice, whether something counts as PII depends on context, on combination with other data, and even on which regulation is asking the question — and treating classification as a simple field-name checklist is exactly how organizations end up missing PII that's genuinely present in their systems.

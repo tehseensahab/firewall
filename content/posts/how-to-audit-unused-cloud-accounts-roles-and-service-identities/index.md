@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "An unused identity with live credentials is functionally identical to a vulnerability sitting unpatched — nobody's using it, but it still works exactly as well for whoever finds it."
 description = "How to audit unused cloud accounts, roles, and service identities systematically, using activity data rather than manual review, before they become someone else's access."
 author = "FirewallSync Editorial"
+imageAlt = "Rack of equipment in a dark server room"
+imageCredit = "Photo by [Tyler](https://unsplash.com/photos/OnI_TNcIv9U) on Unsplash"
 +++
 
 An unused cloud identity — an IAM user nobody logs into anymore, a service account for a decommissioned integration, a role created for a migration that finished a year ago — is functionally identical to an unpatched vulnerability. It doesn't matter that nobody on your team is using it. What matters is that its credentials still work, exactly as well, for anyone who happens to find them.

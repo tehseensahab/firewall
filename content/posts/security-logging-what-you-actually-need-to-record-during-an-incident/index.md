@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "The question that actually matters during an incident isn't 'do we have logs' — it's whether the specific logs you have can answer 'what happened, in what order, across which systems' without gaps."
 description = "What security logging actually needs to capture to support incident response: correlation, authorization decisions, retention windows matched to real attacker dwell time."
 author = "FirewallSync Editorial"
+imageAlt = "Close-up of a graph on a computer screen"
+imageCredit = "Photo by [Agence Olloweb](https://unsplash.com/photos/qfp4-Ud6Fyg) on Unsplash"
 +++
 
 Most organizations have logs. Far fewer have logs that can actually answer the specific questions an incident response investigation needs answered: what happened, in what order, across which systems, and who or what was responsible. The gap between "we log things" and "we can reconstruct an incident" is where most logging strategies fail, usually because they were designed to support dashboards and monitoring rather than the very different demands of forensic reconstruction.

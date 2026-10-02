@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Most supply-chain security advice assumes you can afford to review every dependency by hand. Here's a tiered approach that scales with a normal release cadence."
 description = "Software supply chain security doesn't require reviewing every dependency manually. A tiered audit approach that keeps release velocity intact."
 author = "FirewallSync Editorial"
+imageAlt = "Lines of code on a dark screen"
+imageCredit = "Photo by [Florian Olivo](https://unsplash.com/photos/4hbJ-eymZ1o) on Unsplash"
 +++
 
 The standard advice on software supply chain security — review every new dependency before it merges — assumes a review capacity most teams don't have. Applied literally, it either gets ignored under deadline pressure or becomes a bottleneck that developers route around by vendoring code instead of adding a package. Neither outcome improves security.

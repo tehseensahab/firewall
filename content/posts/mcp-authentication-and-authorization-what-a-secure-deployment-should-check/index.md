@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "MCP's authorization spec is built on OAuth 2.1 for a specific reason: most MCP clients are desktop apps and CLI tools that can't securely hold a client secret, and OAuth 2.1's mandatory PKCE was designed for exactly that constraint."
 description = "How MCP authentication and authorization actually work under OAuth 2.1: audience binding, the confused deputy problem, and what a secure remote MCP deployment must validate."
 author = "FirewallSync Editorial"
+imageAlt = "Padlock and keys resting on a computer keyboard"
+imageCredit = "Photo by [Sasun Bughdaryan](https://unsplash.com/photos/cX8kNl8X0Ys) on Unsplash"
 +++
 
 The MCP specification's authorization framework, revised in 2025, is built on OAuth 2.1 rather than a bespoke authentication scheme — a deliberate choice, since most MCP clients (desktop AI applications, CLI-based agents, browser-based interfaces) are public clients that can't securely store a client secret, and OAuth 2.1's mandatory PKCE requirement exists specifically to secure authorization flows for exactly that class of client, without needing one.

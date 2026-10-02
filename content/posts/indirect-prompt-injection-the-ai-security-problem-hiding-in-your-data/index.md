@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "The attacker doesn't need to talk to your AI application at all. They just need to get malicious text into something it will eventually read — a document, a webpage, an inbox."
 description = "Indirect prompt injection explained: how attackers plant instructions in documents, emails, and web pages your AI application will later process on someone else's behalf."
 author = "FirewallSync Editorial"
+imageAlt = "Close-up of a chat interface on a computer screen"
+imageCredit = "Photo by [Emiliano Vittoriosi](https://unsplash.com/photos/fvxNerA8uk0) on Unsplash"
 +++
 
 In direct prompt injection, the attacker is the one typing into the model. Indirect prompt injection removes that requirement entirely — the attacker never interacts with your application at all. They just need to get malicious text into some piece of content your AI system will eventually process on someone else's behalf: a document, a web page, an email, a support ticket, a product review. The legitimate user never does anything wrong; they just ask the AI to summarize or act on content that happens to contain planted instructions.

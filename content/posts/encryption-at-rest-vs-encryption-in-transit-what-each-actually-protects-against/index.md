@@ -6,6 +6,8 @@ categories = ["fundamentals"]
 summary = "Both terms get used as a single checkbox on a compliance form, but they protect against completely different threats — and having one without the other leaves a specific, predictable gap."
 description = "Encryption at rest vs encryption in transit: what each actually protects against, why compliance checklists treating them as one item miss a real gap, and where the boundary between them sits."
 author = "Tehseen Arbab"
+imageAlt = "Internal hard disk drive"
+imageCredit = "Photo by [Vincent Botta](https://unsplash.com/photos/wYD_wfifJVs) on Unsplash"
 +++
 
 "Encryption at rest and in transit" gets treated as a single line item on compliance checklists and security questionnaires, as if it's one control rather than two separate ones addressing two distinct threats. Having one without the other is common, and it leaves a specific, predictable gap that's worth understanding rather than assuming the checkbox covers everything.

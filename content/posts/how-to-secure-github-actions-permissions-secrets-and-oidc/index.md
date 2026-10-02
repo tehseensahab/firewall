@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "A GitHub Actions workflow often runs with more access than the task actually requires, simply because the defaults are permissive and nobody scoped them down before shipping."
 description = "How to secure GitHub Actions: workflow permissions, third-party action risk, secrets scoping, and using OIDC instead of long-lived cloud credentials."
 author = "FirewallSync Editorial"
+imageAlt = "Laptop on a desk showing code"
+imageCredit = "Photo by [James Harrison](https://unsplash.com/photos/vpOeXr5wmR4) on Unsplash"
 +++
 
 A GitHub Actions workflow, by default, often runs with more access than the task it performs actually requires — not because anyone deliberately over-provisioned it, but because the defaults are permissive and narrowing them down takes deliberate configuration that's easy to skip while getting a pipeline working.

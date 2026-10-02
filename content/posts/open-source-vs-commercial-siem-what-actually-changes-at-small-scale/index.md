@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "The license cost is the easiest number to compare and the least representative of the real cost. What actually differs at small scale is who's doing the engineering work the platform doesn't do for you."
 description = "Open source vs commercial SIEM for small teams: what genuinely differs beyond license cost, and where each option's real hidden cost actually shows up."
 author = "Tehseen Arbab"
+imageAlt = "Performance analytics graphs on a laptop screen"
+imageCredit = "Photo by [Luke Chesser](https://unsplash.com/photos/JKUTrJ4vK00) on Unsplash"
 +++
 
 The license cost comparison between open source and commercial SIEM platforms is the easiest number to put in a spreadsheet and the least representative of the actual decision. What genuinely differs at small scale isn't primarily features — most SIEM platforms, open source or commercial, can ingest logs and run correlation rules — it's who ends up doing the engineering work the platform doesn't do automatically for you.

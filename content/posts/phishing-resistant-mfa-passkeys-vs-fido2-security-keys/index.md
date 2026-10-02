@@ -6,6 +6,8 @@ categories = ["identity-access"]
 summary = "Passkeys and FIDO2 security keys share the same underlying cryptographic protocol and the same phishing resistance. Where they differ is storage, portability, and what that means for a rollout."
 description = "Passkeys vs FIDO2 security keys: both are phishing-resistant by the same underlying protocol, but they differ in storage, portability, and rollout tradeoffs."
 author = "FirewallSync Editorial"
+imageAlt = "Padlock on top of a computer keyboard"
+imageCredit = "Photo by [Sasun Bughdaryan](https://unsplash.com/photos/2T4l02ZYj-k) on Unsplash"
 +++
 
 Passkeys and dedicated FIDO2 security keys (like a YubiKey) are often presented as competing options, but they share the same underlying cryptographic protocol and the same core security property: both are phishing-resistant because the authentication challenge is cryptographically bound to the actual origin (the domain) being authenticated against, which means neither can be tricked into producing a valid response for a convincing lookalike site the way a password or OTP can. Where they genuinely differ is in where the private key lives and how it moves between devices — and that difference has real operational consequences for a rollout.

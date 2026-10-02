@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "An OAuth grant isn't a one-time event — it's a standing, persistent credential that keeps working for as long as it exists, regardless of whether the app it was granted to remains trustworthy."
 description = "Why a single overprivileged OAuth integration can expose company data at scale, and how the risk compounds through broad scopes, standing access, and third-party breach exposure."
 author = "FirewallSync Editorial"
+imageAlt = "Person using a laptop at a white table"
+imageCredit = "Photo by [Dan Nelson](https://unsplash.com/photos/AvSFPw5Tp68) on Unsplash"
 +++
 
 Granting OAuth access to a third-party app feels like a one-time, low-stakes decision — click "Allow," get the integration working, move on. What that click actually creates is a standing, persistent credential that continues to function for as long as it exists, with whatever scope was granted, entirely independent of whether the app remains trustworthy, well-maintained, or even still exists in its original form.

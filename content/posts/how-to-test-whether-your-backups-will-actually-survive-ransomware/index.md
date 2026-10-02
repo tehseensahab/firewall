@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "A backup that has never been restored is a hypothesis, not a recovery plan. Testing it against a realistic ransomware scenario — not just a routine file-restore drill — is what actually validates it."
 description = "How to actually test backup resilience against ransomware: restore drills, immutability verification, and simulating the specific ways attackers target backup infrastructure."
 author = "FirewallSync Editorial"
+imageAlt = "Opened hard drive on a white surface"
+imageCredit = "Photo by [William Warby](https://unsplash.com/photos/NIpQvMn5RTk) on Unsplash"
 +++
 
 A backup that has never been restored is, functionally, a hypothesis about recoverability rather than a confirmed capability. The "0 errors" component of the 3-2-1-1-0 backup framework exists specifically because a backup job reporting success tells you data was written somewhere — it doesn't tell you that data can actually be restored into a working system, under time pressure, in the specific scenario a ransomware attack creates.

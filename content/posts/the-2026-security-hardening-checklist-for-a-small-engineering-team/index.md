@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "A small team doesn't need an enterprise security program. It needs the specific controls that close the gaps attackers actually exploit against small teams — which is a much shorter, more tractable list."
 description = "A practical, prioritized security hardening checklist for small engineering teams — covering identity, code, infrastructure, and incident readiness without enterprise overhead."
 author = "FirewallSync Editorial"
+imageAlt = "Hand ticking off items on a checklist"
+imageCredit = "Photo by [Jakub Żerdzicki](https://unsplash.com/photos/yKnIbJV0RbY) on Unsplash"
 +++
 
 A small engineering team doesn't need an enterprise security program, and trying to build one usually means nothing gets fully implemented because the scope is too large for the available time. What a small team needs is a shorter, prioritized list of the specific controls that close the gaps attackers most commonly exploit against organizations exactly this size — under-resourced, moving fast, with no dedicated security headcount.

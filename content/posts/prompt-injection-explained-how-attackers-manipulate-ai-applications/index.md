@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "Prompt injection has topped OWASP's LLM Top 10 for two consecutive editions, for a structural reason: instructions and data flow through the same channel, and the model has no reliable way to tell them apart."
 description = "Prompt injection explained: why LLMs can't reliably separate instructions from data, the difference between direct and indirect attacks, and why it's structurally hard to fully fix."
 author = "FirewallSync Editorial"
+imageAlt = "Circuit board with a brain motif"
+imageCredit = "Photo by [Steve A Johnson](https://unsplash.com/photos/_0iV9LmPDn0) on Unsplash"
 +++
 
 Prompt injection has held the top position in OWASP's Top 10 for LLM Applications across two consecutive editions, and the reason isn't that it's an unusually clever attack technique — it's that it exploits a structural property of how large language models process input. An LLM receives instructions (what it should do) and data (the content it should act on) through the same channel, as undifferentiated text, and has no reliable built-in mechanism to distinguish "this is a command to follow" from "this is content to process." An attacker who can influence any text the model reads can potentially get that text interpreted as a new instruction.

@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Dependency confusion doesn't exploit a vulnerability in any package. It exploits a resolution assumption most package managers share, and it was proven against 35+ major companies without a single CVE."
 description = "How dependency confusion attacks work, why they compromised Apple, Microsoft, and PayPal without a single CVE, and how to actually close the gap."
 author = "FirewallSync Editorial"
+imageAlt = "Stack of cargo containers"
+imageCredit = "Photo by [Guillaume Bolduc](https://unsplash.com/photos/uBe2mknURG4) on Unsplash"
 +++
 
 In February 2021, security researcher Alex Birsan demonstrated a technique that compromised build systems at Apple, Microsoft, PayPal, Tesla, Uber, Yelp, and more than 30 other major companies — earning over $130,000 in bug bounties in the process. None of it involved a zero-day exploit, stolen credentials, or malware hidden inside a legitimate package. It exploited a single, widely shared assumption in how package managers resolve dependency names.

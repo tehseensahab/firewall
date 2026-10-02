@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "IDOR is one of the simplest vulnerability classes to understand and one of the easiest to miss in testing, because it doesn't fail — it just returns the wrong person's data."
 description = "How to find and fix IDOR vulnerabilities: testing methodology, why sequential IDs make exploitation easier, and how to enforce object-level authorization correctly."
 author = "FirewallSync Editorial"
+imageAlt = "Computer screen displaying web code"
+imageCredit = "Photo by [Mohammad Rahmani](https://unsplash.com/photos/oXlXu2qukGE) on Unsplash"
 +++
 
 An insecure direct object reference happens when an application uses a value the user can see or guess — an order number, a document ID, a user ID in a URL — to look up a resource, without separately checking whether the requesting user is actually authorized to access that specific resource. It's conceptually simple, which is exactly why it's easy to miss: the request doesn't fail, doesn't throw an error, and doesn't look different from a legitimate one. It just returns data belonging to someone else.

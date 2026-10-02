@@ -6,6 +6,8 @@ categories = ["privacy-risk"]
 summary = "Canceling a SaaS subscription stops the billing. It doesn't automatically revoke the API keys, OAuth grants, and webhook credentials that tool accumulated while it was in active use."
 description = "How to properly offboard a SaaS application: revoking API keys, OAuth grants, and webhook credentials that outlive the subscription itself if nobody explicitly removes them."
 author = "FirewallSync Editorial"
+imageAlt = "Three silver keys"
+imageCredit = "Photo by [Tierra Mallorca](https://unsplash.com/photos/y5N2HDwagVw) on Unsplash"
 +++
 
 Canceling a SaaS subscription is a billing event. It's not, by default, a security event — the API keys issued to that tool, the OAuth grants it received, and any webhook credentials or integration tokens configured for it typically continue to exist and function independent of whether anyone is still paying for or actively using the underlying service, unless someone explicitly goes through the process of revoking each one.

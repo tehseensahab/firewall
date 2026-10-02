@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Image scanning in CI catches known CVEs in base layers, but most pipelines still ship vulnerable configs and secrets that scanners aren't tuned to see."
 description = "Container image scanning in CI catches CVEs but misses config drift and runtime secrets. Here's what to add to close the gap."
 author = "FirewallSync Editorial"
+imageAlt = "Stacked orange shipping containers against a blue sky"
+imageCredit = "Photo by [Aron Yigin](https://unsplash.com/photos/sNY6B9NsPP8) on Unsplash"
 +++
 
 Most teams that added container scanning to CI did it for one reason: catch known CVEs before a vulnerable base image ships to production. That part works well now — scanners are mature and fast. What they consistently miss is everything that isn't a CVE: misconfigurations, embedded secrets, and drift between what was scanned and what actually runs.

@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Both can find the same categories of web vulnerabilities. The real difference is workflow: one is built around a commercial tester's manual process, the other around free, scriptable automation."
 description = "Burp Suite vs OWASP ZAP compared: manual testing workflow versus automation-first design, licensing cost, and which fits a small team's actual testing needs."
 author = "Tehseen Arbab"
+imageAlt = "Monitor showing program code"
+imageCredit = "Photo by [Ilya Pavlov](https://unsplash.com/photos/OqtafYT5kTw) on Unsplash"
 +++
 
 Burp Suite and OWASP ZAP can both find the same broad categories of web application vulnerabilities — injection flaws, broken authentication, misconfigurations, and the rest of the usual web app security testing surface. The meaningful difference between them isn't detection capability so much as workflow: Burp Suite is built primarily around a skilled manual tester's interactive process, while ZAP is built with automation and free accessibility as first-class design goals from the start.

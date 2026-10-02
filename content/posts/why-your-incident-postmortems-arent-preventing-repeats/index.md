@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "Blameless postmortems became standard practice for good reasons, but most teams stopped halfway through adopting them — and it shows in the repeat incidents."
 description = "Why blameless postmortems often fail to prevent repeat incidents, and how to make action items stick so the same failure does not happen twice."
 author = "FirewallSync Editorial"
+imageAlt = "People taking notes around a table during a meeting"
+imageCredit = "Photo by [Dylan Gillis](https://unsplash.com/photos/KdeqA3aTnBY) on Unsplash"
 +++
 
 Blameless postmortems are now the default at most engineering orgs, which is progress. But a document being blameless doesn't automatically make it useful. The most common failure mode isn't blame creeping back in — it's that the postmortem produces a list of action items that never get prioritized against feature work, so the same root cause resurfaces in six months wearing a different symptom.

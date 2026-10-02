@@ -1,0 +1,73 @@
+least-privilege-access-controls-that-dont-slow-teams-down	1685886069739-c1b96bba7953	5Dp7XJxILTk	Sets of keys hanging on a hook	Samantha Lam
+why-your-incident-postmortems-arent-preventing-repeats	1517048676732-d65bc937f952	KdeqA3aTnBY	People taking notes around a table during a meeting	Dylan Gillis
+the-api-key-mistakes-that-keep-making-breach-reports	1555066931-4365d14bab8c	f77Bh3inUpE	Laptop displaying program code	Arnold Francisca
+mfa-fatigue-attacks-what-actually-stops-them	1667453466805-75bbf36e8707	Uw_8vSroCSc	Person holding a smartphone	Onur Binay
+alert-fatigue-is-a-security-metric-not-a-morale-problem	1526628953301-3e589a6a8b74	qwtCeJ5cLYs	Monitoring screen showing live metrics	Stephen Dawson
+the-tabletop-exercise-gap-testing-incident-response-for-real	1557804506-669a67965ba0	wD1LRb9OeEo	Team with laptops watching a colleague at a whiteboard	Austin Distel
+container-image-scanning-what-ci-pipelines-still-miss	1605732562742-3023a888e56e	sNY6B9NsPP8	Stacked orange shipping containers against a blue sky	Aron Yigin
+dependency-audits-without-slowing-down-releases	1542831371-29b0f74f9713	4hbJ-eymZ1o	Lines of code on a dark screen	Florian Olivo
+logging-for-incidents-not-for-dashboards	1686061594225-3e92c0cd51b0	bMWHu8wU1Vk	Computer screen filled with data	1981 Digital
+the-vulnerability-backlog-that-never-shrinks	1507925921958-8a62f3d1a50d	-1_RZL8BGBM	Sticky notes arranged on a wall	Kelly Sikkema
+what-is-the-cia-triad-and-why-it-still-shapes-security-decisions	1614064641938-3bbee52942c7	mT7lXZPjk7U	Red padlock on a black computer keyboard	FlyD
+symmetric-vs-asymmetric-encryption-when-to-use-each	1609587415882-97552f39c6c2	_sLxcfdsqLQ	Skeleton keys on a wooden table	Nerene Grobler
+security-champions-programs-that-dont-fizzle-out	1522071820081-009f0129c71c	QckxruozjRg	Group of colleagues working together at a laptop	Annie Spratt
+cloud-misconfiguration-checklists-dont-work-heres-what-does	1484480974693-6ca0a78fb36b	RLw-UC03Gwc	Person writing a list in a notebook	Glenn Carstens-Peters
+what-is-a-zero-day-vulnerability-and-how-should-you-actually-respond-to-one	1618060932014-4deda4932554	zAhAUSdRLJ8	Open padlock surrounded by scattered keyboard keys	FlyD
+encryption-at-rest-vs-encryption-in-transit-what-each-actually-protects-against	1531492746076-161ca9bcad58	wYD_wfifJVs	Internal hard disk drive	Vincent Botta
+vetting-third-party-saas-tools-before-they-touch-your-data	1516382799247-87df95d790b7	d9ILr-dbEdg	Magnifying glass next to a laptop	Agence Olloweb
+how-to-detect-and-rotate-leaked-api-keys-before-attackers-use-them	1516259762381-22954d7d3ad2	cvBBO4PzWPg	Colorful JavaScript code on a dark screen	Markus Spiske
+what-gdpr-actually-requires-a-plain-english-breakdown-for-engineering-teams	1595666944516-bbb485958fb5	JFk0dVyvdvw	Sign reading privacy please	Jason Dent
+passkeys-vs-passwords-what-actually-changes-for-security-teams	1584433144859-1fc3ab64a957	ah-HeguOe9k	Smartphone showing a security lock icon on a desk	Dan Nelson
+data-minimization-the-privacy-principle-most-teams-skip	1640158615573-cd28feb1bf4e	fyeOxvYvIyY	The word DATA stenciled in dots on glass	Claudio Schwarz
+how-to-secure-oauth-tokens-in-production	1607799279861-4dd421887fb3	8qEB0fTe9Vw	Laptop screen displaying colorful code	Mohammad Rahmani
+what-is-pii-and-why-classification-is-harder-than-it-sounds	1542903660-eedba2cda473	hvSr_CVecVI	Close-up of code on a computer screen	Markus Spiske
+1password-vs-bitwarden-vs-vaultwarden-choosing-a-password-manager-for-a-small-team	1633265486064-086b219458ec	FnA5pAzqhMM	Golden padlock sitting on a keyboard	Towfiqu barbhuiya
+what-is-token-theft-and-why-mfa-doesnt-always-stop-it	1614064548237-096f735f344f	C5pXRFEjq3w	Padlock on a laptop with light trails	FlyD
+aws-iam-least-privilege-a-practical-guide-to-finding-excess-permissions	1558494949-ef010cbdcc31	M5tzZtFCOfs	Network cabling in a data center	Taylor Vick
+open-source-vs-commercial-siem-what-actually-changes-at-small-scale	1551288049-bebda4e38f71	JKUTrJ4vK00	Performance analytics graphs on a laptop screen	Luke Chesser
+burp-suite-vs-owasp-zap-which-web-app-scanner-fits-your-workflow	1461749280684-dccba630e2f6	OqtafYT5kTw	Monitor showing program code	Ilya Pavlov
+how-to-find-overprivileged-aws-iam-users-and-roles	1506399558188-acca6f8cbf41	klWUhr-wPJ8	Rows of server racks in a data center	imgix
+api-authentication-api-keys-vs-oauth-vs-jwt	1564767609342-620cb19b2357	jJnZg7vBfMs	Keys held in a hand	Everyday basics
+how-to-secure-a-public-rest-api-a-production-checklist	1515879218367-8466d910aaa4	ieic5Tq8YMk	Computer screen with code	Chris Ried
+the-most-common-api-security-misconfigurations-and-how-to-fix-them	1518773553398-650c184e0bb3	u2Ru4QBXA5Q	Monitor displaying program code	Pankaj Patel
+how-api-rate-limiting-actually-works-and-where-it-fails	1594915440248-1e419eba6611	eVWWr6nmDf8	Fiber optic cables connected to a network switch	Kirill Sh
+broken-access-control-real-world-examples-and-how-to-prevent-it	1609770231080-e321deccc34c	0juktkOTkpU	Metal key in a keyhole	Jozsef Hocza
+idor-vulnerabilities-how-to-find-and-fix-insecure-direct-object-references	1607706189992-eae578626c86	oXlXu2qukGE	Computer screen displaying web code	Mohammad Rahmani
+jwt-security-9-mistakes-that-can-turn-tokens-into-an-attack-path	1619410283995-43d9134e7656	mZnx9429i94	Code editor displaying source code	Juanjo Jaramillo
+how-to-secure-webhooks-against-replay-attacks-and-forged-requests	1544197150-b99a580bb7a8	40XgDxBfYXM	Blue network cables plugged into a patch panel	Jordan Harrison
+webhook-security-hmac-signatures-timestamps-and-replay-protection	1627398242454-45a1465c2479	g5jpH62pwes	JavaScript code with syntax highlighting	Gabriel Heinzer
+software-supply-chain-attacks-where-modern-build-pipelines-break	1493946740644-2d8a1f1a6aff	tjX_sniNzgQ	Rows of stacked intermodal shipping containers	frank mckenna
+dependency-confusion-how-package-managers-can-become-an-attack-path	1494961104209-3c223057bd26	uBe2mknURG4	Stack of cargo containers	Guillaume Bolduc
+how-to-secure-github-actions-permissions-secrets-and-oidc	1587620962725-abab7fe55159	vpOeXr5wmR4	Laptop on a desk showing code	James Harrison
+github-actions-oidc-stop-storing-cloud-credentials-in-cicd	1534972195531-d756b9bfa9f2	LJ9KY8pIH3E	Two monitors displaying code	Fotis Fotopoulos
+cloud-iam-vs-network-security-why-identity-has-become-the-new-perimeter	1691435828932-911a7801adfb	dyUp7WPu5q4	Close-up of network equipment with connected cables	Albert Stoynov
+how-to-audit-unused-cloud-accounts-roles-and-service-identities	1680992046626-418f7e910589	OnI_TNcIv9U	Rack of equipment in a dark server room	Tyler
+non-human-identities-the-security-problem-behind-service-accounts-and-ai-agents	1620712943543-bcc4688e7485	zwd435-ewb4	Small robot standing on a table	Andrea De Santis
+what-is-workload-identity-and-why-should-you-stop-using-static-cloud-keys	1680992044138-ce4864c2b962	vSprjjDbu60	Close-up of a server in a server room	Tyler
+prompt-injection-explained-how-attackers-manipulate-ai-applications	1677442135703-1787eea5ce01	_0iV9LmPDn0	Circuit board with a brain motif	Steve A Johnson
+how-to-defend-llm-applications-against-prompt-injection	1697577418970-95d99b5a55cf	eGGFZ5X2LnA	Computer chip on a circuit board	Igor Omilaev
+indirect-prompt-injection-the-ai-security-problem-hiding-in-your-data	1677691820099-a6e8040aa077	fvxNerA8uk0	Close-up of a chat interface on a computer screen	Emiliano Vittoriosi
+llm-data-leakage-how-ai-applications-accidentally-expose-sensitive-information	1716637644831-e046c73be197	bV_P23FXxhI	Phone photographing a screen showing an AI-generated face	Aidin Geranrekab
+ai-agent-security-why-giving-an-agent-tools-changes-the-threat-model	1680783954745-3249be59e527	X9Cemmq4YjM	Robot and human hands reaching toward each other	Cash Macanaya
+excessive-agency-in-ai-agents-how-too-much-permission-becomes-a-security-risk	1737644467636-6b0053476bb2	CjWsslYVnPI	White robot against a black background	Numan Ali
+mcp-security-what-developers-need-to-secure-before-connecting-ai-to-tools	1739036868260-c26b292cd85d	IsYT5rUuVcs	Processor chip on a dark circuit board	Igor Omilaev
+mcp-tool-poisoning-how-malicious-instructions-can-hide-inside-trusted-tools	1744640326166-433469d102f2	w69Z8K-HGQU	Glowing chip on a circuit board	Immo Wegmann
+mcp-authentication-and-authorization-what-a-secure-deployment-should-check	1768839722988-91767bb82b10	cX8kNl8X0Ys	Padlock and keys resting on a computer keyboard	Sasun Bughdaryan
+how-to-secure-mcp-servers-in-production	1762163516269-3c143e04175c	VHmBX7FnXw0	Server rack with green status lights	Domaintechnik
+shadow-ai-how-employees-accidentally-create-security-gaps-with-ai-tools	1762330465857-07e4c81c0dfa	CaRba5ZXJTQ	Person typing to an AI chatbot on a smartphone	Zulfugar Karimov
+how-to-build-an-ai-security-policy-without-blocking-developers	1573164574572-cb89e39749b4	faEfWCdOKIg	Colleagues meeting around a table with laptops	Christina @ wocintechchat.com
+phishing-resistant-mfa-passkeys-vs-fido2-security-keys	1654588831193-0285dab84d5a	2T4l02ZYj-k	Padlock on top of a computer keyboard	Sasun Bughdaryan
+why-sms-mfa-is-being-replaced-and-what-to-use-instead	1603899122634-f086ca5f5ddd	DoWZMPZ-M9s	Smartphone lying on a yellow surface	Franck
+how-session-hijacking-works-even-after-mfa	1548092372-0d1bd40894a3	iIJrUoeRoCQ	Close-up of a lit laptop screen	Philipp Katzenberger
+how-to-detect-stolen-session-cookies-in-your-environment	1560472354-b33ff0c44a43	shr_Xn8S8QU	Monitor showing a site analytics view	Stephen Phillips - Hostreviews.co.uk
+saas-security-how-to-audit-oauth-apps-connected-to-your-company	1460925895917-afdab827c52f	hpjSkU2UYSU	Laptop showing a dashboard on a glass table	Carlos Muza
+oauth-app-risk-how-one-overprivileged-integration-can-expose-your-data	1590065707046-4fde65275b2e	AvSFPw5Tp68	Person using a laptop at a white table	Dan Nelson
+third-party-saas-security-checklist-for-security-teams	1748609422318-7301636fb625	50comlI_39U	Hand writing in a notebook with checkboxes	Jakub Żerdzicki
+how-to-offboard-saas-applications-without-leaving-credentials-behind	1575908539614-ff89490f4a78	y5N2HDwagVw	Three silver keys	Tierra Mallorca
+ransomware-backups-why-having-backups-isnt-enough	1601737487795-dab272f52420	VYfxkePredI	Hard disk drive	Nick
+how-to-test-whether-your-backups-will-actually-survive-ransomware	1703756291643-df456ffc8079	NIpQvMn5RTk	Opened hard drive on a white surface	William Warby
+zero-trust-vs-vpn-what-changes-when-you-move-remote-access-to-ztna	1698668975271-2ba9a323be6b	c-lSQecD9oI	Server rack with network cables attached	Yuriy Vertikov
+how-to-implement-zero-trust-without-rebuilding-your-network	1750711731797-25c3f2551ff8	vE5AKQRUs7c	Network switch with ethernet cables connected	User_Pascal
+security-logging-what-you-actually-need-to-record-during-an-incident	1516383274235-5f42d6c6426d	qfp4-Ud6Fyg	Close-up of a graph on a computer screen	Agence Olloweb
+how-to-build-an-incident-response-playbook-for-a-credential-leak	1542744173-8e7e53415bb0	gMsnXqILjp4	Presenter standing in front of a team with laptops	Campaign Creators
+the-2026-security-hardening-checklist-for-a-small-engineering-team	1754548930574-6a995e5eb5a7	yKnIbJV0RbY	Hand ticking off items on a checklist	Jakub Żerdzicki

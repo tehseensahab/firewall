@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "MCP solved a real integration problem — connecting AI applications to tools and data through a common interface — and in doing so created a new, concentrated attack surface at exactly that connection point."
 description = "MCP security fundamentals: server trust, tool poisoning, credential scope, and the confused deputy problem developers need to address before connecting AI to tools."
 author = "FirewallSync Editorial"
+imageAlt = "Processor chip on a dark circuit board"
+imageCredit = "Photo by [Igor Omilaev](https://unsplash.com/photos/IsYT5rUuVcs) on Unsplash"
 +++
 
 The Model Context Protocol (MCP) solved a real, practical problem: giving AI applications a common, standardized way to connect to external tools and data sources, rather than every integration being built as a one-off. That standardization is exactly why it also created a concentrated new attack surface — every MCP server a client connects to can shape what the model reads, act using whatever credentials it's been handed, and feed the model text that gets treated as trustworthy context. Securing an MCP integration means addressing several distinct problems, not one.

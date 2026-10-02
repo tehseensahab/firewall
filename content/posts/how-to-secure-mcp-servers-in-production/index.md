@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "Running an MCP server in production means running a piece of infrastructure that mediates between an AI model and real systems — it deserves the same operational rigor as any other production service handling credentials."
 description = "A production checklist for securing MCP servers: authentication, credential scoping, input validation, and monitoring for the specific attack patterns MCP introduces."
 author = "FirewallSync Editorial"
+imageAlt = "Server rack with green status lights"
+imageCredit = "Photo by [Domaintechnik](https://unsplash.com/photos/VHmBX7FnXw0) on Unsplash"
 +++
 
 An MCP server running in production is infrastructure mediating between an AI model and real systems — files, databases, APIs, sometimes shell access. It deserves the same operational security rigor as any other production service that handles credentials and executes actions on behalf of a client, plus a set of additional considerations specific to what it means for an AI model, rather than a conventional client, to be the thing calling it.

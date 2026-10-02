@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "Modern ransomware operators specifically target backup infrastructure before encrypting production data, precisely because they know backups are the thing standing between their ransom demand and a straightforward recovery."
 description = "Why simply having backups doesn't protect against modern ransomware — attackers specifically target backup infrastructure first, which is what the 3-2-1-1-0 rule exists to defeat."
 author = "FirewallSync Editorial"
+imageAlt = "Hard disk drive"
+imageCredit = "Photo by [Nick](https://unsplash.com/photos/VYfxkePredI) on Unsplash"
 +++
 
 "We have backups" used to be a reasonably confident answer to ransomware risk. It no longer is, because modern ransomware operators have adapted specifically around this defense — deliberately targeting and destroying or encrypting backup infrastructure before encrypting production systems, precisely because they know backups are the thing standing between their ransom demand and an organization simply restoring and moving on without paying.

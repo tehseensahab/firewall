@@ -6,6 +6,8 @@ categories = ["identity-access"]
 summary = "MFA verifies who's logging in, not who's still using the session afterward. Token theft attacks steal what MFA leaves behind: the authenticated session itself."
 description = "Token theft explained: how adversary-in-the-middle attacks steal session cookies after MFA succeeds, and what detection actually needs to catch it."
 author = "FirewallSync Editorial"
+imageAlt = "Padlock on a laptop with light trails"
+imageCredit = "Photo by [FlyD](https://unsplash.com/photos/C5pXRFEjq3w) on Unsplash"
 +++
 
 Multi-factor authentication verifies identity at the moment of login. It says nothing about what happens to the session afterward — and that gap is exactly what token theft attacks exploit. A user can enter their password, complete their MFA prompt correctly, and still hand an attacker full account access, because the thing worth stealing isn't the password or the MFA code anymore. It's the session token issued after both succeed.

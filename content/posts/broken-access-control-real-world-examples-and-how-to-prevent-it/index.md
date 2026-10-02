@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "Broken access control has topped the OWASP Top 10 since 2021 for a reason: it's not one vulnerability type, it's an entire category of ways authorization checks get skipped."
 description = "Broken access control tops the OWASP Top 10. Real-world patterns — IDOR, missing function-level checks, privilege escalation — and how to prevent them."
 author = "FirewallSync Editorial"
+imageAlt = "Metal key in a keyhole"
+imageCredit = "Photo by [Jozsef Hocza](https://unsplash.com/photos/0juktkOTkpU) on Unsplash"
 +++
 
 Broken access control has held the top position in the OWASP Top 10 since the 2021 edition, and it's the category with the most reported occurrences in OWASP's own contributed testing data — over 318,000 recorded instances across the applications analyzed. That volume isn't because it's one specific bug pattern; it's because "broken access control" covers several distinct ways authorization checks fail, each common enough on its own to matter.

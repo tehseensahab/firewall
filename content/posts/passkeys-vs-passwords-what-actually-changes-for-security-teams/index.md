@@ -6,6 +6,8 @@ categories = ["identity-access"]
 summary = "Passkeys aren't just a more convenient password. They remove an entire attack category at the protocol level, but only if recovery and enrollment are governed correctly."
 description = "Passkeys vs passwords: how FIDO2's origin binding removes phishing as an attack path, and where recovery and enrollment gaps can undo that protection."
 author = "FirewallSync Editorial"
+imageAlt = "Smartphone showing a security lock icon on a desk"
+imageCredit = "Photo by [Dan Nelson](https://unsplash.com/photos/ah-HeguOe9k) on Unsplash"
 +++
 
 Passwords and passkeys get compared as if they're two options on the same axis, usually framed as "convenience versus security." That framing undersells what actually changes. A password is a shared secret: both the user and the server know a value derived from it, and anything either party can be tricked into revealing can be replayed. A passkey, built on the FIDO2/WebAuthn standard, removes the shared secret entirely and replaces it with a public-private key pair, where the private key never leaves the user's device.

@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "A webhook endpoint is a public URL that triggers real actions when it receives a POST request. That combination is exactly what makes it worth securing deliberately, not by default configuration."
 description = "How to secure webhook endpoints against forged requests and replay attacks: signature verification, idempotency, IP allowlisting, and what each control actually stops."
 author = "FirewallSync Editorial"
+imageAlt = "Blue network cables plugged into a patch panel"
+imageCredit = "Photo by [Jordan Harrison](https://unsplash.com/photos/40XgDxBfYXM) on Unsplash"
 +++
 
 A webhook endpoint is, structurally, a public URL that triggers a real action — fulfilling an order, provisioning access, updating a record — whenever it receives a POST request shaped correctly. That combination is exactly what makes it worth securing deliberately: unlike most of your API, a webhook receiver is designed to accept unsolicited, unauthenticated-by-default requests from the outside, because it doesn't get to choose when the sending service decides to call it.

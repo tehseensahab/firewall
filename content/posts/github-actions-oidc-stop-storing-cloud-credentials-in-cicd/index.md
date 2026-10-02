@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "A static cloud credential stored as a CI secret is valid until someone notices it's wrong. An OIDC-issued credential is valid for one workflow run and expires whether anyone notices or not."
 description = "How GitHub Actions OIDC works technically, how to configure the AWS trust relationship, and why short-lived tokens change the actual risk profile of CI/CD credentials."
 author = "FirewallSync Editorial"
+imageAlt = "Two monitors displaying code"
+imageCredit = "Photo by [Fotis Fotopoulos](https://unsplash.com/photos/LJ9KY8pIH3E) on Unsplash"
 +++
 
 A static cloud credential — an AWS access key, a GCP service account key — stored as a GitHub Actions secret has one fundamental property that makes it a standing risk: it remains valid until someone actively notices it shouldn't be and rotates it. OpenID Connect (OIDC) support in GitHub Actions removes that credential from the equation entirely, replacing it with a token that's short-lived by design and requires no manual rotation discipline to stay safe.

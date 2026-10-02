@@ -6,6 +6,8 @@ categories = ["fundamentals"]
 summary = "Confidentiality, integrity, and availability are taught as a checklist. In practice they're better understood as three competing priorities that most security decisions are actually trading off against each other."
 description = "The CIA triad explained: what confidentiality, integrity, and availability actually mean in practice, and why most real security decisions trade them off against each other."
 author = "Tehseen Arbab"
+imageAlt = "Red padlock on a black computer keyboard"
+imageCredit = "Photo by [FlyD](https://unsplash.com/photos/mT7lXZPjk7U) on Unsplash"
 +++
 
 Confidentiality, integrity, and availability get introduced early in most security education as a simple checklist — three properties a secure system should have. Treated that way, the CIA triad feels almost too obvious to be useful. It becomes genuinely useful once you notice that these three properties routinely compete with each other, and that most real security decisions are actually judgment calls about which one to prioritize given a specific constraint, not a checklist to satisfy simultaneously.

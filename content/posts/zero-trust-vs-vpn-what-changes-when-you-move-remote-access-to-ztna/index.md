@@ -6,6 +6,8 @@ categories = ["cloud-security"]
 summary = "A VPN authenticates once and then trusts the device on the network broadly. ZTNA verifies every request individually and exposes only the specific application being accessed — a fundamentally different failure mode when a credential is compromised."
 description = "Zero trust network access vs VPN: what actually changes in architecture, attack surface, and blast radius when remote access moves from network-level trust to per-request verification."
 author = "FirewallSync Editorial"
+imageAlt = "Server rack with network cables attached"
+imageCredit = "Photo by [Yuriy Vertikov](https://unsplash.com/photos/c-lSQecD9oI) on Unsplash"
 +++
 
 A traditional VPN authenticates a user once, at connection time, and from that point grants access to a broad segment of the internal network — the user's device is now effectively "inside," trusted at the network level for the duration of the session. Zero Trust Network Access (ZTNA) replaces this with per-request verification: every access attempt to a specific application is independently evaluated, based on identity, device posture, and context, with users never placed on the broader network at all. This isn't a minor configuration difference — it changes what a compromised credential or device can actually reach.

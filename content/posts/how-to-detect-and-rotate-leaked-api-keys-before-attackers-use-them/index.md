@@ -6,6 +6,8 @@ categories = ["appsec"]
 summary = "A leaked API key isn't automatically compromised, but you often can't prove it wasn't used. Here's how to find exposure fast and rotate without breaking production."
 description = "How to detect leaked API keys across GitHub, logs, and client bundles, and rotate them safely without breaking the services that depend on them."
 author = "FirewallSync Editorial"
+imageAlt = "Colorful JavaScript code on a dark screen"
+imageCredit = "Photo by [Markus Spiske](https://unsplash.com/photos/cvBBO4PzWPg) on Unsplash"
 +++
 
 An API key committed to a public repository is not automatically compromised. The problem is that you usually cannot prove who copied it, when, or what they did with it. Scanners and bots index public GitHub commits within minutes of a push, so the window between "leaked" and "found by someone else" is often shorter than the window between "leaked" and "found by you."

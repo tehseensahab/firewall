@@ -6,6 +6,8 @@ categories = ["ai-security"]
 summary = "Shadow AI isn't employees deliberately bypassing security. It's people solving real work problems with the tools available to them, without a sanctioned option existing yet — and the data flows that follow are usually invisible until something goes wrong."
 description = "Shadow AI explained: how employees pasting company data into unapproved AI tools creates real exposure, and why blocking access doesn't actually solve it."
 author = "FirewallSync Editorial"
+imageAlt = "Person typing to an AI chatbot on a smartphone"
+imageCredit = "Photo by [Zulfugar Karimov](https://unsplash.com/photos/CaRba5ZXJTQ) on Unsplash"
 +++
 
 Shadow AI describes employees using AI tools — chatbots, browser extensions, coding assistants, AI-powered SaaS features — that haven't been reviewed, approved, or even necessarily noticed by their organization's security team. It's the AI-era version of shadow IT, and it follows the same underlying pattern: it isn't driven by employees deliberately bypassing security controls, it's driven by people trying to solve a real work problem with whatever tool is available and effective, in the absence of a sanctioned option that does the same job.

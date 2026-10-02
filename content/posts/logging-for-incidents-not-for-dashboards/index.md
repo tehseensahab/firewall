@@ -6,6 +6,8 @@ categories = ["security-operations"]
 summary = "Most logging strategies optimize for building dashboards, then fail the one test that matters: can you reconstruct what happened during an actual incident?"
 description = "Security logging best practices for incident response differ from logging for dashboards. What to capture so you can actually reconstruct an incident."
 author = "FirewallSync Editorial"
+imageAlt = "Computer screen filled with data"
+imageCredit = "Photo by [1981 Digital](https://unsplash.com/photos/bMWHu8wU1Vk) on Unsplash"
 +++
 
 Most logging strategies get built to answer "what does normal look like" — the questions a dashboard needs. Incident response needs the opposite: enough detail to reconstruct exactly what an attacker did, in order, across systems that don't share a clock or a request ID. Those are different design goals, and optimizing for one quietly starves the other.

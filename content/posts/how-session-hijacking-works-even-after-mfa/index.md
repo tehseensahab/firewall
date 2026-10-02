@@ -6,6 +6,8 @@ categories = ["identity-access"]
 summary = "MFA protects the login. It says nothing about the session token issued afterward — and several distinct attack techniques exist specifically to steal that token instead of touching the login at all."
 description = "How session hijacking actually works after MFA succeeds — infostealer malware, XSS-based cookie theft, and AiTM relay — and why each bypasses MFA differently."
 author = "FirewallSync Editorial"
+imageAlt = "Close-up of a lit laptop screen"
+imageCredit = "Photo by [Philipp Katzenberger](https://unsplash.com/photos/iIJrUoeRoCQ) on Unsplash"
 +++
 
 Multi-factor authentication secures a single event: the login. Once that login succeeds, the application issues a session token — typically a cookie — and for as long as that token remains valid, it represents the authenticated session without requiring MFA to be checked again. Several distinct attack techniques target exactly this token rather than the login itself, and each bypasses MFA in a genuinely different way, worth understanding separately rather than as one undifferentiated "session hijacking" category.
