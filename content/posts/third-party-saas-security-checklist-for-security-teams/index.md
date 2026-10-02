@@ -6,7 +6,7 @@ categories = ["privacy-risk"]
 summary = "Most SaaS vendor reviews stop at a security questionnaire filled out by sales. A checklist that actually reduces risk needs to look past the questionnaire, at what the integration can actually touch."
 description = "A practical third-party SaaS security checklist covering vendor vetting, OAuth scope review, data handling, and the ongoing monitoring most reviews skip after launch."
 author = "FirewallSync Editorial"
-imageAlt = "Notepad with a pen resting on top"
+imageAlt = "Notepad with a to-do checklist and a pen"
 imageCredit = "Photo by [Thomas Bormans](https://unsplash.com/photos/pcpsVsyFp_s) on Unsplash"
 +++
 
