@@ -1,0 +1,13 @@
+{{- /* Category grid: used by "Browse by topic" on home and by the Topics page */ -}}
+<div class="post-grid cat-grid">
+  {{- range (site.GetPage "/categories").Pages.ByWeight }}
+  {{- $n := len .Pages }}
+  {{- if $n }}
+  <a class="card cat-card" href="{{ .RelPermalink }}">
+    <h3>{{ .LinkTitle }}</h3>
+    <p class="excerpt">{{ .Description | default (printf "Everything we've published on %s." (.LinkTitle | lower)) }}</p>
+    <p class="meta">{{ $n }} {{ if eq $n 1 }}article{{ else }}articles{{ end }}</p>
+  </a>
+  {{- end }}
+  {{- end }}
+</div>

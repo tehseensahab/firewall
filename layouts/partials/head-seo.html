@@ -1,0 +1,58 @@
+{{- $desc := .Description | default .Params.summary | default site.Params.description -}}
+{{- $home := site.Home.Permalink -}}
+{{- $iso := "2006-01-02T15:04:05Z07:00" -}}
+{{- $isArticle := and (eq .Type "posts") .IsPage -}}
+{{- $image := absURL site.Params.ogDefault -}}
+{{- if $isArticle }}{{ with (partial "cover.html" .) }}{{ if .has }}{{ $image = .og.Permalink }}{{ end }}{{ end }}{{ end -}}
+<title>{{ if .IsHome }}{{ site.Title }} — {{ site.Params.tagline }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $image }}">
+<meta name="author" content="{{ if $isArticle }}{{ .Params.author | default site.Params.author }}{{ else }}{{ site.Params.author }}{{ end }}">
+{{- if $isArticle }}
+<meta property="article:published_time" content="{{ .Date.Format $iso }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format $iso }}">
+{{- with .GetTerms "categories" }}
+<meta property="article:section" content="{{ (index . 0).LinkTitle }}">
+{{- end }}
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+{{- range .AlternativeOutputFormats }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+{{- $publisher := dict "@type" "Organization" "@id" (printf "%s#organization" $home) "name" site.Title "url" $home "description" site.Params.description "logo" (absURL "favicon.svg") "publishingPrinciples" (absURL "editorial-policy/") "correctionsPolicy" (absURL "corrections/") }}
+{{- if .IsHome }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice (dict "@type" "WebSite" "name" site.Title "url" $home "description" site.Params.description "publisher" (dict "@id" (printf "%s#organization" $home))) $publisher) | jsonify | safeJS }}</script>
+{{- end }}
+{{- if $isArticle }}
+{{- $cat := false }}{{ with .GetTerms "categories" }}{{ $cat = index . 0 }}{{ end }}
+{{- $author := dict "@type" "Organization" "name" site.Params.author "url" (absURL "about/") }}
+{{- with .Params.author }}{{ if ne . site.Params.author }}{{ $author = dict "@type" "Person" "name" . }}{{ end }}{{ end }}
+{{- $article := dict "@type" "Article" "headline" .Title "description" $desc "url" .Permalink "mainEntityOfPage" .Permalink "image" (slice $image) "datePublished" (.Date.Format $iso) "dateModified" (.Lastmod.Format $iso) "author" $author "publisher" $publisher "inLanguage" "en-US" "isAccessibleForFree" true "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" $home) }}
+{{- with .Params.tags }}{{ $article = merge $article (dict "keywords" (delimit . ", ")) }}{{ end }}
+{{- with $cat }}{{ $article = merge $article (dict "articleSection" .LinkTitle) }}{{ end }}
+{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" $home) }}
+{{- with $cat }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .LinkTitle "item" .Permalink) }}{{ end }}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
+{{- $graph := slice $article (dict "@type" "BreadcrumbList" "itemListElement" $crumbs) }}
+{{- with .Params.faq }}
+{{- $qs := slice }}
+{{- range . }}{{ $qs = $qs | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+{{- $graph = $graph | append (dict "@type" "FAQPage" "mainEntity" $qs) }}
+{{- end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
+{{- end }}

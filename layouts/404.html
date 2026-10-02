@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="wrap page-head">
+  <p class="eyebrow">404</p>
+  <h1>Page not found</h1>
+  <p class="lead">That page doesn't exist, or it moved. Try one of these instead.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/">Home</a>
+    <a class="btn btn-secondary" href="/categories/">Browse topics</a>
+  </div>
+</div>
+<section class="section wrap">
+  <div class="section-head"><h2>Latest</h2></div>
+  {{ partial "card-grid.html" (first 3 (where site.RegularPages "Section" "posts").ByDate.Reverse) }}
+</section>
+{{ end }}

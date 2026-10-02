@@ -1,0 +1,31 @@
+# {{ site.Title }} — full text
+
+> {{ site.Params.description }}
+> Generated {{ now.Format "2006-01-02" }}. Source: {{ site.Home.Permalink }}. See {{ "for-ai/" | absURL }} for citation guidance.
+{{ range (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+{{- $cat := "" }}{{ with .GetTerms "categories" }}{{ $cat = (index . 0).LinkTitle }}{{ end }}
+
+---
+
+# {{ .Title }}
+
+- URL: {{ .Permalink }}
+- Topic: {{ $cat }}
+- Published: {{ .Date.Format "2006-01-02" }}
+- Author: {{ .Params.author | default site.Params.author }}
+
+> {{ .Params.summary | default .Description }}
+{{ with .Params.takeaways }}
+## Key takeaways
+
+{{ range . }}- {{ . }}
+{{ end }}{{ end }}
+{{ .RawContent | chomp }}
+{{ with .Params.faq }}
+## Frequently asked questions
+{{ range . }}
+### {{ .q }}
+
+{{ .a }}
+{{ end }}{{ end }}
+{{- end }}

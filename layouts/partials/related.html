@@ -1,0 +1,11 @@
+{{- /* Up to 3 newest posts from the same category, excluding the current one. Context: page */ -}}
+{{- $cur := . -}}
+{{- with .GetTerms "categories" }}
+{{- $related := first 3 (where (index . 0).Pages.ByDate.Reverse "Permalink" "ne" $cur.Permalink) }}
+{{- if $related }}
+<section class="related">
+  <div class="section-head"><h2>More in {{ (index . 0).LinkTitle }}</h2><a href="{{ (index . 0).RelPermalink }}">All articles →</a></div>
+  {{ partial "card-grid.html" $related }}
+</section>
+{{- end }}
+{{- end }}

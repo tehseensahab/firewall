@@ -1,0 +1,16 @@
+{{- /* Identical post card used on home, category and tag pages. Context: page */ -}}
+{{- $cover := partial "cover.html" . -}}
+{{- $cat := false }}{{ with .GetTerms "categories" }}{{ $cat = index . 0 }}{{ end -}}
+<article class="card">
+  <a class="card-img-link" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{- if $cover.has }}
+    <img class="card-img" src="{{ $cover.webp.RelPermalink }}" width="1200" height="630" alt="" loading="lazy" decoding="async">
+    {{- else }}
+    {{ partial "placeholder.html" $cat }}
+    {{- end }}
+  </a>
+  {{ with $cat }}<a class="cat" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ else }}<span class="cat">&nbsp;</span>{{ end }}
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p class="excerpt">{{ .Params.summary | default .Description | default .Summary | plainify | truncate 150 }}</p>
+  <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time> · {{ .ReadingTime }} min read</p>
+</article>

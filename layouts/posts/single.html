@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $cover := partial "cover.html" . }}
+{{ $cat := false }}{{ with .GetTerms "categories" }}{{ $cat = index . 0 }}{{ end }}
+<article>
+  <header class="post-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / {{ with $cat }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ else }}<a href="/posts/">Articles</a>{{ end }}</nav>
+    <h1>{{ .Title }}</h1>
+    <p class="byline">
+      By <span rel="author">{{ .Params.author | default site.Params.author }}</span>
+      · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      {{- if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }} · Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "Jan 2, 2006" }}</time>{{ end }}
+      · {{ .ReadingTime }} min read
+    </p>
+    {{ with .Params.summary | default .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+  {{- if $cover.has }}
+  <figure class="post-cover">
+    <img src="{{ $cover.webp.RelPermalink }}" width="1200" height="630" alt="{{ $cover.alt }}" decoding="async" fetchpriority="high">
+    {{ with $cover.credit }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+  {{- end }}
+  <div class="post-body">
+    {{ with .Params.takeaways }}
+    <aside class="takeaways" aria-label="Key takeaways">
+      <h2>Key takeaways</h2>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    </aside>
+    {{ end }}
+    {{ .Content }}
+    {{ with .Params.faq }}
+    <section class="faq">
+      <h2>Frequently asked questions</h2>
+      {{ range . }}
+      <h3>{{ .q }}</h3>
+      <p>{{ .a }}</p>
+      {{ end }}
+    </section>
+    {{ end }}
+    {{ with .GetTerms "tags" }}
+    <p class="tag-row">{{ range . }}<a class="tag-chip small" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
+    {{ end }}
+  </div>
+  <div class="wrap">{{ partial "related.html" . }}</div>
+</article>
+{{ end }}

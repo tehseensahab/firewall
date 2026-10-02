@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="wrap page-head">
+  <h1>{{ .Title }}</h1>
+  <p class="lead">{{ .Description | default (printf "Browse articles by %s." .Data.Singular) }}</p>
+</div>
+<section class="section wrap">
+  {{- if eq .Data.Plural "categories" }}
+  {{ partial "category-grid.html" . }}
+  <div class="section-head tags-head"><h2>Tags</h2><a href="/tags/">All tags →</a></div>
+  {{- end }}
+  <div class="tag-cloud">
+    {{- range site.Taxonomies.tags.ByCount }}
+    <a class="tag-chip" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span class="tag-count">{{ .Count }}</span></a>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

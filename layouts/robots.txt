@@ -1,0 +1,13 @@
+# FirewallSync welcomes search engines and AI assistants.
+# Machine-readable versions: {{ "llms.txt" | absURL }}, {{ "llms-full.txt" | absURL }}, {{ "articles.json" | absURL }}
+# Citation guidance: {{ "for-ai/" | absURL }}
+
+User-agent: *
+Allow: /
+
+{{ range slice "GPTBot" "OAI-SearchBot" "ChatGPT-User" "ClaudeBot" "Claude-SearchBot" "Claude-User" "anthropic-ai" "PerplexityBot" "Perplexity-User" "Google-Extended" "Googlebot" "Bingbot" "Applebot" "Applebot-Extended" "Meta-ExternalAgent" "Meta-ExternalFetcher" "Amazonbot" "DuckAssistBot" "MistralAI-User" "cohere-ai" "CCBot" "YouBot" "Bytespider" -}}
+User-agent: {{ . }}
+Allow: /
+
+{{ end -}}
+Sitemap: {{ "sitemap.xml" | absURL }}

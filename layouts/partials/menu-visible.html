@@ -1,0 +1,8 @@
+{{- /* False for a menu entry that points at a category with no published articles yet. Context: menu entry */ -}}
+{{- $show := true -}}
+{{- if hasPrefix .URL "/categories/" -}}
+  {{- with site.GetPage (strings.TrimSuffix "/" .URL) -}}
+    {{- if and (eq .Kind "term") (not .Pages) }}{{ $show = false }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $show -}}

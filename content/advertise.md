@@ -1,5 +1,6 @@
 +++
 title = "Advertise / Guest Post"
+description = "How to inquire about a guest contribution placement on FirewallSync."
 +++
 
 FirewallSync accepts a limited number of guest contributions from writers and agencies in the security and IT space.

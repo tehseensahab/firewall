@@ -1,30 +1,11 @@
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-col">
-      <p class="footer-heading">FirewallSync</p>
-      <p class="footer-desc">Practical security writing for engineering teams.</p>
-    </div>
-    <div class="footer-col">
-      <p class="footer-heading">Topics</p>
-      {{ range first 6 .Site.Taxonomies.tags.ByCount }}
-      <a href="/tags/{{ .Name | urlize }}/">{{ .Name }}</a>
-      {{ end }}
-    </div>
-    <div class="footer-col">
-      <p class="footer-heading">Recent</p>
-      {{ range first 3 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ end }}
-    </div>
-    <div class="footer-col">
-      <p class="footer-heading">Site</p>
-      <a href="/write-for-us/">Write for Us</a>
-      <a href="/advertise/">Advertise</a>
-      <a href="/about/">About</a>
-      <a href="/index.xml">RSS</a>
-    </div>
-  </div>
   <div class="wrap">
-    <p class="copyright">&copy; {{ now.Year }} FirewallSync. Practical security writing for engineering teams.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      {{- range site.Menus.main }}{{ if partial "menu-visible.html" . }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}{{ end }}
+    </nav>
+    <nav class="footer-nav footer-legal" aria-label="Policies">
+      {{- range site.Menus.footer }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+    </nav>
+    <p class="footer-copy">© {{ now.Format "2006" }} {{ site.Title }}. {{ site.Params.description }}</p>
   </div>
 </footer>

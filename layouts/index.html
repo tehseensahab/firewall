@@ -1,44 +1,44 @@
 {{ define "main" }}
+{{ $posts := (where site.RegularPages "Section" "posts").ByDate.Reverse }}
 <section class="hero">
-  <h1>Security that ships, not slideware.</h1>
-  <p>{{ .Site.Params.tagline }}. Field notes on threat modeling, access control, and the boring fixes that actually stop incidents.</p>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">{{ site.Params.tagline }}</p>
+    <h1>Practical security for teams that ship fast</h1>
+    <p class="lead">Field notes on AI security, access control, APIs and incident response — the boring fixes that actually stop incidents, written for the engineers who implement them.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/categories/">Browse topics</a>
+      <a class="btn btn-secondary" href="/write-for-us/">Write for us</a>
+    </div>
+  </div>
 </section>
 
-{{ $posts := where .Site.RegularPages "Section" "posts" }}
-{{ $posts = $posts.ByDate.Reverse }}
-{{ $featured := index $posts 0 }}
-{{ $rest := after 1 $posts }}
-
-{{ with $featured }}
-<section class="featured">
-  <p class="eyebrow">Latest</p>
-  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-  <p class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read{{ with .Params.author }} · {{ . }}{{ end }}</p>
-  <p class="featured-summary">{{ .Summary }}</p>
-  {{ with .Params.tags }}
-  <p class="tag-row">{{ range . }}<a class="tag-chip small" href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</p>
-  {{ end }}
-  <a class="read-more" href="{{ .RelPermalink }}">Read the article →</a>
-</section>
-{{ end }}
-
-<section class="post-list">
-  <h2>More articles</h2>
-  {{ range first 10 $rest }}
-  <article class="post-card">
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p class="meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read{{ with .Params.author }} · {{ . }}{{ end }}</p>
-    <p>{{ .Summary }}</p>
-    {{ with .Params.tags }}
-    <p class="tag-row">{{ range . }}<a class="tag-chip small" href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</p>
-    {{ end }}
-  </article>
-  {{ end }}
+<section class="section wrap">
+  <div class="section-head"><h2>Latest</h2><a href="/posts/">All articles →</a></div>
+  {{ partial "card-grid.html" (first 9 $posts) }}
 </section>
 
-<section class="contribute-cta">
-  <h2>Got a postmortem or process worth sharing?</h2>
-  <p>We publish practical security writing from engineers and practitioners — no vendor pitches.</p>
-  <a class="read-more" href="/write-for-us/">Write for FirewallSync →</a>
+<section class="section wrap">
+  <div class="section-head"><h2>Browse by topic</h2><a href="/categories/">All topics →</a></div>
+  {{ partial "category-grid.html" . }}
+</section>
+
+<section class="section wrap">
+  <div class="section-head"><h2>How we write</h2><a href="/editorial-policy/">Editorial policy →</a></div>
+  <ol class="how-list">
+    <li><h3>Start from the real problem</h3><p>Every article opens with the failure teams actually hit, not a definition they already know.</p></li>
+    <li><h3>Give the fix, in order</h3><p>Rollout orders, checklists and trade-offs you can act on this sprint.</p></li>
+    <li><h3>No vendor pitches</h3><p>Tools are compared on what they change for your team, and sponsored content is always labeled.</p></li>
+    <li><h3>Corrected in the open</h3><p>When advice goes stale or we get something wrong, we fix it and say so on our <a href="/corrections/">corrections page</a>.</p></li>
+  </ol>
+</section>
+
+<section class="section wrap">
+  <div class="cta">
+    <div>
+      <h2>Got a postmortem or process worth sharing?</h2>
+      <p>We publish practical security writing from engineers and practitioners — no vendor pitches.</p>
+    </div>
+    <a class="btn btn-primary" href="/write-for-us/">Write for FirewallSync</a>
+  </div>
 </section>
 {{ end }}

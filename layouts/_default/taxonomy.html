@@ -1,9 +1,0 @@
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-<p class="page-content">Browse articles by {{ .Data.Singular }}.</p>
-<section class="tag-cloud">
-  {{ range .Data.Terms.ByCount }}
-  <a class="tag-chip" href="{{ $.Permalink }}{{ .Name | urlize }}/">{{ .Name }} <span class="tag-count">{{ .Count }}</span></a>
-  {{ end }}
-</section>
-{{ end }}

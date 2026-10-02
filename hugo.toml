@@ -1,11 +1,136 @@
 baseURL = "https://firewallsync.com/"
 languageCode = "en-us"
 title = "FirewallSync"
+enableRobotsTXT = true
+copyright = "FirewallSync"
+
+[pagination]
+  pagerSize = 12
 
 [params]
-  tagline = "Practical cybersecurity for teams that ship fast"
-  defaultAuthor = "FirewallSync Editorial"
+  description = "Practical cybersecurity writing for engineering teams that ship fast."
+  tagline = "Security that ships, not slideware."
+  author = "FirewallSync Editorial"
+  ogDefault = "/og-default.jpg"
 
 [taxonomies]
-  tag = "tags"
   category = "categories"
+  tag = "tags"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "AI Security"
+  url = "/categories/ai-security/"
+  weight = 20
+
+[[menu.main]]
+  name = "AppSec & APIs"
+  url = "/categories/appsec/"
+  weight = 30
+
+[[menu.main]]
+  name = "Identity"
+  url = "/categories/identity-access/"
+  weight = 40
+
+[[menu.main]]
+  name = "Cloud"
+  url = "/categories/cloud-security/"
+  weight = 50
+
+[[menu.main]]
+  name = "SecOps"
+  url = "/categories/security-operations/"
+  weight = 60
+
+[[menu.main]]
+  name = "All topics"
+  url = "/categories/"
+  weight = 70
+
+[[menu.main]]
+  name = "Write for Us"
+  url = "/write-for-us/"
+  weight = 80
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 90
+
+[[menu.footer]]
+  name = "Editorial policy"
+  url = "/editorial-policy/"
+  weight = 10
+
+[[menu.footer]]
+  name = "Corrections"
+  url = "/corrections/"
+  weight = 20
+
+[[menu.footer]]
+  name = "Disclaimer"
+  url = "/disclaimer/"
+  weight = 30
+
+[[menu.footer]]
+  name = "Advertise"
+  url = "/advertise/"
+  weight = 40
+
+[[menu.footer]]
+  name = "Privacy"
+  url = "/privacy/"
+  weight = 50
+
+[[menu.footer]]
+  name = "Terms"
+  url = "/terms/"
+  weight = 60
+
+[[menu.footer]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 70
+
+[[menu.footer]]
+  name = "For AI & developers"
+  url = "/for-ai/"
+  weight = 80
+
+[[menu.footer]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 90
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputFormats.LLMS]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.LLMSFull]
+  mediaType = "text/plain"
+  baseName = "llms-full"
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.Markdown]
+  mediaType = "text/markdown"
+  baseName = "index"
+  isPlainText = true
+
+[outputFormats.Articles]
+  mediaType = "application/json"
+  baseName = "articles"
+
+[outputs]
+  home = ["HTML", "RSS", "LLMS", "LLMSFull", "Articles"]
+  page = ["HTML", "Markdown"]

@@ -1,0 +1,35 @@
+# {{ site.Title }}
+
+> {{ site.Params.description }} Articles cover AI security, application and API security, identity and access, cloud security, security operations, and privacy and third-party risk. Each carries publication and update dates.
+
+How to use this site as a reference:
+- Each article has a plain-markdown version: add `index.md` to the article URL (listed below).
+- All articles with metadata, as JSON: {{ "articles.json" | absURL }}
+- Full text of every article in one file: {{ "llms-full.txt" | absURL }}
+- Rules for citing and reusing our work: {{ "for-ai/" | absURL }}
+- Sitemap: {{ "sitemap.xml" | absURL }}
+
+Security advice ages. Check the published and updated dates, and prefer the vendor documentation or standard an article relies on for anything you will act on.
+
+## Start here
+{{ range slice "about" "editorial-policy" "corrections" "for-ai" }}
+{{- with site.GetPage (printf "/%s" .) }}
+{{- $url := .Permalink }}{{ with .OutputFormats.Get "markdown" }}{{ $url = .Permalink }}{{ end }}
+- [{{ .Title }}]({{ $url }}): {{ .Description }}
+{{- end }}
+{{- end }}
+{{ range (site.GetPage "/categories").Pages.ByWeight }}{{ if .Pages }}
+## {{ .LinkTitle }}
+
+{{ .Description }}
+{{ range .Pages.ByDate.Reverse }}
+{{- $md := .OutputFormats.Get "markdown" }}
+- [{{ .Title }}]({{ $md.Permalink }}): {{ .Description | default .Params.summary }} ({{ .Date.Format "2006-01-02" }})
+{{- end }}
+{{ end }}{{ end }}
+## Optional
+{{ range slice "write-for-us" "advertise" "disclaimer" "privacy" "terms" "contact" }}
+{{- with site.GetPage (printf "/%s" .) }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{- end }}

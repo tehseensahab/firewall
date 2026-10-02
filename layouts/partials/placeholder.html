@@ -1,0 +1,4 @@
+{{- /* Stand-in when a post has no cover.jpg. Context: category term page or false */ -}}
+<div class="card-img placeholder" aria-hidden="true">
+  <span class="ph-label">{{ with . }}{{ .LinkTitle }}{{ else }}{{ site.Title }}{{ end }}</span>
+</div>

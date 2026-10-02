@@ -1,5 +1,6 @@
 +++
 title = "Write for Us"
+description = "FirewallSync publishes practical, field-tested security writing from engineers and practitioners. Here is what we publish and how to pitch."
 +++
 
 FirewallSync publishes practical, field-tested security writing for engineering teams — not vendor whitepapers, not listicles. If you've shipped a fix, run an incident, or built a process that actually held up under pressure, we want to hear about it.

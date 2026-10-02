@@ -1,0 +1,21 @@
+{{- $articles := slice -}}
+{{- range (where site.RegularPages "Section" "posts").ByDate.Reverse -}}
+  {{- $cat := dict -}}
+  {{- with .GetTerms "categories" }}{{ $t := index . 0 }}{{ $cat = dict "name" $t.LinkTitle "slug" $t.File.ContentBaseName "url" $t.Permalink }}{{ end -}}
+  {{- $item := dict
+      "title" .Title
+      "url" .Permalink
+      "markdown_url" (.OutputFormats.Get "markdown").Permalink
+      "summary" (.Params.summary | default "")
+      "description" .Description
+      "topic" $cat
+      "tags" (.Params.tags | default slice)
+      "published" (.Date.Format "2006-01-02")
+      "updated" (.Lastmod.Format "2006-01-02")
+      "author" (.Params.author | default site.Params.author)
+      "reading_minutes" .ReadingTime
+      "takeaways" (.Params.takeaways | default slice)
+      "faq" (.Params.faq | default slice) -}}
+  {{- $articles = $articles | append $item -}}
+{{- end -}}
+{{- dict "site" site.Title "url" site.Home.Permalink "description" site.Params.description "license_and_citation" (absURL "for-ai/") "llms_txt" (absURL "llms.txt") "llms_full_txt" (absURL "llms-full.txt") "generated" (now.Format "2006-01-02") "articles" $articles | jsonify (dict "indent" "  ") -}}

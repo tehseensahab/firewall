@@ -1,0 +1,9 @@
+{{- /* Resolves a page's cover. Returns dict: webp (card/hero), og (jpg), alt, credit, has. Context: page */ -}}
+{{- $page := . -}}
+{{- $res := dict "has" false "alt" ($page.Params.imageAlt | default $page.Title) "credit" ($page.Params.imageCredit | default "") -}}
+{{- with $page.Resources.GetMatch "cover.*" -}}
+  {{- $webp := .Fill "1200x630 webp q80" -}}
+  {{- $og := .Fill "1200x630 jpg q80" -}}
+  {{- $res = merge $res (dict "has" true "webp" $webp "og" $og) -}}
+{{- end -}}
+{{- return $res -}}
