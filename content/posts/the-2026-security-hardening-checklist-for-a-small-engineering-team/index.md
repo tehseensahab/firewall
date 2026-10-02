@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "A small team doesn't need an enterprise security program. It needs the specific controls that close the gaps attackers actually exploit against small teams — which is a much shorter, more tractable list."
 description = "A practical, prioritized security hardening checklist for small engineering teams — covering identity, code, infrastructure, and incident readiness without enterprise overhead."
 author = "FirewallSync Editorial"
-imageAlt = "Hand ticking off items on a checklist"
+imageAlt = "Hand ticking off a checklist on a tablet"
 imageCredit = "Photo by [Jakub Żerdzicki](https://unsplash.com/photos/yKnIbJV0RbY) on Unsplash"
 +++
 

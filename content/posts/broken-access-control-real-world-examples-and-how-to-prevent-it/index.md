@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "Broken access control has topped the OWASP Top 10 since 2021 for a reason: it's not one vulnerability type, it's an entire category of ways authorization checks get skipped."
 description = "Broken access control tops the OWASP Top 10. Real-world patterns — IDOR, missing function-level checks, privilege escalation — and how to prevent them."
 author = "FirewallSync Editorial"
-imageAlt = "Metal key in a keyhole"
+imageAlt = "Old key hanging from a ring"
 imageCredit = "Photo by [Jozsef Hocza](https://unsplash.com/photos/0juktkOTkpU) on Unsplash"
 +++
 

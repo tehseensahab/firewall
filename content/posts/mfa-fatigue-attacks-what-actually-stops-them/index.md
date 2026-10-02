@@ -6,7 +6,7 @@ categories = ["identity-access"]
 summary = "Push-notification bombing keeps working because most MFA rollouts treat every factor as equally trustworthy. Here's what actually closes the gap."
 description = "MFA fatigue attacks exploit push notifications, not passwords. Here's why number matching and phishing-resistant MFA actually stop them."
 author = "FirewallSync Editorial"
-imageAlt = "Person holding a smartphone"
+imageAlt = "Person holding a smartphone showing a fingerprint prompt"
 imageCredit = "Photo by [Onur Binay](https://unsplash.com/photos/Uw_8vSroCSc) on Unsplash"
 +++
 

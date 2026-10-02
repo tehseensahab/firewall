@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "A stolen session cookie produces a valid login from your identity provider's perspective. The signal isn't in the authentication event — it's in what happens to that session afterward."
 description = "Practical detection techniques for stolen session cookies: impossible travel on session activity, device fingerprint mismatches, and the specific log sources that surface it."
 author = "FirewallSync Editorial"
-imageAlt = "Monitor showing a site analytics view"
+imageAlt = "Monitor showing a traffic analytics chart"
 imageCredit = "Photo by [Stephen Phillips - Hostreviews.co.uk](https://unsplash.com/photos/shr_Xn8S8QU) on Unsplash"
 +++
 

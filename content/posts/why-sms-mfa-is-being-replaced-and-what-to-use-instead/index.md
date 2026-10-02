@@ -6,7 +6,7 @@ categories = ["identity-access"]
 summary = "SMS-based MFA doesn't fail because of a flaw in the code itself. It fails because it depends on the telephone network's identity verification, which was never designed to be a security control."
 description = "Why SMS MFA is being phased out — SIM swapping, SS7 interception, and real-time phishing relay — and what NIST and regulators now recommend instead."
 author = "FirewallSync Editorial"
-imageAlt = "Smartphone lying on a yellow surface"
+imageAlt = "Smartphone showing a lock icon on a yellow background"
 imageCredit = "Photo by [Franck](https://unsplash.com/photos/DoWZMPZ-M9s) on Unsplash"
 +++
 

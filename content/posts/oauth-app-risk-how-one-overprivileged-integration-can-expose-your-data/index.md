@@ -6,7 +6,7 @@ categories = ["privacy-risk"]
 summary = "An OAuth grant isn't a one-time event — it's a standing, persistent credential that keeps working for as long as it exists, regardless of whether the app it was granted to remains trustworthy."
 description = "Why a single overprivileged OAuth integration can expose company data at scale, and how the risk compounds through broad scopes, standing access, and third-party breach exposure."
 author = "FirewallSync Editorial"
-imageAlt = "Person using a laptop at a white table"
+imageAlt = "Person using a laptop showing a VPN connection screen"
 imageCredit = "Photo by [Dan Nelson](https://unsplash.com/photos/AvSFPw5Tp68) on Unsplash"
 +++
 

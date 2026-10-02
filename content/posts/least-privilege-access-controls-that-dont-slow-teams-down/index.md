@@ -6,7 +6,7 @@ categories = ["identity-access"]
 summary = "Most least-privilege rollouts fail because they optimize for audit checklists instead of how engineers actually work. Here's a rollout order that holds up."
 description = "How to roll out least-privilege access without slowing engineers down: start from real usage data, phase the rollout, and make access requests fast enough that nobody routes around them."
 author = "FirewallSync Editorial"
-imageAlt = "Sets of keys hanging on a hook"
+imageAlt = "Keys hanging from a door lock"
 imageCredit = "Photo by [Samantha Lam](https://unsplash.com/photos/5Dp7XJxILTk) on Unsplash"
 +++
 

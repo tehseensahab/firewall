@@ -6,8 +6,8 @@ categories = ["privacy-risk"]
 summary = "Most SaaS vendor reviews stop at a security questionnaire filled out by sales. A checklist that actually reduces risk needs to look past the questionnaire, at what the integration can actually touch."
 description = "A practical third-party SaaS security checklist covering vendor vetting, OAuth scope review, data handling, and the ongoing monitoring most reviews skip after launch."
 author = "FirewallSync Editorial"
-imageAlt = "Hand writing in a notebook with checkboxes"
-imageCredit = "Photo by [Jakub Żerdzicki](https://unsplash.com/photos/50comlI_39U) on Unsplash"
+imageAlt = "Notepad with a pen resting on top"
+imageCredit = "Photo by [Thomas Bormans](https://unsplash.com/photos/pcpsVsyFp_s) on Unsplash"
 +++
 
 Most third-party SaaS security review processes concentrate all their scrutiny at the point of initial approval — a security questionnaire, a SOC 2 report review, a sign-off — and then stop paying attention once the tool is live. A checklist that actually reduces ongoing risk needs to cover the full lifecycle: vetting before approval, scoping at integration time, and monitoring for as long as the tool remains connected.

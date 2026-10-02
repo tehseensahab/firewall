@@ -6,7 +6,7 @@ categories = ["identity-access"]
 summary = "The real decision isn't which one has more features. It's how much operational responsibility your team is willing to take on in exchange for lower cost and more control."
 description = "1Password vs Bitwarden vs Vaultwarden compared for a small team: managed vs self-hosted tradeoffs, admin features, and which fits different team sizes and risk tolerances."
 author = "Tehseen Arbab"
-imageAlt = "Golden padlock sitting on a keyboard"
+imageAlt = "Golden combination padlock on a keyboard"
 imageCredit = "Photo by [Towfiqu barbhuiya](https://unsplash.com/photos/FnA5pAzqhMM) on Unsplash"
 +++
 
