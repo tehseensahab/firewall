@@ -79,3 +79,5 @@ zammad-zero-days-cve-2026-102489-and-cve-2026-102490-what-is-fixed-and-what-is-n
 cisco-catalyst-sd-wan-manager-cve-2026-76504-authentication-bypass-fixed-releases-and-log-checks	1682559736721-c2e77ff4c650	T-IN5o3kxyA	Fiber optic cables plugged into a network switch	Lightsaber Collection
 zitadel-account-takeover-cve-2026-105207-cve-2026-105209-cve-2026-105215-fixed-versions	1762340275855-ae8f4c2c144e	hvbjTynPt7A	Account settings screen showing a verification prompt	Zulfugar Karimov
 netscaler-cve-2026-88779-saml-denial-of-service-exploited-patched-last-weeks-zero-days	1702478475268-aa8ef54c084e	ca9Ex6yVRgw	Server rack with network cables attached	Yuriy Vertikov
+cvss-vs-epss-vs-kev-which-signal-should-decide-what-you-patch-first	1503551723145-6c040742065b	ETRPjvb0KM0	Colorful sticky notes pinned to a board	Patrick Perkins
+csrf-protection-samesite-cookies-tokens-and-fetch-metadata-compared	1484417894907-623942c8ee29	xrVDYZRGdw4	Laptop on a desk showing code in an editor	Emile Perron
