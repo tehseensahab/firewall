@@ -1,6 +1,6 @@
 +++
 title = "CORS Misconfiguration: What Access-Control-Allow-Origin Actually Permits"
-date = 2026-10-08T08:40:00Z
+date = 2026-10-08T08:15:00Z
 tags = ["appsec", "api-security"]
 categories = ["appsec"]
 summary = "A CORS header decides which other websites may read your responses with your users' cookies attached. Reflecting the Origin header, matching it with endsWith or an unescaped regex, or trusting null each hands that read access to an attacker."

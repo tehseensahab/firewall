@@ -1,6 +1,6 @@
 +++
 title = "S3 Block Public Access: What the Four Settings Do and How to Enforce Them"
-date = 2026-10-08T08:45:00Z
+date = 2026-10-08T08:20:00Z
 tags = ["cloud-security", "iam"]
 categories = ["cloud-security"]
 summary = "New S3 buckets have blocked public access by default since April 2023, but older buckets, account settings and new accounts can still be open. Here is what each setting does and how to enforce all four across an account or an AWS organization."
