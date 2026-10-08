@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "A CORS header decides which other websites may read your responses with your users' cookies attached. Reflecting the Origin header, matching it with endsWith or an unescaped regex, or trusting null each hands that read access to an attacker."
 description = "CORS misconfiguration explained: what Access-Control-Allow-Origin with credentials allows, the origin-matching bugs attackers exploit, and a tested fix."
 author = "FirewallSync Editorial"
-imageAlt = "Blue and white light in a dark room"
+imageAlt = "Glowing blue fiber optic strands against a dark background"
 imageCredit = "Photo by [Denny Müller](https://unsplash.com/photos/JyRTi3LoQnc) on Unsplash"
 takeaways = [
   "CORS does not block requests. It controls whether script on another website may read the response.",
