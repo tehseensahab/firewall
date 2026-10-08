@@ -81,3 +81,5 @@ zitadel-account-takeover-cve-2026-105207-cve-2026-105209-cve-2026-105215-fixed-v
 netscaler-cve-2026-88779-saml-denial-of-service-exploited-patched-last-weeks-zero-days	1702478475268-aa8ef54c084e	ca9Ex6yVRgw	Server rack with network cables attached	Yuriy Vertikov
 cvss-vs-epss-vs-kev-which-signal-should-decide-what-you-patch-first	1503551723145-6c040742065b	ETRPjvb0KM0	Colorful sticky notes pinned to a board	Patrick Perkins
 csrf-protection-samesite-cookies-tokens-and-fetch-metadata-compared	1484417894907-623942c8ee29	xrVDYZRGdw4	Laptop on a desk showing code in an editor	Emile Perron
+cors-misconfiguration-what-access-control-allow-origin-actually-permits	1604869515882-4d10fa4b0492	JyRTi3LoQnc	Blue and white light in a dark room	Denny Müller
+s3-block-public-access-what-the-four-settings-do-and-how-to-enforce-them	1762627105132-f6ed848a23bf	5utYi64hnJ0	Rows of white archive boxes on wooden shelves	Luke Caunt
