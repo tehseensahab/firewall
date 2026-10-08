@@ -14,7 +14,7 @@ Multi-factor authentication verifies identity at the moment of login. It says no
 
 ## How token theft actually works
 
-The dominant technique is adversary-in-the-middle (AiTM) phishing, using widely available open-source tooling such as Evilginx. The attacker doesn't build a fake login page — they proxy the real one. The victim lands on a domain that looks wrong on close inspection, but the page itself is the actual login flow, relayed through the attacker's server in real time.
+The dominant technique is adversary-in-the-middle (AiTM) phishing, using open-source tooling such as Evilginx2, which Microsoft Threat Intelligence [documented in a July 12, 2022 report](https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/) on a campaign it said targeted more than 10,000 organizations from September 2021 and was followed by business email compromise fraud. The attacker doesn't build a fake login page — they proxy the real one. The victim lands on a domain that looks wrong on close inspection, but the page itself is the actual login flow, relayed through the attacker's server in real time.
 
 The victim enters their real username and password, and completes MFA exactly as they normally would — push approval, OTP, whatever the org uses. The legitimate service verifies everything correctly and issues a session cookie or token, because as far as the identity provider is concerned, a real authentication just happened. The attacker's proxy captures that session token in transit before relaying the successful login back to the victim, who notices nothing wrong.
 
@@ -22,13 +22,13 @@ From that point, the attacker doesn't need the password or MFA again. They load 
 
 ## Why traditional MFA doesn't stop this
 
-MFA that relies on a human relaying a value — typing an OTP, tapping "approve" on a push notification — is phishable by design, because nothing prevents that value from being captured and relayed through a proxy. The code or approval doesn't know which site it's being used on. This is a structural gap, not an implementation bug in any particular MFA product, which is why the technique works across Microsoft 365, Google Workspace, and most SSO platforms regardless of which MFA method they use.
+MFA that relies on a human relaying a value — typing an OTP, tapping "approve" on a push notification — is phishable by design, because nothing prevents that value from being captured and relayed through a proxy. The code or approval doesn't know which site it's being used on. Microsoft's report describes this as not being a flaw in MFA itself: the attacker obtains an authenticated session cookie, so access follows regardless of the sign-in method used. We have not verified how the technique behaves on specific platforms other than those in that report.
 
-Phishing-resistant authentication (FIDO2/WebAuthn passkeys and security keys) closes this specific gap because the cryptographic challenge is bound to the actual domain — an AiTM proxy sitting on a different origin can't get a valid signed response out of it, even with a perfect visual clone of the login page. But phishing-resistant login doesn't retroactively protect a session token that's already been issued under older MFA methods, which is why detection matters as much as prevention.
+Phishing-resistant authentication (FIDO2/WebAuthn passkeys and security keys) closes this specific gap because the cryptographic challenge is bound to the actual domain — an AiTM proxy sitting on a different origin can't get a valid signed response out of it, even with a perfect visual clone of the login page. But phishing-resistant login doesn't retroactively protect a session token that's already been issued under older MFA methods, which is why detection matters as much as prevention. Microsoft's report recommends phish-resistant MFA (FIDO v2.0 and certificate-based) plus conditional access that evaluates signals such as device compliance and trusted IPs.
 
 ## What detection actually needs to catch
 
-Standard login monitoring looks for failed authentication attempts and unusual login locations. Token theft produces neither — the original login succeeded legitimately, and the attacker's subsequent access uses a valid token, not a new login attempt. What it does produce, if you're watching for it:
+Standard login monitoring looks for failed authentication attempts and unusual login locations. Token theft typically produces neither — the original login succeeded legitimately, and the attacker's subsequent access uses a valid token, not a new login attempt. What it does produce, if you're watching for it:
 
 - **The same session token used from two meaningfully different locations or devices close together in time** — not a new login, but continued use of an existing session from an inconsistent source
 - **Impossible travel on session activity, not just login events** — a session that was active in one region and is suddenly active somewhere geographically implausible minutes later
