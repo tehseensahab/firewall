@@ -1,12 +1,12 @@
 +++
 title = "Open Source vs Commercial SIEM: What Actually Changes at Small Scale"
-date = 2026-10-09T09:00:00Z
+date = 2026-10-09T05:00:00Z
 tags = ["tools"]
 categories = ["security-operations"]
 summary = "The license cost is the easiest number to compare and the least representative of the real cost. What actually differs at small scale is who's doing the engineering work the platform doesn't do for you."
 description = "Open source vs commercial SIEM for small teams: what genuinely differs beyond license cost, and where each option's real hidden cost actually shows up."
 author = "Tehseen Arbab"
-imageAlt = "Performance analytics graphs on a laptop screen"
+imageAlt = "Laptop screen showing a dark-themed web performance dashboard with page-load and bounce-rate charts"
 imageCredit = "Photo by [Luke Chesser](https://unsplash.com/photos/JKUTrJ4vK00) on Unsplash"
 +++
 
@@ -17,6 +17,8 @@ The license cost comparison between open source and commercial SIEM platforms is
 Collect logs from disparate sources, normalize them into a queryable format, run detection rules against that normalized data, and surface alerts with enough context to actually investigate. Every SIEM, open source or commercial, needs all four of these working correctly to provide real value — a platform that ingests logs but has poorly tuned detection rules, or one with great detection logic but incomplete log coverage, provides a fraction of its potential value regardless of how much it costs.
 
 ## Open source (the Elastic Stack, Wazuh, and similar): lower license cost, higher engineering cost
+
+A note on terms: "open source" is used loosely here for platforms whose core can be self-hosted without a license fee. Licenses differ by project and version, so check the current license of whichever product you evaluate. The comparison in this article is editorial analysis based on general industry practice, not a benchmark or a price survey; it does not cite vendor price lists, and costs vary by vendor, contract and data volume.
 
 Open source SIEM platforms have no licensing fee (or a much lower one for a supported distribution), which is the number that shows up first in any comparison. What doesn't show up in that number: detection rule tuning, log source integration, dashboard building, and ongoing maintenance are largely work your team does itself, rather than work a vendor has already done and packaged. A commercial SIEM typically ships with a substantial library of pre-built, vendor-maintained detection rules and integrations for common log sources; an open source deployment often starts closer to a blank canvas, with detection logic and integrations built and maintained by whoever on your team owns the platform.
 

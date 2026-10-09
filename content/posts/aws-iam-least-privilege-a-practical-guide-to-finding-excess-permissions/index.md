@@ -1,12 +1,12 @@
 +++
 title = "AWS IAM Least Privilege: A Practical Guide to Finding Excess Permissions"
-date = 2026-10-09T09:00:00Z
+date = 2026-10-09T05:00:00Z
 tags = ["iam", "cloud security"]
 categories = ["cloud-security"]
 summary = "Least privilege fails in practice because most teams have no visibility into which granted permissions are actually used. Here's how to find the gap and close it without breaking production."
 description = "A practical guide to AWS IAM least privilege: how to find unused permissions with IAM Access Analyzer and safely tighten policies without breaking access."
 author = "FirewallSync Editorial"
-imageAlt = "Network cabling in a data center"
+imageAlt = "Server racks behind mesh doors with orange and teal network cables and green status lights"
 imageCredit = "Photo by [Taylor Vick](https://unsplash.com/photos/M5tzZtFCOfs) on Unsplash"
 +++
 
@@ -34,15 +34,17 @@ AWS IAM Access Analyzer's unused access analysis is built specifically for this 
 
 This last category is the one that matters most for least privilege work — it doesn't just tell you a role exists and might be over-permissioned in theory, it tells you which specific granted permissions haven't actually been exercised, based on real access activity. Findings consolidate into a centralized dashboard, so security teams can prioritize accounts by finding volume instead of manually reviewing every policy by hand.
 
+Two details from AWS's documentation that change how you plan this work. First, the unused access analyzer has a configurable tracking period of 1 to 365 days, and it only evaluates entities that have existed for the whole period ([AWS docs: create an unused access analyzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-create-unused.html)). Second, unused access analysis is a paid feature billed per IAM role or user analyzed per month, unlike external access findings, which are free ([AWS pricing page](https://aws.amazon.com/iam/access-analyzer/pricing)). Check the pricing page for the current rate in your region.
+
 ## Turning findings into safe policy changes
 
 Finding unused permissions is the easy part. Removing them without breaking something is where teams get cautious, and reasonably so — an unused-in-the-analysis-window permission isn't necessarily an unused-forever permission if it backs an infrequent process like a quarterly batch job or an annual compliance export.
 
 A safer sequence:
 
-1. **Extend the observation window** before acting on any single finding — a permission unused in 30 days might still be legitimate for something that runs monthly or quarterly
+1. **Extend the observation window** before acting on any single finding — a permission unused in a 30-day window might still be legitimate for something that runs monthly or quarterly
 2. **Cross-reference against known infrequent processes** — check with the team that owns the role about anything that runs on a schedule longer than your analysis window before removing access tied to it
-3. **Use policy generation, not just manual editing** — Access Analyzer can generate a refined policy based on actual observed access activity, which is a better starting point than hand-editing an existing broad policy
+3. **Use policy generation, not just manual editing** — Access Analyzer policy generation builds a policy template from the actions an entity performed in your CloudTrail logs over a period of up to 90 days, which is a better starting point than hand-editing an existing broad policy. It has limits: it needs a CloudTrail trail, it does not identify action-level activity for data events such as S3 object reads, it does not include `iam:PassRole` (CloudTrail does not track it), and it counts denied actions as activity. Review the generated template rather than attaching it as-is ([AWS docs: policy generation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-policy-generation.html))
 4. **Apply changes in a way that's reversible** — deploy the tightened policy, monitor for access denials over a follow-up period, and keep the prior policy version available to roll back quickly if something legitimate breaks
 
 ## Where least privilege breaks down structurally
