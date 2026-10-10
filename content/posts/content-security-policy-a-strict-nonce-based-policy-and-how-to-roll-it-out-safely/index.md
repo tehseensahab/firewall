@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "A Content Security Policy limits what scripts a browser will run, which can turn a cross-site scripting bug from a full compromise into a blocked request. Here is the strict nonce-based policy MDN and OWASP recommend, what each directive does, and a report-only rollout that does not break your site."
 description = "How to write a strict Content Security Policy with nonces, what strict-dynamic and unsafe-inline do, and how to deploy with Report-Only and reporting endpoints."
 author = "FirewallSync Editorial"
-imageAlt = "A padlock hanging on a metal gate"
+imageAlt = "Black-and-white photo of an open padlock hanging from the latch of a metal grille gate"
 imageCredit = "Photo by [Hennie Stander](https://unsplash.com/photos/ACmOuY2lOug) on Unsplash"
 takeaways = [
   "MDN's recommended practice for controlling script loading is a strict CSP: a policy built on per-response nonces or on hashes, not on lists of allowed hostnames.",

@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "SPF, DKIM and DMARC answer three different questions about a message. Here is what each record checks, how alignment ties them together, what Google and Microsoft require from high-volume senders, and a rollout order that avoids blocking your own mail."
 description = "What SPF, DKIM and DMARC each verify, how DMARC alignment works, the Gmail and Outlook.com bulk sender requirements, and the DMARC update in RFC 9989."
 author = "FirewallSync Editorial"
-imageAlt = "A pile of old envelopes stacked on top of each other"
+imageAlt = "Five vintage handwritten postcards with stamps and postmarks spread on a black surface"
 imageCredit = "Photo by [rc.xyz NFT gallery](https://unsplash.com/photos/oathFTcFigc) on Unsplash"
 takeaways = [
   "SPF checks whether the sending server's IP address is authorized for the envelope sender domain. DKIM checks a cryptographic signature added by a signing domain. DMARC requires one of them to pass and to align with the domain in the visible From address.",
