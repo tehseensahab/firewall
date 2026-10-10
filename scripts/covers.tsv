@@ -83,3 +83,5 @@ cvss-vs-epss-vs-kev-which-signal-should-decide-what-you-patch-first	150355172314
 csrf-protection-samesite-cookies-tokens-and-fetch-metadata-compared	1484417894907-623942c8ee29	xrVDYZRGdw4	Laptop on a desk showing code in an editor	Emile Perron
 cors-misconfiguration-what-access-control-allow-origin-actually-permits	1604869515882-4d10fa4b0492	JyRTi3LoQnc	Glowing blue fiber optic strands against a dark background	Denny Müller
 s3-block-public-access-what-the-four-settings-do-and-how-to-enforce-them	1762627105132-f6ed848a23bf	5utYi64hnJ0	Rows of white archive boxes on wooden shelves	Luke Caunt
+spf-dkim-and-dmarc-what-each-record-does-and-what-gmail-and-outlook-require	1637597384611-0c33cef6ec03	oathFTcFigc	A pile of old envelopes stacked on top of each other	rc.xyz NFT gallery
+content-security-policy-a-strict-nonce-based-policy-and-how-to-roll-it-out-safely	1619037318263-5899a359e504	ACmOuY2lOug	A padlock hanging on a metal gate	Hennie Stander
