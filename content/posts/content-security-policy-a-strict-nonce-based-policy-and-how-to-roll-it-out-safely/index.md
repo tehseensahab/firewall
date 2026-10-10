@@ -1,6 +1,6 @@
 +++
 title = "Content Security Policy: A Strict Nonce-Based Policy and How to Roll It Out Safely"
-date = 2026-10-10T06:10:00Z
+date = 2026-10-10T06:05:00Z
 tags = ["appsec", "api-security"]
 categories = ["appsec"]
 summary = "A Content Security Policy limits what scripts a browser will run, which can turn a cross-site scripting bug from a full compromise into a blocked request. Here is the strict nonce-based policy MDN and OWASP recommend, what each directive does, and a report-only rollout that does not break your site."
