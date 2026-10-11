@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "Four response headers do most of the work after Content Security Policy: Strict-Transport-Security, X-Content-Type-Options, Referrer-Policy and Permissions-Policy. Here is what each one does, the values MDN and OWASP document, and the HSTS preload trap that is hard to undo."
 description = "What HSTS, X-Content-Type-Options, Referrer-Policy and Permissions-Policy do, the values OWASP recommends, the HSTS preload requirements, and which old headers to stop sending."
 author = "FirewallSync Editorial"
-imageAlt = "Close-up of a metal slide bolt fastened across the seam where two dark wooden door panels meet"
+imageAlt = "Brass padlock hanging from a metal slide bolt across the seam of two dark wooden door panels"
 imageCredit = "Photo by [Zoshua Colah](https://unsplash.com/photos/n-O8na8fAao) on Unsplash"
 takeaways = [
   "OWASP's recommended values are: Strict-Transport-Security: max-age=63072000; includeSubDomains; preload, X-Content-Type-Options: nosniff, Referrer-Policy: strict-origin-when-cross-origin, and Permissions-Policy: geolocation=(), camera=(), microphone=(). Treat them as starting points, not as drop-in answers for every site.",

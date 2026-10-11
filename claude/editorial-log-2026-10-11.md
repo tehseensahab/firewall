@@ -31,6 +31,8 @@ Slug: sbom-minimum-elements-2026-what-cisa-and-partners-changed-from-the-2021-nt
 - SBOM post: replaced a link to a future-dated post (third-party SaaS checklist, 2026-11-25) with a live post; reworded an unsupported "listed first" SPDX claim; replaced an unsupported inference about the EU CRA with what the document says.
 - Third-party summaries (Paubox "ten new fields", 2025-draft counts) were not relied on; the ten was counted from the CISA document itself.
 
+- SBOM hero: first choice (port shipping containers) showed Maersk/ONE/Evergreen/COSCO/MSC brand names; replaced with wooden crates photo (Hemerson Coelho, iqEOJiBs1o8) after viewing. Headers hero alt corrected to include the brass padlock (tiny 'GLOBE' marking on padlock, judged not a recognisable logo).
+
 ## Known limitations
 - No live-server header tests, no browser tests; no SBOM tool output checked against the 17 fields. Hugo not installed locally, so build not tested before push.
 - Whether federal procurement or EU CRA rules now reference the 2026 document was not checked.

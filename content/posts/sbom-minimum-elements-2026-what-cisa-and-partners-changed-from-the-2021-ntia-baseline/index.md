@@ -6,8 +6,8 @@ categories = ["appsec"]
 summary = "On July 29, 2026, CISA and international partners published updated minimum elements for a software bill of materials, replacing the 2021 NTIA document. Here is what changed in the data fields and practices, what did not, and what to ask your suppliers and your tooling for."
 description = "CISA's 2026 SBOM Minimum Elements explained: the 17 data fields, ten new ones, removed elements, the Coverage and unknown-information rules, SPDX and CycloneDX, and what the guidance does not require."
 author = "FirewallSync Editorial"
-imageAlt = "Shipping containers stacked high at a busy port with cranes"
-imageCredit = "Photo by [雙 film](https://unsplash.com/photos/1gveplodu04) on Unsplash"
+imageAlt = "Tall stacks of wooden crates in a warehouse, with open crates of oranges in the foreground"
+imageCredit = "Photo by [Hemerson Coelho](https://unsplash.com/photos/iqEOJiBs1o8) on Unsplash"
 takeaways = [
   "The 2026 Minimum Elements for a Software Bill of Materials (SBOM) was published on July 29, 2026 by CISA with the NSA, the FBI and other national agencies. It updates and replaces NTIA's 2021 document (version 2.1; the 2025 version was a public-comment draft).",
   "The 2021 document listed seven baseline data fields. The 2026 document's data-field table lists 17, and its own Notable Updates section names ten as new, including component hash, component license, SBOM tool name and SBOM generation context.",
