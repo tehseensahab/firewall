@@ -115,14 +115,14 @@ We could not read the whole document, including its "Changes from RFC 7489" appe
 
 ## A rollout order that does not block your own mail
 
-1. **Inventory senders.** List every system that sends mail with your domain in the From address: corporate mail, marketing platform, help desk, billing, CRM, monitoring alerts, applications. The shadow senders are the usual cause of surprises. Our guide to [auditing SaaS apps connected to your company](/posts/saas-security-how-to-audit-oauth-apps-connected-to-your-company/) is a useful starting point for finding them.
+1. **Inventory senders.** List every system that sends mail with your domain in the From address: corporate mail, marketing platform, help desk, billing, CRM, monitoring alerts, applications. The shadow senders are the usual cause of surprises.
 2. **Publish DMARC at `p=none` with a `rua` address.** This changes no delivery behavior and starts aggregate reports. Use a mailbox or reporting service that can parse them; the reports are XML.
 3. **Fix alignment per sender.** For each source in the reports, make DKIM sign with your domain or align the return-path. Check the SPF lookup count after each addition.
 4. **Move to `quarantine`, then `reject`.** Do it when reports show your legitimate sources aligned. Under RFC 7489 the `pct` tag can apply the policy to a share of mail while you gain confidence; under RFC 9989 the `t` test-mode tag takes that role, so confirm which your receivers honor.
 5. **Set `sp` (and `np` if your receivers support it) deliberately** so unused subdomains cannot be spoofed.
 6. **Watch the reports continuously.** New vendors appear without anyone telling security. Reports are how you learn about them before a customer does.
 
-Email authentication reduces spoofing of *your domain*. It does not detect phishing from lookalike domains, compromised legitimate accounts, or stolen sessions; for the latter see [how session hijacking works even after MFA](/posts/how-session-hijacking-works-even-after-mfa/) and [phishing-resistant MFA](/posts/phishing-resistant-mfa-passkeys-vs-fido2-security-keys/).
+Email authentication reduces spoofing of *your domain*. It does not detect phishing from lookalike domains, compromised legitimate accounts, or stolen sessions.
 
 ## Sources and verification
 
