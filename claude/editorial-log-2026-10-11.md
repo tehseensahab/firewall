@@ -33,6 +33,8 @@ Slug: sbom-minimum-elements-2026-what-cisa-and-partners-changed-from-the-2021-nt
 
 - SBOM hero: first choice (port shipping containers) showed Maersk/ONE/Evergreen/COSCO/MSC brand names; replaced with wooden crates photo (Hemerson Coelho, iqEOJiBs1o8) after viewing. Headers hero alt corrected to include the brass padlock (tiny 'GLOBE' marking on padlock, judged not a recognisable logo).
 
+- Headers post: removed a link to the API misconfigurations post (dated 2026-10-13, 404 live); replaced with live CSRF post. Found by live link check after first push.
+
 ## Known limitations
 - No live-server header tests, no browser tests; no SBOM tool output checked against the 17 fields. Hugo not installed locally, so build not tested before push.
 - Whether federal procurement or EU CRA rules now reference the 2026 document was not checked.

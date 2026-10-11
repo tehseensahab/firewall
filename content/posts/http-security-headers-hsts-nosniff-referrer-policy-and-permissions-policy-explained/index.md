@@ -142,7 +142,7 @@ OWASP's cheat sheet also names headers that should no longer be used:
 - **`Expect-CT` and `Public-Key-Pins`:** do not use; remove from existing code where possible.
 - **`Server`, `X-Powered-By`, `X-AspNet-Version`, `X-AspNetMvc-Version`:** remove, or set non-informative values.
 
-OWASP also recommends `X-Frame-Options: DENY` against clickjacking but notes the CSP `frame-ancestors` directive obsoletes it for supporting browsers, and that it provides nothing for redirects or JSON API responses. For API-specific header advice, our post on [common API security misconfigurations](/posts/the-most-common-api-security-misconfigurations-and-how-to-fix-them/) covers the surrounding checks, and for cross-origin access headers see [CORS misconfiguration](/posts/cors-misconfiguration-what-access-control-allow-origin-actually-permits/).
+OWASP also recommends `X-Frame-Options: DENY` against clickjacking but notes the CSP `frame-ancestors` directive obsoletes it for supporting browsers, and that it provides nothing for redirects or JSON API responses. For cross-origin access headers see [CORS misconfiguration](/posts/cors-misconfiguration-what-access-control-allow-origin-actually-permits/), and for another cookie- and header-based defense see [CSRF protection with SameSite cookies, tokens and Fetch Metadata](/posts/csrf-protection-samesite-cookies-tokens-and-fetch-metadata-compared/).
 
 ## A rollout order that limits breakage
 
