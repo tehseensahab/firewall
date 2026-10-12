@@ -82,17 +82,17 @@ The dates in the last column are our arithmetic from the page date. The directiv
 
 ## Case study: five old CVEs added on October 8, 2026
 
-The KEV catalog lists five entries added on 2026-10-08, each with a due date of 2026-10-11. NVD records for each show CISA's required action referring to BOD 26-04 and its "Forensics Triage Requirements."
+The KEV catalog lists five entries added on 2026-10-08, each with a due date of 2026-10-11. Each entry's required action refers to BOD 26-04 and CISA's "Forensics Triage Requirements," but the catalog's forensic-triage field is not the same for all five: it is marked "Yes" for four and "No" for the BIND denial-of-service flaw, CVE-2015-5477.
 
-| CVE | Product | Published (NVD) | What NVD says | CVSS v3.1 base score |
+| CVE | Product | Published (NVD) | What NVD says | CVSS v3.1 base score (CISA enrichment) |
 |---|---|---|---|---|
 | CVE-2015-3306 | ProFTPD 1.3.5 | May 18, 2015 | mod_copy lets remote attackers read and write arbitrary files via site cpfr and cpto commands | 10.0 |
 | CVE-2021-3199 | ONLYOFFICE Document Server before 5.6.3 | Jan 26, 2021 | Directory traversal with remote code execution in /upload when JWT is used | 9.8 |
-| CVE-2023-22894 | Strapi through 4.5.5 | Apr 19, 2023 | Admin-panel users can infer sensitive user details, including password hashes and reset tokens for a super admin, via the query filter | 4.9 (NVD) / 7.2 (CISA) |
+| CVE-2023-22894 | Strapi through 4.5.5 | Apr 19, 2023 | Admin-panel users can infer sensitive user details, including password hashes and reset tokens for a super admin, via the query filter | 7.2 (NIST's own NVD score: 4.9) |
 | CVE-2016-3081 | Apache Struts 2.3.19 to 2.3.28 (specified ranges) | Apr 26, 2016 | Remote code execution via method: prefix when Dynamic Method Invocation is enabled | 8.1 |
 | CVE-2015-5477 | ISC BIND 9.x before 9.9.7-P2 and 9.10.x before 9.10.2-P3 | Jul 29, 2015 | Denial of service via TKEY queries (assertion failure and daemon exit) | 7.5 |
 
-Sources: [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) and the NVD records ([CVE-2015-3306](https://nvd.nist.gov/vuln/detail/CVE-2015-3306), [CVE-2021-3199](https://nvd.nist.gov/vuln/detail/CVE-2021-3199), [CVE-2023-22894](https://nvd.nist.gov/vuln/detail/CVE-2023-22894), [CVE-2016-3081](https://nvd.nist.gov/vuln/detail/CVE-2016-3081), [CVE-2015-5477](https://nvd.nist.gov/vuln/detail/CVE-2015-5477)). Scores are those listed in NVD, retrieved October 12, 2026; where two scorers differ, both are shown. The NVD records had been modified on October 9, 2026, so scores may change.
+Sources: [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) and the NVD records ([CVE-2015-3306](https://nvd.nist.gov/vuln/detail/CVE-2015-3306), [CVE-2021-3199](https://nvd.nist.gov/vuln/detail/CVE-2021-3199), [CVE-2023-22894](https://nvd.nist.gov/vuln/detail/CVE-2023-22894), [CVE-2016-3081](https://nvd.nist.gov/vuln/detail/CVE-2016-3081), [CVE-2015-5477](https://nvd.nist.gov/vuln/detail/CVE-2015-5477)). The scores are the CVSS v3.1 scores CISA added to each CVE record (its "ADP" enrichment), as updated on October 9, 2026; NIST's own NVD analysis has scored only the Strapi entry, at 4.9, and shows no v3.1 score for the BIND entry. Scores may change.
 
 What this shows, and what it does not:
 
@@ -140,6 +140,8 @@ Checked on October 12, 2026.
 | Tier descriptions (3, 14, 60 days, fix-on-upgrade) | [Tenable analysis](https://www.tenable.com/blog/cisa-bod-26-04-FAQ-vulnerability-remediation-impact) | Qualified: secondary source, not checked against Table 1 |
 | Triage steps and timings; directive requires adequate triage, not these timings | [CISA implementation guidance](https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk) | Verified |
 | Five CVEs added to KEV 2026-10-08, due 2026-10-11 | [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) and the five NVD records linked above | Verified as of October 12, 2026 |
-| Publication dates, descriptions, affected versions, CVSS v3.1 scores | NVD records linked above | Qualified: records modified October 9, 2026 and may change |
+| Publication dates, descriptions, affected versions | NVD records linked above | Verified |
+| CVSS v3.1 scores (CISA enrichment) and the NIST score of 4.9 for Strapi | [CVE records in the CVE Program's cvelistV5 repository](https://github.com/CVEProject/cvelistV5), updated October 9, 2026; NVD page for CVE-2023-22894 | Qualified: scores may change |
+| Forensic triage field "Yes" for four entries, "No" for CVE-2015-5477 | [CISA KEV data file](https://github.com/cisagov/kev-data), catalog version 2026.10.08 | Verified |
 | Phase II and III dates (August 9 and December 7, 2026) | Our calculation from June 10, 2026 | Qualified: assumes issuance date equals page date |
 | Suggestions for non-federal teams | Our analysis | Qualified: editorial judgment |
