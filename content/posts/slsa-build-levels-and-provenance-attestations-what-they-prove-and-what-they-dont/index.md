@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "SLSA Build Level 1, 2 and 3 describe how trustworthy a build's provenance is, not whether the code is safe. Here is what each level promises, how Sigstore and GitHub artifact attestations fit in, and how to verify an attestation with the GitHub CLI."
 description = "SLSA Build L1, L2 and L3 explained: what provenance attestations prove, what they cannot, how Sigstore signing works, and how to verify GitHub artifact attestations with gh attestation verify."
 author = "FirewallSync Editorial"
-imageAlt = "A white envelope closed with a gray wax seal and stamp"
+imageAlt = "Three cream envelopes, each closed with a bronze wax seal stamped with a tree design, on a white surface"
 imageCredit = "Photo by [Diana Light](https://unsplash.com/photos/Fcd6LJ4HDNk) on Unsplash"
 takeaways = [
   "SLSA (Supply-chain Levels for Software Artifacts) Build levels L1 to L3 describe how much you can trust a build's provenance record: L1 provenance exists, L2 a hosted platform signs it, L3 the platform is hardened against tampering during the build.",

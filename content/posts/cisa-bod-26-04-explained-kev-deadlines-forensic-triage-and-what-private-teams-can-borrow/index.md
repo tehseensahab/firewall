@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "CISA's Binding Operational Directive 26-04, issued June 10, 2026, replaces fixed patch deadlines for U.S. federal agencies with risk-based timelines and a three-day forensic triage requirement. A batch of five years-old flaws added to the KEV catalog on October 8, 2026 shows it in action."
 description = "CISA BOD 26-04 explained: who it applies to, how the four risk inputs set remediation timelines, the forensic triage requirement, the phase dates, and which practices non-federal teams can borrow."
 author = "FirewallSync Editorial"
-imageAlt = "A brown and blue hourglass with sand running, resting on stones"
+imageAlt = "A small wooden hourglass with blue sand standing at a tilt on pebbles"
 imageCredit = "Photo by [Aron Visuals](https://unsplash.com/photos/BXOXnQ26B7o) on Unsplash"
 takeaways = [
   "BOD 26-04, \"Prioritizing Security Updates Based on Risk,\" is a Binding Operational Directive for U.S. Federal Civilian Executive Branch agencies. CISA's page is dated June 10, 2026, and states that it revokes BOD 22-01 and BOD 19-02. It does not legally bind private companies.",
