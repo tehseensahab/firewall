@@ -30,7 +30,7 @@ a = "CISA's guidance says VEX statements are assertions the consumer may accept 
 
 [[faq]]
 q = "Which VEX formats exist?"
-a = "This article covers two: OpenVEX, a lightweight JSON format whose specification says it meets CISA's minimum requirements, and CSAF 2.0, an OASIS Standard that includes a VEX profile (Profile 5). CycloneDX can also carry VEX data; we did not review its specification for this article."
+a = "This article covers two: OpenVEX, a lightweight JSON format whose specification says it aims to meet CISA's minimum requirements, and CSAF 2.0, an OASIS Standard that includes a VEX profile (Profile 5). CycloneDX can also carry VEX data; we did not review its specification for this article."
 +++
 
 **VEX**, short for Vulnerability Exploitability eXchange, is a way for a supplier (or another party) to say, in a structured document, whether a specific product is affected by a specific vulnerability. A VEX statement about a library you find in your scanner output answers the question the scanner cannot: "this component is present, but can the flaw actually be reached?" This article explains the vocabulary CISA defined, shows how two formats (OpenVEX and CSAF) express it, and sets out how to evaluate a "not affected" claim before you let it close a ticket.
@@ -46,7 +46,7 @@ We read CISA's June 2022 status-justification guidance, the OpenVEX specificatio
 
 ## What a VEX document must contain
 
-CISA's guidance states that VEX documents must contain four things: VEX metadata, product details, vulnerability details and product status. CISA also published a separate "Minimum Requirements for VEX" document (the CISA page is dated April 21, 2023). We could not download that PDF (CISA's server returned "Access Denied" to our request), so we rely on the OpenVEX specification's statement that it meets those minimum requirements, and on the CISA status-justification guidance quoted above.
+CISA's guidance states that VEX documents must contain four things: VEX metadata, product details, vulnerability details and product status. CISA also published a separate "Minimum Requirements for VEX" document (the CISA page is dated April 21, 2023). We could not download that PDF (CISA's server returned "Access Denied" to our request), so we rely on the OpenVEX specification, which says it aims to meet those minimum requirements, and on the CISA status-justification guidance quoted above.
 
 ## The four statuses
 
@@ -154,7 +154,7 @@ Checked on October 13, 2026.
 | Definitions and examples for each justification; the caveats on execution path and inline mitigations | Same document, sections 3.3 to 3.7 | Verified |
 | CISA published "Minimum Requirements for VEX," page dated April 21, 2023 | [CISA resource page](https://www.cisa.gov/resources-tools/resources/minimum-requirements-vulnerability-exploitability-exchange-vex) | Qualified: PDF itself could not be downloaded |
 | OpenVEX required fields; justification or impact statement required for `not_affected`; free text discouraged for automation; `action_statement` for `affected`; author signature recommendation; version incrementing | [OpenVEX specification](https://github.com/openvex/spec/blob/main/OPENVEX-SPEC.md) | Verified |
-| OpenVEX says it meets CISA's April 2023 minimum requirements | Same specification, overview | Qualified: the OpenVEX project's own claim |
+| OpenVEX says it aims to meet CISA's April 2023 minimum requirements | Same specification, overview | Qualified: the OpenVEX project's own claim |
 | CSAF 2.0 is an OASIS Standard dated November 18, 2022; errata dated January 26, 2024 | [CSAF 2.0 errata 01](https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html) | Verified |
 | CSAF Profile 5 requirements; `product_status` categories; flag labels | [CSAF 2.0 standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) | Verified |
 | Trivy `--vex` options; page marked experimental | [Trivy VEX documentation](https://trivy.dev/latest/docs/supply-chain/vex/) | Qualified: read October 13, 2026; may change |
