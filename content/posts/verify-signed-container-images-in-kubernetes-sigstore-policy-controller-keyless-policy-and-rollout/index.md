@@ -6,7 +6,7 @@ categories = ["cloud-security"]
 summary = "Signing images only helps if something refuses the unsigned ones. This guide covers Sigstore's policy-controller admission webhook: opting namespaces in, writing a ClusterImagePolicy that pins a GitHub Actions workflow identity, rolling out in warn mode, and the failure-policy trade-off the Helm chart defaults create."
 description = "How to enforce cosign signatures in Kubernetes with Sigstore policy-controller: namespace opt-in, a keyless ClusterImagePolicy pinned to a GitHub Actions workflow, warn-mode rollout, no-match-policy and webhook failure-policy risks."
 author = "FirewallSync Editorial"
-imageAlt = "A row of gray metal fare gates with orange tops and green indicator lights at a station entrance, with a blue directional sign above and glass barriers to the right"
+imageAlt = "A row of gray metal fare gates with orange tops and green lights at a station entrance, with a blue sign in Chinese characters and an arrow, a wall monitor, and glass barriers to the right"
 imageCredit = "Photo by [Eric Prouzet](https://unsplash.com/photos/vSKnoJZr3m8) on Unsplash"
 takeaways = [
   "Sigstore's policy-controller is a Kubernetes admission webhook that validates cosign signatures and attestations on container images. Per its documentation it only checks namespaces that carry the label policy.sigstore.dev/include: \"true\".",
