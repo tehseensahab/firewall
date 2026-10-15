@@ -4,6 +4,9 @@ title = "FirewallSync"
 enableRobotsTXT = true
 copyright = "FirewallSync"
 
+[services.googleAnalytics]
+  id = "G-49NLF6PFP5"
+
 [pagination]
   pagerSize = 12
 
