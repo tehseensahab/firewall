@@ -1,6 +1,7 @@
 +++
 title = "CISA BOD 26-04 Explained: KEV Deadlines, Forensic Triage and What Private Teams Can Borrow"
 date = 2026-10-12T06:15:00Z
+lastmod = 2026-10-12T09:22:00Z
 tags = ["vulnerability management", "process"]
 categories = ["security-operations"]
 summary = "CISA's Binding Operational Directive 26-04, issued June 10, 2026, replaces fixed patch deadlines for U.S. federal agencies with risk-based timelines and a three-day forensic triage requirement. A batch of five years-old flaws added to the KEV catalog on October 8, 2026 shows it in action."
@@ -145,3 +146,7 @@ Checked on October 12, 2026.
 | Forensic triage field "Yes" for four entries, "No" for CVE-2015-5477 | [CISA KEV data file](https://github.com/cisagov/kev-data), catalog version 2026.10.08 | Verified |
 | Phase II and III dates (August 9 and December 7, 2026) | Our calculation from June 10, 2026 | Qualified: assumes issuance date equals page date |
 | Suggestions for non-federal teams | Our analysis | Qualified: editorial judgment |
+
+## Correction
+
+*October 12, 2026:* An earlier version of this article described the CVSS v3.1 scores in the KEV table as "listed in NVD". They are CISA's enrichment (ADP) scores in the CVE records, not NIST's own NVD scores. It also said every entry added on October 8 was marked for forensic triage; CVE-2015-5477 (BIND) is not. Both points have been corrected.

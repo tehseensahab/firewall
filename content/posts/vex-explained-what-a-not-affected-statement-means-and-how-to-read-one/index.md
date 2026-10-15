@@ -1,6 +1,7 @@
 +++
 title = "VEX Explained: What a \"Not Affected\" Statement Means and How to Read One"
 date = 2026-10-13T06:05:00Z
+lastmod = 2026-10-13T08:05:00Z
 tags = ["supply chain", "vulnerability management"]
 categories = ["appsec"]
 summary = "A VEX document is a supplier's signed-off claim about whether a specific product is affected by a specific vulnerability. Here is what the four statuses and five justifications mean in CISA's guidance, how OpenVEX and CSAF express them, and why a VEX claim is something to evaluate, not obey."
@@ -159,3 +160,7 @@ Checked on October 13, 2026.
 | CSAF Profile 5 requirements; `product_status` categories; flag labels | [CSAF 2.0 standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) | Verified |
 | Trivy `--vex` options; page marked experimental | [Trivy VEX documentation](https://trivy.dev/latest/docs/supply-chain/vex/) | Qualified: read October 13, 2026; may change |
 | Status mapping table; reading checklist | Our analysis | Qualified: editorial judgment, labelled as such |
+
+## Correction
+
+*October 13, 2026:* An earlier version of this article said OpenVEX meets CISA's minimum requirements for VEX. The OpenVEX specification says it *aims to meet* them. The wording has been corrected in three places.
