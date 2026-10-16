@@ -40,3 +40,8 @@ Future-dated posts publish when the site is rebuilt after their date. `.github/w
 - Build command: `hugo --minify`
 - Build output directory: `public`
 - Environment variable `HUGO_VERSION` = `0.140.2` (the extended build is used by Cloudflare's Hugo preset)
+
+
+## Writers
+
+New articles are bylined **John Marshall** or **Craig Leslie** (they write for all three publications: WiFi Weekly, Solar Examiner and FirewallSync). Pick whichever of the two wrote the piece. Existing articles keep their current bylines.
