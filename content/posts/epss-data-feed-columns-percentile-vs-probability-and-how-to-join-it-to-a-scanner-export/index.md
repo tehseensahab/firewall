@@ -118,7 +118,7 @@ We joined the file to CISA's KEV JSON, catalog version 2026.10.15 (released 2026
 | `percentile` below 0.90 | 276 | 15.8% |
 | `epss` at least 0.50 | 870 | 49.8% |
 | `epss` below 0.01 | 61 | 3.5% |
-| Median `epss` | 0.49166 | n/a |
+| Median `epss` | 0.4912 | n/a |
 
 KEV is about 0.45% of the scored file (1,746 of 389,824), which is in line with FIRST's statement that KEV lists roughly 0.5% of published CVEs. Two cautions on reading this table:
 
@@ -200,7 +200,7 @@ These are our suggestions and were not tested beyond the script above: download 
 
 ## Limits of this article
 
-We tested the script only on a five-row file, not a real scanner export. Counts are from one file scored on October 15, 2026, and one KEV version. We did not assess the model's accuracy or calibration, did not read the research papers FIRST links, and did not verify FIRST's own figures beyond the comparisons stated above. FIRST's Using EPSS page states some thresholds without a date, so treat them as of the page we read on October 16, 2026. We did not find a documented rate limit in the API page we read, so check the API documentation before building anything that makes many calls.
+We tested the script only on a five-row file, not a real scanner export. Counts are from one file scored on October 15, 2026, and one KEV version. We did not assess the model's accuracy or calibration, did not read the research papers FIRST links, and did not verify FIRST's own figures beyond the comparisons stated above. FIRST's Using EPSS page states some thresholds without a date, so treat them as of the page we read on October 16, 2026. The API documentation has a rate-limit section that we did not review, so read it before building anything that makes many calls.
 
 ## Sources and verification
 
@@ -208,7 +208,7 @@ Checked on October 16, 2026.
 
 | Important claim | Source | Verification |
 |---|---|---|
-| EPSS estimates the probability of exploitation in the next 30 days, a 0 to 1 score updated daily; not a complete risk score | [FIRST EPSS FAQ](https://www.first.org/epss/faq) | Verified |
+| EPSS estimates the probability of exploitation in the next 30 days, a 0 to 1 score updated daily; not a complete risk score; 0.10 sits around the 95th percentile; KEV lists roughly 0.5% of published CVEs | [FIRST EPSS FAQ](https://www.first.org/epss/faq) | Verified |
 | Three access routes; CSV URL; three columns; percentile definition; archive back to 2021-04-14; model version start dates and the score-shift warning | [FIRST, Get the Data](https://www.first.org/epss/data) | Verified |
 | API endpoint, parameters, time-series scope, BETA status | [FIRST API documentation](https://api.first.org/epss/) | Verified |
 | Sources record exploitation activity, not necessarily success; VulnCheck KEV listed as a data partner | [FIRST, How EPSS Works](https://www.first.org/epss/how-it-works) | Verified |
