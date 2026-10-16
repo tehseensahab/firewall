@@ -135,5 +135,12 @@ copyright = "FirewallSync"
   baseName = "articles"
 
 [outputs]
-  home = ["HTML", "RSS", "LLMS", "LLMSFull", "Articles"]
+  home = ["HTML", "RSS", "LLMS", "LLMSFull", "Articles", "GoogleNews"]
   page = ["HTML", "Markdown"]
+
+# Google News sitemap (/news-sitemap.xml): last 2 days of articles. Listed in robots.txt.
+[outputFormats.GoogleNews]
+  mediaType = "application/xml"
+  baseName = "news-sitemap"
+  isPlainText = true
+  notAlternative = true

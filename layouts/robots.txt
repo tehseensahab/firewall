@@ -11,3 +11,4 @@ Allow: /
 
 {{ end -}}
 Sitemap: {{ "sitemap.xml" | absURL }}
+Sitemap: {{ "news-sitemap.xml" | absURL }}

@@ -1,0 +1,19 @@
+{{- /* Google News sitemap: articles published in the last 2 days (Google's limit), newest first, max 1000. */ -}}
+{{- $cut := now.AddDate 0 0 -2 -}}
+{{- $pages := where (where (where site.RegularPages "Type" "posts") "Date" "ge" $cut) "Params.noindex" "!=" true -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{{- range first 1000 $pages.ByDate.Reverse }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>{{ site.Title | htmlEscape }}</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</news:publication_date>
+      <news:title>{{ .Title | htmlEscape }}</news:title>
+    </news:news>
+  </url>
+{{- end }}
+</urlset>

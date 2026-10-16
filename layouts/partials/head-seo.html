@@ -7,6 +7,7 @@
 <title>{{ if .IsHome }}{{ site.Title }} — {{ site.Params.tagline }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ else if hasPrefix .RelPermalink "/tags/" }}<meta name="robots" content="noindex, follow">{{ else }}<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">{{ end }}
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $desc }}">
@@ -34,7 +35,7 @@
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">
 {{- end }}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-{{- $publisher := dict "@type" "Organization" "@id" (printf "%s#organization" $home) "name" site.Title "url" $home "description" site.Params.description "logo" (absURL "favicon.svg") "publishingPrinciples" (absURL "editorial-policy/") "correctionsPolicy" (absURL "corrections/") }}
+{{- $publisher := dict "@type" "NewsMediaOrganization" "@id" (printf "%s#organization" $home) "name" site.Title "url" $home "description" site.Params.description "logo" (dict "@type" "ImageObject" "url" (absURL "icon-512.png") "width" 512 "height" 512) "publishingPrinciples" (absURL "editorial-policy/") "correctionsPolicy" (absURL "corrections/") }}
 {{- if .IsHome }}
 <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice (dict "@type" "WebSite" "name" site.Title "url" $home "description" site.Params.description "publisher" (dict "@id" (printf "%s#organization" $home))) $publisher) | jsonify | safeJS }}</script>
 {{- end }}
