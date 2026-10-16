@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "FIRST publishes EPSS scores as a free daily CSV with three columns. Here is what epss and percentile each promise, how the October 15, 2026 file is distributed, how it lines up with CISA's KEV catalog, and a tested Python script that adds both columns to a scanner export."
 description = "EPSS data feed explained: the daily CSV and API, the cve, epss and percentile columns, model-version breaks, how the October 15, 2026 scores are distributed, and a tested Python script that joins EPSS to a scanner CSV."
 author = "FirewallSync Editorial"
-imageAlt = "Close-up of playing cards in purple tones on a table"
+imageAlt = "Four aces (diamonds, spades, hearts, clubs) fanned out face up on a pale surface beside one face-down card with a red patterned back"
 imageCredit = "Photo by [Daniel Dan](https://unsplash.com/photos/qxuA9-FxnSs) on Unsplash"
 takeaways = [
   "The EPSS (Exploit Prediction Scoring System) daily file has three columns: cve, epss (a probability from 0 to 1 that exploitation activity will be observed in the next 30 days) and percentile (the share of scored CVEs with the same score or lower). The file we downloaded was scored 2026-10-15T12:03:56Z by model v2026.06.15 and held 389,824 CVEs.",
