@@ -1,0 +1,37 @@
+{{- /* RSS: full-text articles with a 1200x630 image each (Flipboard, feed readers). Home feed = all posts; category feeds = their posts. */ -}}
+{{- $pages := .Pages -}}
+{{- if .IsHome }}{{ $pages = site.RegularPages }}{{ end -}}
+{{- $pages = where $pages "Type" "posts" -}}
+{{- $pages = first 50 $pages.ByDate.Reverse -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Description | default site.Params.description }}</description>
+    <language>en-us</language>
+    <image><url>{{ "icon-512.png" | absURL }}</url><title>{{ site.Title }}</title><link>{{ site.Home.Permalink }}</link></image>
+    {{- with $pages }}<lastBuildDate>{{ (index . 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml"/>
+    {{- end }}
+    {{- range $pages }}
+    {{- $c := partial "cover.html" . }}
+    {{- $img := "" }}{{ if $c.has }}{{ $img = $c.og.Permalink }}{{ end }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid>{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <dc:creator>{{ .Params.author | default site.Params.author }}</dc:creator>
+      {{- with .GetTerms "categories" }}<category>{{ (index . 0).LinkTitle }}</category>{{ end }}
+      <description>{{ .Params.summary | default .Description | default .Summary | plainify | htmlUnescape }}</description>
+      {{- with $img }}
+      <enclosure url="{{ . }}" type="image/jpeg" length="0"/>
+      <media:content url="{{ . }}" medium="image" type="image/jpeg" width="1200" height="630"/>
+      {{- end }}
+      <content:encoded>{{ printf "<![CDATA[%s%s]]>" (cond (ne $img "") (printf "<p><img src=\"%s\" alt=\"%s\" width=\"1200\" height=\"630\"></p>" $img ($c.alt | htmlEscape)) "") .Content | safeHTML }}</content:encoded>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
