@@ -1,0 +1,10 @@
+# Staff writers: shown on the About page and linked from bylines.
+# url: LinkedIn or personal profile (used as schema.org sameAs). Leave empty until known.
+"John Marshall":
+  role: "Researcher and writer"
+  bio: "John Marshall researches and writes about application, API and cloud security for FirewallSync. He works from standards, vendor documentation and government advisories, and lists his sources at the end of every article."
+  url: ""
+"Craig Leslie":
+  role: "Researcher and writer"
+  bio: "Craig Leslie researches and writes about identity, security operations and AI security for FirewallSync. He checks each technical claim against its original source and says when advice depends on a team's size or risk tolerance."
+  url: ""

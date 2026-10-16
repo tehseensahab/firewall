@@ -1,0 +1,7 @@
+{{- /* Writer bios from data/writers.yaml. Each gets an anchor (/about/#john-marshall) that bylines link to. */ -}}
+{{- range $name, $w := site.Data.writers }}
+<h3 id="{{ anchorize $name }}">{{ $name }}</h3>
+{{ with $w.role }}<p><em>{{ . }}</em></p>{{ end }}
+{{ with $w.bio }}<p>{{ . }}</p>{{ end }}
+{{ with $w.url }}<p><a href="{{ . }}" rel="me noopener">Profile</a></p>{{ end }}
+{{- end }}

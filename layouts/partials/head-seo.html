@@ -42,7 +42,7 @@
 {{- if $isArticle }}
 {{- $cat := false }}{{ with .GetTerms "categories" }}{{ $cat = index . 0 }}{{ end }}
 {{- $author := dict "@type" "Organization" "name" site.Params.author "url" (absURL "about/") }}
-{{- with .Params.author }}{{ if ne . site.Params.author }}{{ $author = dict "@type" "Person" "name" . }}{{ end }}{{ end }}
+{{- with .Params.author }}{{ if ne . site.Params.author }}{{ $author = dict "@type" "Person" "name" . }}{{ with index site.Data.writers . }}{{ $author = merge $author (dict "url" (printf "about/#%s" (anchorize $.Params.author) | absURL) "jobTitle" .role) }}{{ with .url }}{{ $author = merge $author (dict "sameAs" (slice .)) }}{{ end }}{{ end }}{{ end }}{{ end }}
 {{- $article := dict "@type" "Article" "headline" .Title "description" $desc "url" .Permalink "mainEntityOfPage" .Permalink "image" (slice $image) "datePublished" (.Date.Format $iso) "dateModified" (.Lastmod.Format $iso) "author" $author "publisher" $publisher "inLanguage" "en-US" "isAccessibleForFree" true "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" $home) }}
 {{- with .Params.tags }}{{ $article = merge $article (dict "keywords" (delimit . ", ")) }}{{ end }}
 {{- with $cat }}{{ $article = merge $article (dict "articleSection" .LinkTitle) }}{{ end }}

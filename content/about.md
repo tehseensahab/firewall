@@ -21,7 +21,11 @@ Every article starts with the problem a team actually runs into, then gives a co
 
 ## Who writes it
 
-Articles carry the name of their writer. Pieces without a named writer appear under FirewallSync Editorial. We also publish guest contributions from practitioners; see [Write for Us](/write-for-us/).
+Articles carry the name of their writer. Our writers:
+
+{{< writers >}}
+
+Pieces without a named writer appear under FirewallSync Editorial. We also publish guest contributions from practitioners; see [Write for Us](/write-for-us/).
 
 ## Money and independence
 
