@@ -6,8 +6,8 @@ categories = ["cloud-security"]
 summary = "ValidatingAdmissionPolicy lets the Kubernetes API server enforce custom rules written in CEL, with no webhook to run. This guide shows the policy, binding and parameter model, two worked rules that Pod Security Admission cannot express, and a rollout order that goes from Warn and Audit to Deny."
 description = "Kubernetes ValidatingAdmissionPolicy explained: policy and binding resources, CEL expressions, Deny, Warn and Audit actions, failurePolicy, matchConditions, an image-registry allowlist and a memory-limit rule, and a warn-first rollout, based on the Kubernetes v1.37 documentation."
 author = "John Marshall"
-imageAlt = "A person drafting on a blueprint with a pencil and ruler"
-imageCredit = "Photo by [Daniel McCullough](https://unsplash.com/photos/HtBlQdxfG9k) on Unsplash"
+imageAlt = "Large architectural floor-plan drawings printed on white paper and spread overlapping across a table"
+imageCredit = "Photo by [Marina Zvada](https://unsplash.com/photos/fNxmdlYHRm8) on Unsplash"
 takeaways = [
   "ValidatingAdmissionPolicy (VAP) is a Kubernetes API-server feature that evaluates rules written in the Common Expression Language (CEL) at admission time, in-process, as an alternative to validating admission webhooks. The Kubernetes documentation lists it as stable since v1.30.",
   "A policy has no effect on its own: you need a ValidatingAdmissionPolicy (the logic) and a ValidatingAdmissionPolicyBinding (the scope and the action). Optional parameter resources let one policy carry different values per binding.",
