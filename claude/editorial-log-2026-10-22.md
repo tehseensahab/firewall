@@ -71,7 +71,7 @@ Slug: llm-improper-output-handling-treat-model-output-as-untrusted-input
 - No duplicate cover ids added (pre-existing duplicates unchanged).
 
 ## Flag for owner
-- Backlog post webhook-security-hmac-signatures-timestamps-and-replay-protection (Oct 19) overlaps how-to-secure-webhooks-against-replay-attacks-and-forged-requests (Oct 18): likely keyword cannibalization; consider merging and redirecting.
+- Webhook cannibalization fixed 2026-10-22: Oct 18 post merged into webhook-security-hmac-signatures-timestamps-and-replay-protection (rewritten with Stripe, GitHub and Shopify docs and tested code); old URL 301s via static/_redirects.
 
 ## Next-session candidates
 1. CVSS v4.0 supplemental metrics and when vendors fill them in

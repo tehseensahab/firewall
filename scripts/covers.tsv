@@ -34,8 +34,7 @@ how-api-rate-limiting-actually-works-and-where-it-fails	1594915440248-1e419eba66
 broken-access-control-real-world-examples-and-how-to-prevent-it	1609770231080-e321deccc34c	0juktkOTkpU	Old key hanging from a ring	Jozsef Hocza
 idor-vulnerabilities-how-to-find-and-fix-insecure-direct-object-references	1607706189992-eae578626c86	oXlXu2qukGE	Computer screen displaying web code	Mohammad Rahmani
 jwt-security-9-mistakes-that-can-turn-tokens-into-an-attack-path	1619410283995-43d9134e7656	mZnx9429i94	Code editor displaying source code	Juanjo Jaramillo
-how-to-secure-webhooks-against-replay-attacks-and-forged-requests	1544197150-b99a580bb7a8	40XgDxBfYXM	Blue network cables plugged into a patch panel	Jordan Harrison
-webhook-security-hmac-signatures-timestamps-and-replay-protection	1627398242454-45a1465c2479	g5jpH62pwes	JavaScript code with syntax highlighting	Gabriel Heinzer
+webhook-security-hmac-signatures-timestamps-and-replay-protection	1627398242454-45a1465c2479	g5jpH62pwes	Close-up of colourful syntax-highlighted JavaScript on a dark screen, including a SQL query string	Gabriel Heinzer
 software-supply-chain-attacks-where-modern-build-pipelines-break	1493946740644-2d8a1f1a6aff	tjX_sniNzgQ	Rows of stacked intermodal shipping containers	frank mckenna
 dependency-confusion-how-package-managers-can-become-an-attack-path	1494961104209-3c223057bd26	uBe2mknURG4	Stack of cargo containers	Guillaume Bolduc
 how-to-secure-github-actions-permissions-secrets-and-oidc	1587620962725-abab7fe55159	vpOeXr5wmR4	Laptop on a desk showing code	James Harrison
