@@ -41,3 +41,6 @@ Fix during review: rotation step rewritten to match docs (new key added as secon
 1. CVSS v4.0 supplemental metrics and when vendors fill them in
 2. Palo Alto PAN-OS CVE-2026-0322 (KEV 2026-10-14) or Cisco Secure Email Gateway CVE-2026-76519: patch and hunt, if vendor advisory reachable
 3. Kubernetes service account tokens: bound tokens, TokenRequest and why legacy Secret-based tokens should go
+
+## Publication status
+Both pushed to main (commits dda8c47, b7cdc89 covers, cce9403 alt text). Local Hugo build: 0 errors, both pages present, no dead /posts/ links. Live check NOT confirmed: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (approval not available in unattended run) and shell curl is blocked by the proxy (403). Owner should spot-check both URLs.
