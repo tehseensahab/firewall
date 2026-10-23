@@ -6,7 +6,7 @@ categories = ["cloud-security"]
 summary = "Kubernetes stores Secrets unencrypted in etcd unless you configure an EncryptionConfiguration. Turning it on protects etcd data, but not against anyone who can read Secrets through the API, create Pods, or, with local keys, read the control plane host. This guide maps each threat to the control that actually stops it, with a tested config checker."
 description = "Kubernetes Secrets encryption at rest protects etcd data, not API readers or Pod creators. What each provider stops, how to verify it, and a config checker."
 author = "Craig Leslie"
-imageAlt = "Close-up of numbered metal deposit boxes"
+imageAlt = "Rows of ornate brass deposit boxes with keyholes and numbers 564 to 624, viewed at an angle"
 imageCredit = "Photo by [Tim Evans](https://unsplash.com/photos/Uf-c4u1usFQ) on Unsplash"
 takeaways = [
   "By default Kubernetes writes Secrets to etcd in plain text; the default identity provider gives no confidentiality. Base64 in a manifest is encoding, not encryption.",
