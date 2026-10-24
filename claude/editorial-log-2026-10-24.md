@@ -40,3 +40,6 @@ Not reachable: GHSA-g3vx-3m76-fghh, GitHub issue #354 (api.github.com requires a
 1. Palo Alto PAN-OS CVE-2026-0322 (KEV 2026-10-14): management-interface RCE, fixed releases, exposure checks
 2. Arista VeloCloud Orchestrator CVE-2026-114625 (KEV 2026-10-23): fixed releases 5.2.3.18 / 6.1.3.10 / 6.4.2.12 per CVE record; check advisory reachability
 3. Kubernetes audit policy for security teams: which events and levels capture token, RBAC and Secret access
+
+## Publication status
+Pushed to main: 191901d (posts), 3a2ee83 (covers, by workflow), 02a6e18 (alt text + log). Local Hugo build: 0 errors, both pages present, no dead /posts/ links. Live check NOT confirmed: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (not retried) and shell curl is blocked by the proxy (403). Owner should spot-check both URLs.
