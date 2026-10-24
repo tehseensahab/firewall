@@ -6,7 +6,7 @@ categories = ["identity-access"]
 summary = "Kubernetes Pods get short-lived, Pod-bound service account tokens from the TokenRequest API, but Secret-based tokens still never expire and stay valid until someone deletes the Secret. Here is how the two differ, why a default Pod token can stay valid for up to a year, and how to find, trace and remove the legacy tokens left in your clusters."
 description = "Bound Kubernetes service account tokens expire and die with their Pod; Secret-based ones never expire. How to find, trace and retire legacy tokens."
 author = "John Marshall"
-imageAlt = "A glass bowl filled with folded paper raffle tickets on a table"
+imageAlt = "A grey bowl heaped with loose green numbered raffle tickets printed with the word TICKET"
 imageCredit = "Photo by [Obi](https://unsplash.com/photos/PyO1DiAFPPQ) on Unsplash"
 takeaways = [
   "Since Kubernetes v1.22, Pods get service account tokens from the TokenRequest API through a projected volume. These tokens have an expiry and an audience, and stop working when their Pod or ServiceAccount is deleted.",
