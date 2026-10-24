@@ -112,3 +112,5 @@ how-to-build-an-incident-response-playbook-for-a-credential-leak | How to Build 
 the-2026-security-hardening-checklist-for-a-small-engineering-team | The 2026 Security Hardening Checklist for a Small Engineering Team | 2026-12-03 | ["security-operations"] | ["process", "appsec"]
 atlassian-cve-2026-21589-data-center-file-read-patch-and-hunt | Atlassian CVE-2026-21589 File Read: Patch and Hunt | 2026-10-23 | ["security-operations"] | atlassian cve-2026-21589
 kubernetes-secrets-encryption-at-rest-what-it-protects | Kubernetes Secrets Encryption at Rest: What It Protects | 2026-10-23 | ["cloud-security"] | kubernetes secrets encryption at rest
+collabora-code-cve-2026-110447-nextcloud-patch-and-hunt | Collabora CODE CVE-2026-110447: Patch Nextcloud, Then Hunt | 2026-10-24 | ["security-operations"] | collabora cve-2026-110447
+kubernetes-service-account-tokens-bound-vs-legacy-secrets | Kubernetes Service Account Tokens: Retire Legacy Secrets | 2026-10-24 | ["identity-access"] | kubernetes service account tokens
