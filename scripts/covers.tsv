@@ -110,3 +110,5 @@ atlassian-cve-2026-21589-data-center-file-read-patch-and-hunt	1768119997334-bc76
 kubernetes-secrets-encryption-at-rest-what-it-protects	1462045504115-6c1d931f07d1	Uf-c4u1usFQ	Close-up of numbered metal deposit boxes	Tim Evans
 collabora-code-cve-2026-110447-nextcloud-patch-and-hunt	1643695211836-1b721438f9e6	KBuWjEVavM8	An open door in a dark room with light coming in	Lan Gao
 kubernetes-service-account-tokens-bound-vs-legacy-secrets	1715520928476-cd350276d96e	PyO1DiAFPPQ	A bowl full of paper tickets on a table	Obi
+velocloud-orchestrator-cve-2026-114625-patch-and-hunt	1683322499436-f4383dd59f5a	PSpf_XgOM5w	A bunch of blue network cables connected to each other	Scott Rodgerson
+kubernetes-audit-policy-what-to-log-and-at-what-level	1760307837453-ce60cb209e52	rvVhr2LngP4	A close-up of an old open ledger with handwritten notes	camera obscura

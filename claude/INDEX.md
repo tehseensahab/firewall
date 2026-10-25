@@ -114,3 +114,5 @@ atlassian-cve-2026-21589-data-center-file-read-patch-and-hunt | Atlassian CVE-20
 kubernetes-secrets-encryption-at-rest-what-it-protects | Kubernetes Secrets Encryption at Rest: What It Protects | 2026-10-23 | ["cloud-security"] | kubernetes secrets encryption at rest
 collabora-code-cve-2026-110447-nextcloud-patch-and-hunt | Collabora CODE CVE-2026-110447: Patch Nextcloud, Then Hunt | 2026-10-24 | ["security-operations"] | collabora cve-2026-110447
 kubernetes-service-account-tokens-bound-vs-legacy-secrets | Kubernetes Service Account Tokens: Retire Legacy Secrets | 2026-10-24 | ["identity-access"] | kubernetes service account tokens
+velocloud-orchestrator-cve-2026-114625-patch-and-hunt | VeloCloud Orchestrator CVE-2026-114625: Patch and Hunt | 2026-10-25 | ["security-operations"] | velocloud orchestrator cve-2026-114625
+kubernetes-audit-policy-what-to-log-and-at-what-level | Kubernetes Audit Policy: What to Log, at What Level | 2026-10-25 | ["cloud-security"] | kubernetes audit policy
