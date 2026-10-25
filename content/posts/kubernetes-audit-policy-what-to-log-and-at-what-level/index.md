@@ -6,7 +6,7 @@ categories = ["cloud-security"]
 summary = "A Kubernetes audit policy decides which API requests kube-apiserver records and how much of each it keeps. The first matching rule wins, so one misplaced rule can write Secret values into your logs. Here is a six-rule policy we ran against kube-apiserver v1.34.1, what each rule captured, and the jq queries that turn the log into answers."
 description = "A Kubernetes audit policy decides what kube-apiserver records. A tested six-rule policy, why rule order can leak Secrets, and the jq queries that use the log."
 author = "Craig Leslie"
-imageAlt = "A close-up of an old open ledger with handwritten entries in ink"
+imageAlt = "A worn, yellowed ledger lying open on green baize, its ruled pages covered in faded handwriting, with a white quill pen resting across them"
 imageCredit = "Photo by [camera obscura](https://unsplash.com/photos/rvVhr2LngP4) on Unsplash"
 takeaways = [
   "kube-apiserver logs nothing unless it is started with --audit-policy-file, and a policy with zero rules is rejected. Each request is matched against the rules in order, and the first match sets its level: None, Metadata, Request or RequestResponse.",
