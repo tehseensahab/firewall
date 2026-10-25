@@ -51,3 +51,6 @@ Slug: kubernetes-audit-policy-what-to-log-and-at-what-level | cloud-security | C
 1. Palo Alto PAN-OS CVE-2026-0322 (KEV 2026-10-14): management-interface code injection, fixed releases, exposure checks
 2. Ivanti Connect Secure CVE-2026-104935 (KEV 2026-10-13): auth bypass by spoofing; fixed versions and integrity checks
 3. Kubernetes audit log detections: building alerts for exec, impersonation, RBAC escalation and Secret enumeration in a SIEM (follow-up to the audit policy guide)
+
+## Publication status
+Pushed to main: 3291171 (posts), 7d6c2d4 (covers, by workflow), c569550 (alt text + log). Local Hugo build: 0 errors, both pages present, no dead /posts/ links. Live check NOT confirmed: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (not retried) and shell curl is blocked by the proxy. Owner should spot-check both URLs.
