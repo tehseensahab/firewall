@@ -116,3 +116,5 @@ collabora-code-cve-2026-110447-nextcloud-patch-and-hunt | Collabora CODE CVE-202
 kubernetes-service-account-tokens-bound-vs-legacy-secrets | Kubernetes Service Account Tokens: Retire Legacy Secrets | 2026-10-24 | ["identity-access"] | kubernetes service account tokens
 velocloud-orchestrator-cve-2026-114625-patch-and-hunt | VeloCloud Orchestrator CVE-2026-114625: Patch and Hunt | 2026-10-25 | ["security-operations"] | velocloud orchestrator cve-2026-114625
 kubernetes-audit-policy-what-to-log-and-at-what-level | Kubernetes Audit Policy: What to Log, at What Level | 2026-10-25 | ["cloud-security"] | kubernetes audit policy
+pan-os-cve-2026-0322-management-interface-rce-patch-and-hunt | PAN-OS CVE-2026-0322: Patch the Management Interface RCE | 2026-10-26 | ["security-operations"] | pan-os cve-2026-0322
+kubernetes-audit-log-detections-8-rules-tested | Kubernetes Audit Log Detections: 8 Rules We Tested | 2026-10-26 | ["cloud-security"] | kubernetes audit log detection

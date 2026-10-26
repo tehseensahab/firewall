@@ -112,3 +112,5 @@ collabora-code-cve-2026-110447-nextcloud-patch-and-hunt	1643695211836-1b721438f9
 kubernetes-service-account-tokens-bound-vs-legacy-secrets	1715520928476-cd350276d96e	PyO1DiAFPPQ	A bowl full of paper tickets on a table	Obi
 velocloud-orchestrator-cve-2026-114625-patch-and-hunt	1683322499436-f4383dd59f5a	PSpf_XgOM5w	A bunch of blue network cables connected to each other	Scott Rodgerson
 kubernetes-audit-policy-what-to-log-and-at-what-level	1760307837453-ce60cb209e52	rvVhr2LngP4	A close-up of an old open ledger with handwritten notes	camera obscura
+pan-os-cve-2026-0322-management-interface-rce-patch-and-hunt	1584131688247-27fe529d6717	pCnsAvfbetw	A padlock attached to a metal gate	smallbox
+kubernetes-audit-log-detections-8-rules-tested	1495714096525-285e85481946	xJc--frJbuw	A white box security camera on a wall	Siarhei Horbach
