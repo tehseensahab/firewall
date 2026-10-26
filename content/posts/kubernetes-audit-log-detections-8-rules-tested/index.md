@@ -6,7 +6,7 @@ categories = ["cloud-security"]
 summary = "Eight detection rules for the Kubernetes audit log, written as jq filters and mapped to MITRE ATT&CK: exec and debug sessions, pods asking for host access, cluster-admin bindings, Secret sweeps, minted tokens, impersonation, permission discovery and anonymous calls. We ran them against a scripted attack on kube-apiserver v1.34.1 and report what each caught, what it missed and how to tune it."
 description = "Kubernetes audit log detections for exec, host-access pods, cluster-admin bindings, Secret sweeps, tokens and impersonation, tested on kube-apiserver v1.34.1."
 author = "Craig Leslie"
-imageAlt = "A white box security camera mounted on a wall"
+imageAlt = "A single white surveillance camera on a short bracket, mounted on a plain pale grey textured wall crossed by a diagonal band of light"
 imageCredit = "Photo by [Siarhei Horbach](https://unsplash.com/photos/xJc--frJbuw) on Unsplash"
 takeaways = [
   "Most Kubernetes attack techniques have to go through kube-apiserver, so a handful of audit log rules covers a lot: exec and ephemeral containers, pods that request host access, bindings to cluster-admin, Secret reads across namespaces or in kube-system, service account tokens minted by people, impersonation, permission discovery and anonymous requests.",
