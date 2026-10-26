@@ -54,4 +54,4 @@ Process notes: restarting kube-apiserver with --allow-privileged=true was denied
 3. Management-plane hardening for network appliances: a checklist for firewalls, VPNs and SD-WAN orchestrators | guide (fundamentals or identity-access) | follows a run of edge-device KEVs | PAN-OS admin guide (securing administrative access), KEV raw (count edge/management CVEs), CVE records for 0322/114625/0012 | must not repeat: pan-os-cve-2026-0322..., velocloud-orchestrator..., the-2026-security-hardening-checklist (scheduled)
 
 ## Publication status
-(filled after push)
+Pushed to main: 91081b9 (posts, covers.tsv, INDEX), ca0ab60 (covers, by workflow), bdca90c (alt text from actual covers, log, SOURCES.md). Local Hugo v0.152.2 build: 0 errors, both pages present, no dead /posts/ links. Live check NOT confirmed: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (not retried). Owner should spot-check both URLs.
