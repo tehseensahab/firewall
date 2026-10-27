@@ -118,3 +118,5 @@ velocloud-orchestrator-cve-2026-114625-patch-and-hunt | VeloCloud Orchestrator C
 kubernetes-audit-policy-what-to-log-and-at-what-level | Kubernetes Audit Policy: What to Log, at What Level | 2026-10-25 | ["cloud-security"] | kubernetes audit policy
 pan-os-cve-2026-0322-management-interface-rce-patch-and-hunt | PAN-OS CVE-2026-0322: Patch the Management Interface RCE | 2026-10-26 | ["security-operations"] | pan-os cve-2026-0322
 kubernetes-audit-log-detections-8-rules-tested | Kubernetes Audit Log Detections: 8 Rules We Tested | 2026-10-26 | ["cloud-security"] | kubernetes audit log detection
+php2shell-cve-2026-109618-cve-2026-109619-patch-and-hunt | PHP2Shell CVE-2026-109618 and -109619: Patch, Then Hunt | 2026-10-27 | ["security-operations"] | php2shell cve-2026-109618
+php-ini-security-hardening-production-settings | php.ini Security Hardening: Production Settings That Matter | 2026-10-27 | ["appsec"] | php.ini security hardening
