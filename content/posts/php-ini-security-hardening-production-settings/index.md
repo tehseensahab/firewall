@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "PHP's own php.ini-production template still leaves several security settings at permissive defaults, including strict session mode, cookie flags and the X-Powered-By header. This guide lists the settings worth changing, shows what each one does with tested examples, explains where to set them so applications can't undo them, and is honest about the two directives that are not security boundaries."
 description = "php.ini hardening: the settings PHP's production template leaves open, tested examples, where to set them so apps can't override them, and what not to rely on."
 author = "Craig Leslie"
-imageAlt = "Hero image for the php.ini hardening guide"
+imageAlt = "A vintage control panel labelled Radiation, with rows of analogue meters, trip and reset lamps, and rotary dials"
 imageCredit = "Photo by [Dan Meyers](https://unsplash.com/photos/F_DSvG5Fb0A) on Unsplash"
 takeaways = [
   "PHP's shipped php.ini-production is safer than no php.ini, but it is not hardened. Checked against a 13-setting baseline, the PHP 8.4.27 template still differed on 6: expose_php, allow_url_fopen, session.use_strict_mode, session.cookie_httponly, session.cookie_secure and session.cookie_samesite.",
