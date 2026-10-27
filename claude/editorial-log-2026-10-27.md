@@ -64,4 +64,5 @@
 3. Siemens Software Center CVE-2026-110936 (uncontrolled search path) | timely (KEV 2026-10-20, due 2026-11-03) | OT/engineering IT patching | cvelistV5 cves/2026/110xxx/CVE-2026-110936.json; KEV raw; Siemens ProductCERT advisory via WebSearch | must not repeat: none
 
 ## Publication status
-(see below)
+Pushed to main: 93a6e3a (posts, INDEX, covers.tsv), a8e0692 (covers by workflow), 8c354f9 / 18e86ce / 0438eda (cover replacements + alt text; final PHP2Shell cover fetched locally with scripts/fetch-covers.sh and verified identical to the previewed image). Local Hugo v0.152.2 build: 0 errors, both pages present, no dead /posts/ links. Live check NOT confirmed: WebFetch of both firewallsync.com URLs returned PROVENANCE_REQUIRED (not retried). Owner should spot-check both URLs.
+Note: covers.tsv edits chained after `grep -c ... &&` silently skip when grep returns 0 matches (exit 1). Use `;` instead.
