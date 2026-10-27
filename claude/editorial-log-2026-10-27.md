@@ -51,7 +51,7 @@
 
 ## Hero images
 - php2shell first pick (9z958EEwNaI, fire alarm box) dropped after viewing: maker name embossed on the box. Replaced with N6oKiPTrk88.
-- php2shell: Unsplash N6oKiPTrk88 (Paran Koo), photo-1653969096164-b46ea1ae36c0
+- php2shell: Unsplash D7Fjd1-Jkbc (Compagnons), photo-1726453004705-fa6341ceb095 (second pick N6oKiPTrk88 dropped after viewing: event branding in background)
 - php.ini: Unsplash F_DSvG5Fb0A (Dan Meyers), photo-1567664883526-8f401f277a27
 
 ## Skipped / blocked
