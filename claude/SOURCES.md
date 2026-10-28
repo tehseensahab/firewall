@@ -15,17 +15,24 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - images.unsplash.com/photo-<id>?w=1600&q=80&fm=jpg | works | preview a cover before committing; scripts/fetch-covers.sh runs locally if the workflow does not fire | 2026-10-27
 - Sandbox has php8.3-cli (Ubuntu 24.04) | works | test PHP behaviour with php -n / -d / -S | 2026-10-27
 
+- raw.githubusercontent.com/google/brotli/<tag>/{CHANGELOG.md,c/dec/decode.c}, nodejs/node/<tag>/deps/<lib>/..., andybalholm/brotli/<tag>/decode.go, envoyproxy/envoy/<tag>/bazel/repository_locations.bzl, urllib3/urllib3/main/... | works | diff fixed vs vulnerable tags; check bundled-dep versions per release | 2026-10-28
+- pypi.org/pypi/<pkg>/json | works | release versions + upload dates | 2026-10-28
+- raw.githubusercontent.com/OWASP/CheatSheetSeries/master/cheatsheets/*.md | works | link cheatsheetseries.owasp.org page in posts | 2026-10-28
+- raw.githubusercontent.com/php/doc-en/master/reference/session/security.xml (+ functions/session-regenerate-id.xml, network/functions/setcookie.xml) | works | session security chapter source; features/* paths 404 | 2026-10-28
+- Sandbox: node v22.23.4, pip venv (python3 -m venv) installs from PyPI | works | test runtime behaviour | 2026-10-28
 ## Fails from the shell
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED on 2026-10-26 and 2026-10-27 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-27
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26, -27, -28 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
 - Restarting a background kube-apiserver with new flags (pkill + relaunch) | denied by the auto-mode classifier | start it once with all flags you need (e.g. --allow-privileged=true) | 2026-10-26
 
 ## WebFetch (after WebSearch)
+- nodejs.org/en/blog/vulnerability/*, wiz.io/blog, aikido.dev/blog | works | Node advisory is primary; Wiz/Aikido secondary (qualify) | 2026-10-28
+- unsplash.com/s/photos/<query> | works for listing, but photo pages from it need their own WebSearch hit | search "unsplash photo <subject>" until a /photos/ URL is returned | 2026-10-28
 - bleepingcomputer.com, thehackernews.com, csoonline.com articles | works (bleepingcomputer SERVER_ERROR once 2026-10-27) | press context only; attribute; infosecurity-magazine.com, securityaffairs.com work | 2026-10-27
 - vulncheck.com/blog, openwall.com/lists/oss-security, ic3.gov/PSA | works | | 2026-10-27
 - docs.paloaltonetworks.com (ngfw admin, pan-os/9-1 admin guide) | works | best-practices/10-1 landing page has no content, use the admin-guide pages | 2026-10-26

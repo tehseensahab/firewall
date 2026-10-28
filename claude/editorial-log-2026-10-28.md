@@ -59,3 +59,6 @@
 1. Adobe Commerce/Magento CVE-2026-48356 (APSB26-73) unrestricted upload, KEV 2026-10-27, due 2026-11-10 | timely | merchants search "is my Magento patched / 2.4.x-2026-jul" | cvelistV5 cves/2026/48xxx/CVE-2026-48356.json (affected list incl. 2026-jul builds); KEV raw; helpx.adobe.com APSB26-73 via WebSearch | must not repeat: php2shell, php-ini posts
 2. Node.js zlib decompression safety: maxOutputLength, streaming limits and decompression bombs (gzip/brotli/zstd) | guide (appsec) | follows Brotli CVE; devs search "node zlib decompression bomb maxOutputLength" | nodejs/node doc/api/zlib.md raw; Node.js Oct 2026 advisory; OWASP file upload cheat sheet raw | must not repeat: brotli-cve-2026-111497 post
 3. Ivanti Connect Secure CVE-2026-104935 auth bypass, fixed 25.1.3.0 / 22.8R2.5 | timely-ish (KEV 2026-10-13, forensicTriage Yes) | ICS admins | cvelistV5 cves/2026/104xxx/CVE-2026-104935.json; KEV raw; hub.ivanti.com advisory via WebSearch | must not repeat: pan-os, citrix posts
+
+## Publication status
+Pushed to main: 142690b (posts, INDEX, covers.tsv), 06b1c6b (covers by workflow), 7e92eb4 (alt text + log). Local Hugo v0.152.2 build: 0 errors, both pages present, 0 dead /posts/ links. Covers checked visually. Live check NOT confirmed: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (not retried). Owner should spot-check both URLs.
