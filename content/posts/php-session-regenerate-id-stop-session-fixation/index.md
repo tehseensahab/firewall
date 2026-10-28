@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "Calling session_regenerate_id() at login is the start of PHP session security, not the whole of it. This guide shows the fixation attack strict mode does not stop, a tested helper for timestamp-based rotation, idle and absolute timeouts, and the grace-period shortcut that quietly undoes the fix."
 description = "PHP session_regenerate_id done right: rotate before setting auth, keep old IDs on a timer, enforce idle and absolute timeouts. Tested code for PHP 8.3."
 author = "Craig Leslie"
-imageAlt = "Two antique brass skeleton keys lying side by side on a white background, each tied with a thin pale pink ribbon"
+imageAlt = "Two antique brass skeleton keys on a white background, one pointing up and one down, each tied with a thin pale pink ribbon"
 imageCredit = "Photo by [Dragonfly Ave](https://unsplash.com/photos/pTZJTasRzY0) on Unsplash"
 takeaways = [
   "session.use_strict_mode only rejects session IDs PHP never issued. An attacker who visits your site gets a real ID and can plant it on a victim. In our test the victim logged in, and the attacker's copy of that ID showed the victim's account.",
