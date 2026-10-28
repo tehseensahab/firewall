@@ -116,3 +116,5 @@ pan-os-cve-2026-0322-management-interface-rce-patch-and-hunt	1584131688247-27fe5
 kubernetes-audit-log-detections-8-rules-tested	1495714096525-285e85481946	xJc--frJbuw	A white box security camera on a wall	Siarhei Horbach
 php2shell-cve-2026-109618-cve-2026-109619-patch-and-hunt	1726453004705-fa6341ceb095	D7Fjd1-Jkbc	A close-up of yellow caution tape	Compagnons
 php-ini-security-hardening-production-settings	1567664883526-8f401f277a27	F_DSvG5Fb0A	A close-up of a vintage control panel with knobs and gauges	Dan Meyers
+brotli-cve-2026-111497-find-and-patch-every-copy	1738965662140-0bb6b1356194	knoPXXK07MQ	Round straw bales stacked in tight columns	Haberdoedas
+php-session-regenerate-id-stop-session-fixation	1571975795053-950dbde7dacc	pTZJTasRzY0	Two brass skeleton keys tied with pale ribbon	Dragonfly Ave

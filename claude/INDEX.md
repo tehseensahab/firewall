@@ -120,3 +120,5 @@ pan-os-cve-2026-0322-management-interface-rce-patch-and-hunt | PAN-OS CVE-2026-0
 kubernetes-audit-log-detections-8-rules-tested | Kubernetes Audit Log Detections: 8 Rules We Tested | 2026-10-26 | ["cloud-security"] | kubernetes audit log detection
 php2shell-cve-2026-109618-cve-2026-109619-patch-and-hunt | PHP2Shell CVE-2026-109618 and -109619: Patch, Then Hunt | 2026-10-27 | ["security-operations"] | php2shell cve-2026-109618
 php-ini-security-hardening-production-settings | php.ini Security Hardening: Production Settings That Matter | 2026-10-27 | ["appsec"] | php.ini security hardening
+brotli-cve-2026-111497-find-and-patch-every-copy | Brotli CVE-2026-111497: Find and Patch Every Copy | 2026-10-28 | ["security-operations"] | brotli cve-2026-111497
+php-session-regenerate-id-stop-session-fixation | PHP session_regenerate_id: Stop Session Fixation Right | 2026-10-28 | ["appsec"] | php session_regenerate_id
