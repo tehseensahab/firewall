@@ -19,20 +19,24 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - pypi.org/pypi/<pkg>/json | works | release versions + upload dates | 2026-10-28
 - raw.githubusercontent.com/OWASP/CheatSheetSeries/master/cheatsheets/*.md | works | link cheatsheetseries.owasp.org page in posts | 2026-10-28
 - raw.githubusercontent.com/php/doc-en/master/reference/session/security.xml (+ functions/session-regenerate-id.xml, network/functions/setcookie.xml) | works | session security chapter source; features/* paths 404 | 2026-10-28
-- Sandbox: node v22.23.4, pip venv (python3 -m venv) installs from PyPI | works | test runtime behaviour | 2026-10-28
+- Sandbox: node v22.23.4, pip venv (python3 -m venv) and npm install (express etc.) from registries | works | test runtime behaviour | 2026-10-29
+- raw.githubusercontent.com/magento/magento2/2.4-develop/{nginx.conf.sample,pub/media/*/.htaccess,app/code/Magento/*/etc/db_schema.xml} | works | stock server rules, table columns | 2026-10-29
+- raw.githubusercontent.com/nodejs/node/<vX.Y.Z>/doc/api/*.md | works | use the tag matching the tested runtime; main branch docs list unreleased versions | 2026-10-29
 ## Fails from the shell
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26, -27, -28 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to -29 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
 - Restarting a background kube-apiserver with new flags (pkill + relaunch) | denied by the auto-mode classifier | start it once with all flags you need (e.g. --allow-privileged=true) | 2026-10-26
 
 ## WebFetch (after WebSearch)
+- helpx.adobe.com/<region>/security/products/magento/apsb*.html (e.g. /au/) | works | the un-prefixed helpx URL 302s to adobe.com/trust/..., which hits PROVENANCE_REQUIRED; use a regional copy and mark QUALIFIED (check 'Last updated') | 2026-10-29
+- sansec.io/research/*, thehackernews.com/2026/* | works | Sansec = researcher (qualify); THN press | 2026-10-29
 - nodejs.org/en/blog/vulnerability/*, wiz.io/blog, aikido.dev/blog | works | Node advisory is primary; Wiz/Aikido secondary (qualify) | 2026-10-28
-- unsplash.com/s/photos/<query> | works for listing, but photo pages from it need their own WebSearch hit | search "unsplash photo <subject>" until a /photos/ URL is returned | 2026-10-28
+- unsplash.com/s/photos/<query> | works for listing, but photo pages from it need their own WebSearch hit | search "unsplash.com/photos <subject>" until a /photos/ URL is returned; reject Unsplash+ (plus.unsplash.com ids) | 2026-10-29
 - bleepingcomputer.com, thehackernews.com, csoonline.com articles | works (bleepingcomputer SERVER_ERROR once 2026-10-27) | press context only; attribute; infosecurity-magazine.com, securityaffairs.com work | 2026-10-27
 - vulncheck.com/blog, openwall.com/lists/oss-security, ic3.gov/PSA | works | | 2026-10-27
 - docs.paloaltonetworks.com (ngfw admin, pan-os/9-1 admin guide) | works | best-practices/10-1 landing page has no content, use the admin-guide pages | 2026-10-26

@@ -47,7 +47,7 @@ Removed: none. rejectGarbageAfterEnd (v24.19/v26.5 per main docs) left out; unte
 Local Hugo v0.152.2: 0 errors, 90 post pages, both new pages present, 0 dead /posts/ links. Titles 50/50 chars; descriptions 152/147.
 
 ## Publication status
-Pushed 3c2427f (posts, INDEX, covers.tsv). Live status: see below.
+Pushed 3c2427f (posts, INDEX, covers.tsv), e90b167 (covers by workflow), e2ca2aa (alt text + log). Covers checked visually; alt text matches. Live check NOT confirmed: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (not retried). Owner should spot-check both URLs.
 
 ## Next-session candidates
 1. Linux kernel CVE-2026-46300 (ESP in-place decrypt of shared page-cache fragments; KEV 2026-10-28, chained with PHP2Shell) | timely | Linux admins search "CVE-2026-46300 fixed kernel" | KEV raw; cvelistV5 cves/2026/46xxx/CVE-2026-46300.json; kernel.org stable commits via CVE record refs; distro trackers via WebSearch | must not repeat: php2shell-cve-2026-109618 post (link to it)
