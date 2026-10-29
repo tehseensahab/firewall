@@ -122,3 +122,5 @@ php2shell-cve-2026-109618-cve-2026-109619-patch-and-hunt | PHP2Shell CVE-2026-10
 php-ini-security-hardening-production-settings | php.ini Security Hardening: Production Settings That Matter | 2026-10-27 | ["appsec"] | php.ini security hardening
 brotli-cve-2026-111497-find-and-patch-every-copy | Brotli CVE-2026-111497: Find and Patch Every Copy | 2026-10-28 | ["security-operations"] | brotli cve-2026-111497
 php-session-regenerate-id-stop-session-fixation | PHP session_regenerate_id: Stop Session Fixation Right | 2026-10-28 | ["appsec"] | php session_regenerate_id
+magento-cve-2026-48356-polyshell-patch-and-hunt | Magento CVE-2026-48356 (PolyShell): Patch and Hunt | 2026-10-29 | ["security-operations"] | magento cve-2026-48356
+nodejs-decompression-bomb-zlib-limits | Node.js Decompression Bombs: zlib Limits That Work | 2026-10-29 | ["appsec"] | node.js decompression bomb
