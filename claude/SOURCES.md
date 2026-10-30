@@ -22,11 +22,13 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - Sandbox: node v22.23.4, pip venv (python3 -m venv) and npm install (express etc.) from registries | works | test runtime behaviour | 2026-10-29
 - raw.githubusercontent.com/magento/magento2/2.4-develop/{nginx.conf.sample,pub/media/*/.htaccess,app/code/Magento/*/etc/db_schema.xml} | works | stock server rules, table columns | 2026-10-29
 - raw.githubusercontent.com/nodejs/node/<vX.Y.Z>/doc/api/*.md | works | use the tag matching the tested runtime; main branch docs list unreleased versions | 2026-10-29
+- raw.githubusercontent.com/ruby/www.ruby-lang.org/master/en/news/_posts/<date>-<slug>.md | works | Ruby security advisories source; link www.ruby-lang.org/en/news/YYYY/MM/DD/<slug>/ | 2026-10-30
+- Sandbox npm install of multer, file-type, sharp (prebuilt binary) | works | read installed READMEs/d.ts for version-exact quotes | 2026-10-30
 ## Fails from the shell
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to -29 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to -30 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
@@ -45,5 +47,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - docs.azure.cn (AKS mirror) | works | learn.microsoft.com mirror; mark QUALIFIED | 2026-10-25
 - docs.aws.amazon.com | works | | 2026-10-25
 
+- docs.gitlab.com/releases/patches/patch-release-gitlab-<ver>-released/ and docs.gitlab.com/ee/api/* | works | primary for GitLab CVEs (fixed versions, detections); gitlabhq GitHub mirror doc paths 404 | 2026-10-30
+- bleepingcomputer.com (non-amp article URL) | fails: client_error 2026-10-30 | try the /amp/ URL from search or another outlet | 2026-10-30
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
