@@ -120,3 +120,5 @@ brotli-cve-2026-111497-find-and-patch-every-copy	1738965662140-0bb6b1356194	knoP
 php-session-regenerate-id-stop-session-fixation	1571975795053-950dbde7dacc	pTZJTasRzY0	Two brass skeleton keys tied with pale ribbon	Dragonfly Ave
 magento-cve-2026-48356-polyshell-patch-and-hunt	1717568511299-003b41c20816	yZLtvPLNlw4	A long row of empty grey shopping carts with orange handles	ERIC ZHU
 nodejs-decompression-bomb-zlib-limits	1741939401889-5dd17bfc64a8	tA30zkMCx-g	Water pouring over a low concrete weir below a lake	Deniz Demirci
+gitlab-cve-2026-97229-ci-regex-rce-patch-and-hunt	1757271453507-bbee317318a8	DkTmBA443g4	Rows of valve wheels on pipes in an underground corridor	Simon Infanger
+secure-file-upload-nodejs-express-multer	1421882046699-09a0ff4ffb1b	EvX8-J2ClMo	Green roadside mailbox in a row of mailboxes	Daria Nepriakhina

@@ -124,3 +124,5 @@ brotli-cve-2026-111497-find-and-patch-every-copy | Brotli CVE-2026-111497: Find 
 php-session-regenerate-id-stop-session-fixation | PHP session_regenerate_id: Stop Session Fixation Right | 2026-10-28 | ["appsec"] | php session_regenerate_id
 magento-cve-2026-48356-polyshell-patch-and-hunt | Magento CVE-2026-48356 (PolyShell): Patch and Hunt | 2026-10-29 | ["security-operations"] | magento cve-2026-48356
 nodejs-decompression-bomb-zlib-limits | Node.js Decompression Bombs: zlib Limits That Work | 2026-10-29 | ["appsec"] | node.js decompression bomb
+gitlab-cve-2026-97229-ci-regex-rce-patch-and-hunt | GitLab CVE-2026-97229: Patch the Regex RCE, Then Hunt | 2026-10-30 | ["security-operations"] | gitlab cve-2026-97229
+secure-file-upload-nodejs-express-multer | Secure File Uploads in Node.js: A Tested Express Setup | 2026-10-30 | ["appsec"] | secure file upload node.js
