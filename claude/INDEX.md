@@ -126,3 +126,5 @@ magento-cve-2026-48356-polyshell-patch-and-hunt | Magento CVE-2026-48356 (PolySh
 nodejs-decompression-bomb-zlib-limits | Node.js Decompression Bombs: zlib Limits That Work | 2026-10-29 | ["appsec"] | node.js decompression bomb
 gitlab-cve-2026-97229-ci-regex-rce-patch-and-hunt | GitLab CVE-2026-97229: Patch the Regex RCE, Then Hunt | 2026-10-30 | ["security-operations"] | gitlab cve-2026-97229
 secure-file-upload-nodejs-express-multer | Secure File Uploads in Node.js: A Tested Express Setup | 2026-10-30 | ["appsec"] | secure file upload node.js
+ivanti-connect-secure-cve-2026-111357-cve-2026-118527-kev | Ivanti CVE-2026-111357 and CVE-2026-118527: What to Do | 2026-10-31 | ["security-operations"] | ivanti cve-2026-111357
+user-supplied-regex-redos-safe-engines | User-Supplied Regex: How to Run It Without ReDoS | 2026-10-31 | ["appsec"] | user-supplied regex
