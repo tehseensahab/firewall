@@ -24,6 +24,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/nodejs/node/<vX.Y.Z>/doc/api/*.md | works | use the tag matching the tested runtime; main branch docs list unreleased versions | 2026-10-29
 - raw.githubusercontent.com/ruby/www.ruby-lang.org/master/en/news/_posts/<date>-<slug>.md | works | Ruby security advisories source; link www.ruby-lang.org/en/news/YYYY/MM/DD/<slug>/ | 2026-10-30
 - Sandbox npm install of multer, file-type, sharp (prebuilt binary) | works | read installed READMEs/d.ts for version-exact quotes | 2026-10-30
+- raw.githubusercontent.com/{google/re2/main/README.md, golang/go/master/src/regexp/regexp.go, rust-lang/regex/master/{README.md,src/lib.rs}, python/cpython/main/Doc/library/re.rst, dotnet/docs/main/docs/standard/base-types/*.md, v8/v8.dev/main/src/blog/*.md} | works | engine/runtime doc sources; link the rendered docs pages | 2026-10-31
+- cvelistV5 path for a KEV CVE with no CNA record yet (e.g. 2026/118xxx/CVE-2026-118527) | 404 | KEV shortDescription is then the only primary text; say so in the post | 2026-10-31
+- Sandbox pip install google-re2 (1.1.20251105) | works | RE2 Python binding for tests; logs parse errors to stderr | 2026-10-31
 ## Fails from the shell
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
@@ -34,6 +37,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
 - Restarting a background kube-apiserver with new flags (pkill + relaunch) | denied by the auto-mode classifier | start it once with all flags you need (e.g. --allow-privileged=true) | 2026-10-26
 
+- owasp.org/www-community/attacks/* | 302 to community.owasp.org, which hit PROVENANCE_REQUIRED | WebFetch the wiki.owasp.org/index.php/<page> copy from search (archived; qualify) | 2026-10-31
+- hub.ivanti.com advisories, volexity.com/blog | not returned by WebSearch | CVE record + KEV + Rapid7/THN/Register (qualify press) | 2026-10-31
 ## WebFetch (after WebSearch)
 - helpx.adobe.com/<region>/security/products/magento/apsb*.html (e.g. /au/) | works | the un-prefixed helpx URL 302s to adobe.com/trust/..., which hits PROVENANCE_REQUIRED; use a regional copy and mark QUALIFIED (check 'Last updated') | 2026-10-29
 - sansec.io/research/*, thehackernews.com/2026/* | works | Sansec = researcher (qualify); THN press | 2026-10-29
@@ -49,5 +54,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 
 - docs.gitlab.com/releases/patches/patch-release-gitlab-<ver>-released/ and docs.gitlab.com/ee/api/* | works | primary for GitLab CVEs (fixed versions, detections); gitlabhq GitHub mirror doc paths 404 | 2026-10-30
 - bleepingcomputer.com (non-amp article URL) | fails: client_error 2026-10-30 | try the /amp/ URL from search or another outlet | 2026-10-30
+- rapid7.com/blog/post/etr-*, theregister.com/a/<id>, cyber.gc.ca/en/alerts-advisories/*, csa.gov.sg/alerts-and-advisories/alerts/* | works | Rapid7 reproduces vendor version tables (qualify); cyber.gc.ca/CSA SG are government alerts with update dates | 2026-10-31
+- unsplash.com/photos/<slug-id> from WebSearch | works | always grep covers.tsv for the id BEFORE appending (a duplicate slipped in and was removed 2026-10-31) | 2026-10-31
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26

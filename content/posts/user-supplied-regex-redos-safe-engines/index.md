@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "Search filters, alert rules, routing configs and log tools all end up accepting regular expressions from users. In a backtracking engine that is a denial-of-service switch you hand to whoever can type a pattern. This guide shows which engines are built for untrusted patterns (RE2, Go, Rust), which ones say plainly that they are not (.NET), what timeouts and possessive quantifiers can and cannot do, and two tested patterns for Python and Node.js."
 description = "To run user-supplied regex safely, use a linear-time engine such as RE2, cap pattern length, and isolate backtracking engines behind a timeout. Tested code."
 author = "Craig Leslie"
-imageAlt = "Regex engine safety"
+imageAlt = "Taut strands of red, orange, pink, purple, yellow and white thread crossing at angles to form a dense grid against a blurred grey background"
 imageCredit = "Photo by [CHUTTERSNAP](https://unsplash.com/photos/close-up-photo-of-intertwining-strings-W2f1VZ6KuoM) on Unsplash"
 takeaways = [
   "A backtracking engine can take exponential time on a crafted input. In our Python 3.13 test, ^(a+)+$ took 0.009 s on 18 characters and 0.54 s on 24; each extra two characters roughly quadrupled the time.",
