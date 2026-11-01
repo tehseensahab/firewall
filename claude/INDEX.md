@@ -128,3 +128,5 @@ gitlab-cve-2026-97229-ci-regex-rce-patch-and-hunt | GitLab CVE-2026-97229: Patch
 secure-file-upload-nodejs-express-multer | Secure File Uploads in Node.js: A Tested Express Setup | 2026-10-30 | ["appsec"] | secure file upload node.js
 ivanti-connect-secure-cve-2026-111357-cve-2026-118527-kev | Ivanti CVE-2026-111357 and CVE-2026-118527: What to Do | 2026-10-31 | ["security-operations"] | ivanti cve-2026-111357
 user-supplied-regex-redos-safe-engines | User-Supplied Regex: How to Run It Without ReDoS | 2026-10-31 | ["appsec"] | user-supplied regex
+vmware-esx-cve-2026-41709-insufficient-logging-kev | VMware ESX CVE-2026-41709: Patch the Logging Gap Now | 2026-11-01 | ["security-operations"] | cve-2026-41709
+escape-user-input-regex-sql-like | Escape User Input in Regex and SQL LIKE: Tested Fixes | 2026-11-01 | ["appsec"] | escape user input regex
