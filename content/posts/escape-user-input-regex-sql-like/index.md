@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "A search box that drops user text into new RegExp() or a LIKE pattern is a small injection bug: a dot matches anything, .* matches everything, and a % turns a filtered search into a full table scan that returns every row. Parameterised queries do not fix it. This guide shows the correct escaping function in Python, JavaScript and Go, the LIKE ESCAPE rules for PostgreSQL and SQLite, and the replacement-string trap that catches people after they have escaped the pattern."
 description = "Escape user text before it enters a regex or LIKE pattern: re.escape, RegExp.escape, regexp.QuoteMeta, and LIKE with an ESCAPE clause. Tested code inside."
 author = "Craig Leslie"
-imageAlt = "Rows of metal type"
+imageAlt = "Dozens of wooden letterpress type blocks, letters and numerals in warm brown tones, scattered on a wooden surface"
 imageCredit = "Photo by [Mr Cup / Fabien Barral](https://unsplash.com/photos/tilt-shift-lens-photography-close-shot-of-brown-letter-and-number-blocks-xzNXkB8oJRU) on Unsplash"
 takeaways = [
   "If user text is meant to be matched literally, escape it before it becomes part of a pattern. In our tests an unescaped search for al.ce also matched alice, and .* matched every line.",
