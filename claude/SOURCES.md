@@ -27,11 +27,14 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/{google/re2/main/README.md, golang/go/master/src/regexp/regexp.go, rust-lang/regex/master/{README.md,src/lib.rs}, python/cpython/main/Doc/library/re.rst, dotnet/docs/main/docs/standard/base-types/*.md, v8/v8.dev/main/src/blog/*.md} | works | engine/runtime doc sources; link the rendered docs pages | 2026-10-31
 - cvelistV5 path for a KEV CVE with no CNA record yet (e.g. 2026/118xxx/CVE-2026-118527) | 404 | KEV shortDescription is then the only primary text; say so in the post | 2026-10-31
 - Sandbox pip install google-re2 (1.1.20251105) | works | RE2 Python binding for tests; logs parse errors to stderr | 2026-10-31
+- npm install node@24 (scratch dir) | works | Node 24.22.2 binary for testing newer JS APIs (RegExp.escape) | 2026-11-01
+- Sandbox PostgreSQL 16 (/usr/lib/postgresql/16/bin initdb + pg_ctl as a non-root user, unix socket in /tmp) | works | real SQL behaviour tests | 2026-11-01
+- Sandbox go 1.24.7, sqlite 3.53.1 (python sqlite3) | works | | 2026-11-01
 ## Fails from the shell
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to -30 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-01 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
@@ -56,5 +59,11 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - bleepingcomputer.com (non-amp article URL) | fails: client_error 2026-10-30 | try the /amp/ URL from search or another outlet | 2026-10-30
 - rapid7.com/blog/post/etr-*, theregister.com/a/<id>, cyber.gc.ca/en/alerts-advisories/*, csa.gov.sg/alerts-and-advisories/alerts/* | works | Rapid7 reproduces vendor version tables (qualify); cyber.gc.ca/CSA SG are government alerts with update dates | 2026-10-31
 - unsplash.com/photos/<slug-id> from WebSearch | works | always grep covers.tsv for the id BEFORE appending (a duplicate slipped in and was removed 2026-10-31) | 2026-10-31
+- support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/<id> (VMSA) | works via WebSearch+WebFetch | primary for VMware CVEs (response matrix, change log) | 2026-11-01
+- knowledge.broadcom.com/external/article/<n>/... (ESXi KBs 318939, 306962) | works | | 2026-11-01
+- developer.mozilla.org (JS reference) | works | | 2026-11-01
+- access.crunchydata.com/documentation/postgresql17/17.1/*.html | works | postgresql.org/docs/current not returned by WebSearch; mirror = QUALIFIED | 2026-11-01
+- Cisco PSIRT advisories (sec.cloudapps.cisco.com / cisco.com/c/en/us/support/docs/csa/<id>) for brand-new advisories | not returned by WebSearch 2026-11-01 | CVE record + KEV; press (securityonline.info) for fixed releases = qualify; hold if core claim | 2026-11-01
+- unsplash.com/photos: check content of picks (one free photo was a religious manuscript) and grep covers.tsv BEFORE appending | | 2026-11-01
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
