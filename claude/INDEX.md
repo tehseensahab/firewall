@@ -130,3 +130,5 @@ ivanti-connect-secure-cve-2026-111357-cve-2026-118527-kev | Ivanti CVE-2026-1113
 user-supplied-regex-redos-safe-engines | User-Supplied Regex: How to Run It Without ReDoS | 2026-10-31 | ["appsec"] | user-supplied regex
 vmware-esx-cve-2026-41709-insufficient-logging-kev | VMware ESX CVE-2026-41709: Patch the Logging Gap Now | 2026-11-01 | ["security-operations"] | cve-2026-41709
 escape-user-input-regex-sql-like | Escape User Input in Regex and SQL LIKE: Tested Fixes | 2026-11-01 | ["appsec"] | escape user input regex
+vulnerability-prioritization-workflow-cve-record-to-patch-ticket | Vulnerability Prioritization Workflow: CVE Record to Ticket | 2026-11-02 | ["security-operations"] | vulnerability prioritization workflow
+cve-affected-versions-lessthan-defaultstatus-versiontype | CVE Affected Versions: lessThan, defaultStatus, versionType | 2026-11-02 | ["appsec"] | cve affected versions defaultStatus lessThan
