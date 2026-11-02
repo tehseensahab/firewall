@@ -30,11 +30,15 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - npm install node@24 (scratch dir) | works | Node 24.22.2 binary for testing newer JS APIs (RegExp.escape) | 2026-11-01
 - Sandbox PostgreSQL 16 (/usr/lib/postgresql/16/bin initdb + pg_ctl as a non-root user, unix socket in /tmp) | works | real SQL behaviour tests | 2026-11-01
 - Sandbox go 1.24.7, sqlite 3.53.1 (python sqlite3) | works | | 2026-11-01
+- github.com/empiricalsec/epss_scores via git clone --depth 1 --filter=blob:none --no-checkout, then git checkout HEAD -- 2026/epss_scores-YYYY-MM-DD.csv.gz | works | daily EPSS files (header model_version, score_date); use when the epss.empiricalsecurity.com CSV is blocked | 2026-11-02
+- github.com/CVEProject/cvelistV5 partial clone (blob:none, no-checkout) | works in ~3 s | gives full file list (git ls-tree); fetch blobs with parallel curl of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/cves/... (xargs -P 24: 1,000 files in seconds); per-path git checkout of 1,000 blobs timed out | 2026-11-02
+- github.com/CVEProject/cve-schema, cisagov/vulnrichment, CERTCC/SSVC (git clone, sparse checkout of data/csv/ssvc/*.csv, docs/howto/deployer_tree.md, src/ssvc/decision_points/ssvc/*.py), raw openvex/spec/main/OPENVEX-SPEC.md | works | primary specs for the prioritization cluster | 2026-11-02
 ## Fails from the shell
+- epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-01 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-02 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
