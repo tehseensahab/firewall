@@ -138,6 +138,7 @@ Tool support varies. As one example, Trivy's documentation says VEX can be used 
 ## Where VEX fits
 
 - **With an SBOM:** the SBOM lists components; VEX says which vulnerabilities in them matter. See our article on the [2026 SBOM minimum elements](/posts/sbom-minimum-elements-2026-what-cisa-and-partners-changed-from-the-2021-ntia-baseline/).
+- **With exploitation signals:** VEX says whether a product is affected, not whether a flaw is being exploited. For that, check the [KEV feed](/posts/cisa-kev-json-feed-what-each-field-means-and-how-to-match-it-against-a-scanner-export/) and [CISA's Vulnrichment SSVC values](/posts/cisa-vulnrichment-how-to-read-ssvc-values-in-a-cve-record-and-turn-them-into-a-patch-decision/).
 - **With provenance:** signing and provenance tell you who built an artifact and how, not whether a given CVE affects it. See [SLSA build levels and provenance attestations](/posts/slsa-build-levels-and-provenance-attestations-what-they-prove-and-what-they-dont/).
 - **With image scanning:** VEX is one way to reduce noise from scanners; see [what container image scanning still misses](/posts/container-image-scanning-what-ci-pipelines-still-miss/).
 

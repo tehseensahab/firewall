@@ -157,6 +157,7 @@ The Admission Controllers reference says admission runs in two phases: mutating 
 
 - **With Pod Security Admission.** The reference lists the `PodSecurity` plugin as validating. Pods are therefore checked after mutation. See our guide to [Pod Security Admission](/posts/kubernetes-pod-security-admission-namespace-labels-modes-and-a-safe-rollout-from-warn-to-enforce/).
 - **With ValidatingAdmissionPolicy.** A mutating policy can set a value that a validating policy then checks. Our [ValidatingAdmissionPolicy guide](/posts/kubernetes-validatingadmissionpolicy-cel-rules-for-registry-allowlists-and-memory-limits-with-a-warn-first-rollout/) covers the validating side, which has Deny, Warn and Audit actions that the MAP binding does not.
+- **With image signature checks.** Verifying cosign signatures at admission is done by a webhook such as Sigstore's policy-controller; see our guide to [verifying signed container images in Kubernetes](/posts/verify-signed-container-images-in-kubernetes-sigstore-policy-controller-keyless-policy-and-rollout/).
 - **With webhooks.** Built-in mutating plugins are re-run if a mutating webhook modifies an object, per the Dynamic Admission Control page.
 
 ### Exempt kinds

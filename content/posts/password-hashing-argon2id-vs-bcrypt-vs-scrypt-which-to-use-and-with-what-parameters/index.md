@@ -1,10 +1,10 @@
 +++
-title = "Password Hashing: Argon2id vs bcrypt vs scrypt, and the Parameters to Use"
+title = "Argon2id vs bcrypt vs scrypt: OWASP Parameters to Use"
 date = 2026-10-04T06:35:00Z
 tags = ["authentication", "appsec"]
 categories = ["appsec"]
 summary = "Use Argon2id for new systems, keep bcrypt if you already have it and handle its 72-byte limit, and use PBKDF2 only when FIPS requires it. The harder part is choosing parameters your login servers can afford."
-description = "Argon2id vs bcrypt vs scrypt vs PBKDF2 for password storage: OWASP and RFC 9106 parameters, measured timings, the bcrypt 72-byte limit and hash migration."
+description = "Argon2id vs bcrypt vs scrypt: Argon2id at 19 MiB, 2 iterations, p=1 (OWASP) for new systems, bcrypt at cost 10+ (72-byte limit), and rehash on login."
 author = "FirewallSync Editorial"
 imageAlt = "Heavy steel bank vault door with a large circular locking wheel"
 imageCredit = "Photo by [Jason Dent](https://unsplash.com/photos/3wPJxh-piRw) on Unsplash"

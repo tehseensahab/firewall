@@ -1,10 +1,10 @@
 +++
-title = "SBOM Minimum Elements 2026: What CISA and Its Partners Changed From the 2021 NTIA Baseline"
+title = "SBOM Minimum Elements 2026: 17 Fields and What Changed"
 date = 2026-10-11T06:05:00Z
 tags = ["supply chain", "appsec"]
 categories = ["appsec"]
 summary = "On July 29, 2026, CISA and international partners published updated minimum elements for a software bill of materials, replacing the 2021 NTIA document. Here is what changed in the data fields and practices, what did not, and what to ask your suppliers and your tooling for."
-description = "CISA's 2026 SBOM Minimum Elements explained: the 17 data fields, ten new ones, removed elements, the Coverage and unknown-information rules, SPDX and CycloneDX, and what the guidance does not require."
+description = "CISA's 2026 SBOM Minimum Elements list 17 data fields, ten new, including component hash and license. What changed from NTIA 2021, Coverage, SPDX and CycloneDX."
 author = "FirewallSync Editorial"
 imageAlt = "Tall stacks of wooden crates in a warehouse, with open crates of oranges in the foreground"
 imageCredit = "Photo by [Hemerson Coelho](https://unsplash.com/photos/iqEOJiBs1o8) on Unsplash"
@@ -104,7 +104,7 @@ These are our suggestions based on the guidance, not requirements in it:
 1. **Update the SBOM request language** in vendor questionnaires. Instead of "provide an SBOM," ask for one that satisfies the 2026 Minimum Elements, in a named format and version, with Coverage including transitive dependencies. See our [guide to vetting third-party SaaS tools](/posts/vetting-third-party-saas-tools-before-they-touch-your-data/) for the wider vendor review.
 2. **Check your generation tooling** for the new metadata: tool name and version, generation context, timestamp, and a signature if you share SBOMs externally.
 3. **Generate at more than one point** if you can. Because components differ by lifecycle phase, a source-based SBOM and a post-build SBOM are not interchangeable.
-4. **Pair SBOMs with vulnerability prioritization.** An SBOM tells you whether you have a component; it does not tell you whether the flaw is exploitable in your product. The guidance points to VEX and CSAF for that. Our comparison of [CVSS, EPSS and KEV](/posts/cvss-vs-epss-vs-kev-which-signal-should-decide-what-you-patch-first/) covers prioritization, and [dependency audits without slowing releases](/posts/dependency-audits-without-slowing-down-releases/) and [container image scanning](/posts/container-image-scanning-what-ci-pipelines-still-miss/) cover where the component data comes from in CI.
+4. **Pair SBOMs with vulnerability prioritization.** An SBOM tells you whether you have a component; it does not tell you whether the flaw is exploitable in your product. The guidance points to VEX and CSAF for that; see [how to read a VEX not-affected statement](/posts/vex-explained-what-a-not-affected-statement-means-and-how-to-read-one/). Our comparison of [CVSS, EPSS and KEV](/posts/cvss-vs-epss-vs-kev-which-signal-should-decide-what-you-patch-first/) covers prioritization, and [dependency audits without slowing releases](/posts/dependency-audits-without-slowing-down-releases/) and [container image scanning](/posts/container-image-scanning-what-ci-pipelines-still-miss/) cover where the component data comes from in CI.
 5. **Treat unknowns as data.** Mark fields you cannot fill as unknown rather than omitting them, as the guidance asks, and treat "unknown" in a vendor SBOM as a follow-up question, not a pass.
 
 ## Limits of this article

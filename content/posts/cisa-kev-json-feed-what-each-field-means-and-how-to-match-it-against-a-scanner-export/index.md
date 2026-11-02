@@ -1,10 +1,10 @@
 +++
-title = "CISA KEV JSON Feed: What Each Field Means and How to Match It Against a Scanner Export"
+title = "CISA KEV JSON Feed: Every Field and a Scanner Match Script"
 date = 2026-10-15T06:05:00Z
 tags = ["vulnerability management", "tools"]
 categories = ["security-operations"]
 summary = "CISA publishes the Known Exploited Vulnerabilities catalog as a JSON file. Here is every field, what the schema does and does not promise, how due dates and the forensic triage flag behave in the data, and a tested 30-line Python script that joins the feed to a scanner CSV."
-description = "How to read the CISA KEV JSON feed: field-by-field meaning, what dueDate, knownRansomwareCampaignUse and forensicTriage do and do not tell you, data pitfalls, and a tested Python script that matches KEV against a vulnerability scanner export."
+description = "The CISA KEV JSON feed has 12 fields per entry. What dueDate, knownRansomwareCampaignUse and forensicTriage mean, plus a tested Python join to a scanner CSV."
 author = "FirewallSync Editorial"
 imageAlt = "A computer screen photographed at an angle, showing a blue cohort grid labelled user activity by cohort and line graphs with 68K, 16K and 1.7K figures"
 imageCredit = "Photo by [1981 Digital](https://unsplash.com/photos/yqaskj8lQBE) on Unsplash"
@@ -189,7 +189,7 @@ These are our suggestions; we did not build or test them beyond the script above
 2. **Pull daily on weekdays** (the kev-data README says updates cluster in US Eastern business hours) and keep each day's file, or use the kev-data git history, so you can diff what was added.
 3. **Detect changes beyond additions.** The README mentions "new or updated" entries, so compare the whole entry, not just the set of CVE IDs.
 4. **Keep the flags separate in your ticket system.** Store `dateAdded`, `dueDate`, `forensicTriage` and `knownRansomwareCampaignUse` as distinct fields rather than a single priority, for the reasons in the table above.
-5. **Pair with other data.** KEV answers "has this been exploited?" Add the exploitability details in [CISA Vulnrichment SSVC values](/posts/cisa-vulnrichment-how-to-read-ssvc-values-in-a-cve-record-and-turn-them-into-a-patch-decision/) and your own exposure data, and watch the [backlog dynamics](/posts/the-vulnerability-backlog-that-never-shrinks/) so KEV items do not get buried.
+5. **Pair with other data.** KEV answers "has this been exploited?" For a likelihood estimate on everything else, join the [EPSS data feed](/posts/epss-data-feed-columns-percentile-vs-probability-and-how-to-join-it-to-a-scanner-export/) on the same CVE ID. Add the exploitability details in [CISA Vulnrichment SSVC values](/posts/cisa-vulnrichment-how-to-read-ssvc-values-in-a-cve-record-and-turn-them-into-a-patch-decision/) and your own exposure data, and watch the [backlog dynamics](/posts/the-vulnerability-backlog-that-never-shrinks/) so KEV items do not get buried.
 
 ## Limits of this article
 

@@ -37,7 +37,7 @@ q = "Does a CVSS 9.8 mean I must patch immediately?"
 a = "Not by itself. A published CVSS base score describes the flaw in general, not your deployment. A 9.8 on a system that is not reachable from untrusted networks can reasonably wait behind a lower-scored flaw that is being exploited on an internet-facing system. CVSS itself provides Threat and Environmental metrics for adjusting a base score to your situation."
 +++
 
-Check the CISA Known Exploited Vulnerabilities (KEV) catalog first, then EPSS, then CVSS, and apply your own knowledge of exposure at every step. KEV tells you a flaw has been exploited. EPSS estimates how likely exploitation is when you have no such evidence. CVSS tells you how bad exploitation would be. Using any one of them alone produces a predictable failure, and seven flaws from the past two weeks show each failure clearly.
+Check the CISA [Known Exploited Vulnerabilities (KEV) catalog](/posts/cisa-kev-json-feed-what-each-field-means-and-how-to-match-it-against-a-scanner-export/) first, then EPSS, then CVSS, and apply your own knowledge of exposure at every step. KEV tells you a flaw has been exploited. EPSS estimates how likely exploitation is when you have no such evidence. CVSS tells you how bad exploitation would be. Using any one of them alone produces a predictable failure, and seven flaws from the past two weeks show each failure clearly.
 
 This article explains what each signal measures, tests them against those seven flaws, and gives an order of operations you can implement.
 
@@ -127,7 +127,7 @@ The mistake would be on the reader's side: seeing 0.6% next to a CVE and lowerin
 This sequence is our recommendation. It uses each signal for the question it can answer.
 
 1. **Is it in KEV, or does the vendor say it is being exploited?** If yes and the affected system is reachable from untrusted networks, act now, and plan a compromise check as well as a patch. If the system is internal only, schedule it within days. Vendor statements count: Fortinet's advisory for CVE-2026-104286 said the flaw was being exploited on the day it was published.
-2. **If not, what does EPSS say?** A score above your chosen threshold moves the item up. Pick the threshold from your capacity: lower it until the resulting queue is the size your team can clear.
+2. **If not, what does EPSS say?** A score above your chosen threshold moves the item up. Our [EPSS data feed guide](/posts/epss-data-feed-columns-percentile-vs-probability-and-how-to-join-it-to-a-scanner-export/) shows how to add the daily scores to a scanner export. Pick the threshold from your capacity: lower it until the resulting queue is the size your team can clear.
 3. **If EPSS is low, is it Critical and exposed?** A CVSS base score of 9.0 or higher on an internet-facing system still deserves the next patch cycle, because a low EPSS score on a fresh CVE can change quickly.
 4. **Everything else follows the routine schedule.**
 
