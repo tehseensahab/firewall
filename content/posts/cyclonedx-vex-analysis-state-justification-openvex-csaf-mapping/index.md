@@ -6,7 +6,7 @@ categories = ["appsec"]
 summary = "CycloneDX VEX uses six analysis states and nine justifications; OpenVEX and CSAF use four statuses and five justifications. Here is a field-by-field mapping, which pairs line up and which do not, how Trivy reads CycloneDX VEX, and a tested Python converter that refuses to invent justifications."
 description = "CycloneDX VEX mapped to OpenVEX and CSAF: analysis.state, justification, response and BOM-Link affects, with a tested Python converter and the gaps that lose data."
 author = "Craig Leslie"
-imageAlt = "Close-up of a modular synthesizer patched with dozens of coloured cables running between jacks and knobs"
+imageAlt = "Close-up of a silver modular synthesizer panel with black knobs, patched with pink, green, orange, red and yellow cables"
 imageCredit = "Photo by [John Barkiple](https://unsplash.com/photos/l090uFWoPaI) on Unsplash"
 takeaways = [
   "CycloneDX VEX lives in a BOM's vulnerabilities array: analysis.state (6 values), analysis.justification (9 values), analysis.response (5 values) and affects[].ref pointing at a component, usually by BOM-Link.",

@@ -33,6 +33,10 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - github.com/empiricalsec/epss_scores via git clone --depth 1 --filter=blob:none --no-checkout, then git checkout HEAD -- 2026/epss_scores-YYYY-MM-DD.csv.gz | works | daily EPSS files (header model_version, score_date); use when the epss.empiricalsecurity.com CSV is blocked | 2026-11-02
 - github.com/CVEProject/cvelistV5 partial clone (blob:none, no-checkout) | works in ~3 s | gives full file list (git ls-tree); fetch blobs with parallel curl of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/cves/... (xargs -P 24: 1,000 files in seconds); per-path git checkout of 1,000 blobs timed out | 2026-11-02
 - github.com/CVEProject/cve-schema, cisagov/vulnrichment, CERTCC/SSVC (git clone, sparse checkout of data/csv/ssvc/*.csv, docs/howto/deployer_tree.md, src/ssvc/decision_points/ssvc/*.py), raw openvex/spec/main/OPENVEX-SPEC.md | works | primary specs for the prioritization cluster | 2026-11-02
+- raw.githubusercontent.com/CVEProject/cvelistV5/main/README.md, cisagov/vulnrichment/develop/README.md | works | CVE Program Container + CISA-ADP rules (verbatim) | 2026-11-03
+- raw.githubusercontent.com/CycloneDX/specification/master/schema/bom-1.{6,7}.schema.json, openvex/spec/main/openvex_json_schema.json, git clone oasis-tcs/csaf (csaf_2.0/json_schema + prose) | works | VEX enums with meta:enum definitions; CSAF profile text = TC draft (qualify) | 2026-11-03
+- git clone --sparse aquasecurity/trivy (pkg/vex) | works | how a real consumer maps VEX states | 2026-11-03
+- Sandbox venv pip install jsonschema check-jsonschema | works | validate CycloneDX/OpenVEX test files | 2026-11-03
 ## Fails from the shell
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
@@ -69,5 +73,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - access.crunchydata.com/documentation/postgresql17/17.1/*.html | works | postgresql.org/docs/current not returned by WebSearch; mirror = QUALIFIED | 2026-11-01
 - Cisco PSIRT advisories (sec.cloudapps.cisco.com / cisco.com/c/en/us/support/docs/csa/<id>) for brand-new advisories | not returned by WebSearch 2026-11-01 | CVE record + KEV; press (securityonline.info) for fixed releases = qualify; hold if core claim | 2026-11-01
 - unsplash.com/photos: check content of picks (one free photo was a religious manuscript) and grep covers.tsv BEFORE appending | | 2026-11-01
+- trivy.dev/docs/latest/supply-chain/vex/file | works (v0.67 docs) | | 2026-11-03
+- siemens.com/<locale>/content/cert-services-sadp/ | works, but quotes capped at 125 chars | qualify; use records for data | 2026-11-03
+- cve.org pages (ProgramOrganization/*, Media/News blog) | WebFetch returns empty (JS-rendered) | cvelistV5 README / cve-schema instead | 2026-11-03
+- unsplash.com/s/photos/<query> listing gives photo id + photographer for free photos; preview images.unsplash.com and reject visible brand names (shipping containers carried line names) | works | | 2026-11-03
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
