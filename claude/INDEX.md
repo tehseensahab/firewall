@@ -132,3 +132,5 @@ vmware-esx-cve-2026-41709-insufficient-logging-kev | VMware ESX CVE-2026-41709: 
 escape-user-input-regex-sql-like | Escape User Input in Regex and SQL LIKE: Tested Fixes | 2026-11-01 | ["appsec"] | escape user input regex
 vulnerability-prioritization-workflow-cve-record-to-patch-ticket | Vulnerability Prioritization Workflow: CVE Record to Ticket | 2026-11-02 | ["security-operations"] | vulnerability prioritization workflow
 cve-affected-versions-lessthan-defaultstatus-versiontype | CVE Affected Versions: lessThan, defaultStatus, versionType | 2026-11-02 | ["appsec"] | cve affected versions defaultStatus lessThan
+cve-adp-containers-cisa-adp-cve-program-supplier-sadp | CVE ADP Containers: CISA-ADP, CVE Program and Supplier ADPs | 2026-11-03 | ["security-operations"] | ["cve adp container", "vulnerability management"]
+cyclonedx-vex-analysis-state-justification-openvex-csaf-mapping | CycloneDX VEX: analysis.state and justification to OpenVEX | 2026-11-03 | ["appsec"] | ["cyclonedx vex", "openvex", "csaf"]
