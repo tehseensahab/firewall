@@ -134,3 +134,5 @@ vulnerability-prioritization-workflow-cve-record-to-patch-ticket | Vulnerability
 cve-affected-versions-lessthan-defaultstatus-versiontype | CVE Affected Versions: lessThan, defaultStatus, versionType | 2026-11-02 | ["appsec"] | cve affected versions defaultStatus lessThan
 cve-adp-containers-cisa-adp-cve-program-supplier-sadp | CVE ADP Containers: CISA-ADP, CVE Program and Supplier ADPs | 2026-11-03 | ["security-operations"] | ["cve adp container", "vulnerability management"]
 cyclonedx-vex-analysis-state-justification-openvex-csaf-mapping | CycloneDX VEX: analysis.state and justification to OpenVEX | 2026-11-03 | ["appsec"] | ["cyclonedx vex", "openvex", "csaf"]
+cve-cpeapplicability-cpe-match-nodes-operators-version-ranges | CVE cpeApplicability: CPE Match Nodes, Operators, Ranges | 2026-11-04 | ["appsec"] | cve cpeapplicability
+wordpress-cve-2026-119977-upgrade-race-rce-kev | WordPress CVE-2026-119977: Patch the Upgrade Race RCE | 2026-11-04 | ["security-operations"] | wordpress cve-2026-119977
