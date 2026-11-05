@@ -47,6 +47,7 @@ Removed: none.
 ## QC
 - Titles 56 / 55 chars; descriptions 159 / 159. hugo --minify: 0 errors; dead internal link check over all built posts: 0 dead.
 - Internal links A: vex-explained, cyclonedx-vex, hub, sbom-minimum-elements. B: cve-affected-versions, cve-cpeapplicability, hub, csaf-vex (today).
+- Live check: WebFetch of firewallsync.com returned PROVENANCE_REQUIRED (not retried); status = pushed, live not confirmed. Cover commit 8a64a1c landed; both cover.jpg checked, imageAlt matches.
 - Covers: sUzKJEfi-dg (branches, BehindTheTmuna), Ul7DGBXznD8 (mailboxes, Andretti Brown); both previewed, no brands. Rejected: zlMHJOdGCdE (Hapag-Lloyd logos), e_QqMu91zEM (franchise crest + child), DD8aCH-MnK4 and Y1mmxrjrZQc (Unsplash+), CpIWRMy0jkg (no photo id).
 
 ## Next-session candidates
