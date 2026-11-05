@@ -39,12 +39,16 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - Sandbox venv pip install jsonschema check-jsonschema | works | validate CycloneDX/OpenVEX test files | 2026-11-03
 - raw.githubusercontent.com/WordPress/WordPress/<tag>/wp-admin/includes/*.php | works | diff fixed vs vulnerable WordPress core tags | 2026-11-04
 - git ls-remote --tags / git fetch --depth 1 <repo> tag <t> (cve-schema) | works | tag commit dates for "added in version X" claims | 2026-11-04
+- github.com/oasis-tcs/csaf partial clone (blob:none) + git checkout of csaf_2.0/prose/csaf-v2-editor-draft.md, json_schema, examples/csaf/csaf_vex | works | CSAF 2.0 prose (OASIS Standard header), schema validates with python jsonschema; csaf_2.1 = CSD draft | 2026-11-05
+- github.com/CVEProject/cvelistV5/releases/download/<tag>/<date>_all_CVEs_at_midnight.zip.zip | works (652 MB in ~24 s) | full corpus; stream inner cves.zip with python zipfile (~30 s per pass) for corpus-wide counts | 2026-11-05
+- raw.githubusercontent.com/CVEProject/cve-schema/main/{schema/CVE_Record_Format.json,rfds/*.md}; package-url/purl-spec (types/*-definition.json, docs/specification/standard/*, docs/decisions/*) | works | | 2026-11-05
+- raw.githubusercontent.com/aquasecurity/trivy/<tag>/{pkg/vex/*.go,docs/guide/supply-chain/vex/file.md} | works | docs moved from docs/docs/ to docs/guide/; git ls-remote --tags for latest tag | 2026-11-05
 ## Fails from the shell
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | often 403 | WebSearch + WebFetch, or cvelistV5/kev-data raw | 2026-10-25
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-04 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-05 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
@@ -52,6 +56,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 
 - owasp.org/www-community/attacks/* | 302 to community.owasp.org, which hit PROVENANCE_REQUIRED | WebFetch the wiki.owasp.org/index.php/<page> copy from search (archived; qualify) | 2026-10-31
 - hub.ivanti.com advisories, volexity.com/blog | not returned by WebSearch | CVE record + KEV + Rapid7/THN/Register (qualify press) | 2026-10-31
+- security.access.redhat.com / access.redhat.com CSAF VEX files from shell | no connection (000) | describe from Red Hat blog posts via WebSearch (redhat.com/<locale>/blog/...); localized copies fetch fine | 2026-11-05
+- trivy.dev/v0.50/docs/... via WebFetch | client_error 2026-11-05 | read docs source from raw.githubusercontent.com at a tag | 2026-11-05
 ## WebFetch (after WebSearch)
 - helpx.adobe.com/<region>/security/products/magento/apsb*.html (e.g. /au/) | works | the un-prefixed helpx URL 302s to adobe.com/trust/..., which hits PROVENANCE_REQUIRED; use a regional copy and mark QUALIFIED (check 'Last updated') | 2026-10-29
 - sansec.io/research/*, thehackernews.com/2026/* | works | Sansec = researcher (qualify); THN press | 2026-10-29
