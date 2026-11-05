@@ -136,3 +136,5 @@ cve-adp-containers-cisa-adp-cve-program-supplier-sadp | CVE ADP Containers: CISA
 cyclonedx-vex-analysis-state-justification-openvex-csaf-mapping | CycloneDX VEX: analysis.state and justification to OpenVEX | 2026-11-03 | ["appsec"] | ["cyclonedx vex", "openvex", "csaf"]
 cve-cpeapplicability-cpe-match-nodes-operators-version-ranges | CVE cpeApplicability: CPE Match Nodes, Operators, Ranges | 2026-11-04 | ["appsec"] | cve cpeapplicability
 wordpress-cve-2026-119977-upgrade-race-rce-kev | WordPress CVE-2026-119977: Patch the Upgrade Race RCE | 2026-11-04 | ["security-operations"] | wordpress cve-2026-119977
+csaf-vex-product-tree-product-status-purl-sbom-matching | CSAF VEX product_tree: Resolve Product IDs to SBOM purls | 2026-11-05 | ["security-operations"] | csaf vex
+cve-packageurl-purl-cve-json-5-2-affected-sbom-matching | CVE packageURL: Join CVE JSON 5.2 Records to SBOM purls | 2026-11-05 | ["appsec"] | cve packageurl
