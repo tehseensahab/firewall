@@ -138,3 +138,5 @@ cve-cpeapplicability-cpe-match-nodes-operators-version-ranges | CVE cpeApplicabi
 wordpress-cve-2026-119977-upgrade-race-rce-kev | WordPress CVE-2026-119977: Patch the Upgrade Race RCE | 2026-11-04 | ["security-operations"] | wordpress cve-2026-119977
 csaf-vex-product-tree-product-status-purl-sbom-matching | CSAF VEX product_tree: Resolve Product IDs to SBOM purls | 2026-11-05 | ["security-operations"] | csaf vex
 cve-packageurl-purl-cve-json-5-2-affected-sbom-matching | CVE packageURL: Join CVE JSON 5.2 Records to SBOM purls | 2026-11-05 | ["appsec"] | cve packageurl
+openvex-products-subcomponents-purl-matching-trivy | OpenVEX Products and Subcomponents: purl Matching Rules | 2026-11-06 | ["appsec"] | openvex subcomponents
+epss-v5-score-shift-model-version-v2026-06-15 | EPSS v5: How Scores Shifted and What to Re-baseline | 2026-11-06 | ["security-operations"] | epss v5
