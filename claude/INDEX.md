@@ -140,3 +140,5 @@ csaf-vex-product-tree-product-status-purl-sbom-matching | CSAF VEX product_tree:
 cve-packageurl-purl-cve-json-5-2-affected-sbom-matching | CVE packageURL: Join CVE JSON 5.2 Records to SBOM purls | 2026-11-05 | ["appsec"] | cve packageurl
 openvex-products-subcomponents-purl-matching-trivy | OpenVEX Products and Subcomponents: purl Matching Rules | 2026-11-06 | ["appsec"] | openvex subcomponents
 epss-v5-score-shift-model-version-v2026-06-15 | EPSS v5: How Scores Shifted and What to Re-baseline | 2026-11-06 | ["security-operations"] | epss v5
+linux-kernel-cve-records-affected-versions-stable-branches | Linux Kernel CVE Records: Read Stable-Branch Affected Ranges | 2026-11-07 | ["appsec"] | linux kernel cve affected versions
+epss-scores-for-kev-cves-low-after-listing-threshold-audit | EPSS Scores for KEV CVEs: Why New Entries Score Low | 2026-11-07 | ["security-operations"] | epss kev
