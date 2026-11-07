@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "An EPSS cutoff of 0.1 misses a quarter of CISA's KEV catalog today, and half of the entries added in the last 90 days. We tracked 113 KEV additions through 145 daily EPSS v5 files: the median score on the day of listing was 0.0076, and entries that crossed 0.1 after listing took a median of 14 days. Data, a tested audit script and the rule it implies."
 description = "EPSS for KEV CVEs starts low: 49% of entries added in the last 90 days sit below 0.1, and late risers took a median 14 days to cross it. Audit script inside."
 author = "John Marshall"
-imageAlt = "A wooden-framed hourglass with grey sand pooling in the lower bulb, photographed against a black background"
+imageAlt = "A wooden-framed hourglass with grey sand running from the upper bulb into the lower one, photographed against a black background"
 imageCredit = "Photo by [Pablo Añón](https://unsplash.com/photos/an-hourglass-with-sand-in-it-on-a-black-background-XMW-B70xZy4) on Unsplash"
 takeaways = [
   "Joining CISA KEV catalog 2026.11.06 to the EPSS file of November 6, 2026: 436 of 1,768 scored KEV CVEs (24.7%) sit below 0.1, and 54 (3.1%) below 0.01.",

@@ -43,12 +43,15 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - github.com/CVEProject/cvelistV5/releases/download/<tag>/<date>_all_CVEs_at_midnight.zip.zip | works (652 MB in ~24 s) | full corpus; stream inner cves.zip with python zipfile (~30 s per pass) for corpus-wide counts | 2026-11-05
 - raw.githubusercontent.com/CVEProject/cve-schema/main/{schema/CVE_Record_Format.json,rfds/*.md}; package-url/purl-spec (types/*-definition.json, docs/specification/standard/*, docs/decisions/*) | works | | 2026-11-05
 - raw.githubusercontent.com/aquasecurity/trivy/<tag>/{pkg/vex/*.go,docs/guide/supply-chain/vex/file.md} | works | docs moved from docs/docs/ to docs/guide/; git ls-remote --tags for latest tag | 2026-11-05; also raw openvex/go-vex/<tag>/pkg/vex/*.go (version from trivy go.mod) | 2026-11-06
+- raw.githubusercontent.com/torvalds/linux/master/Documentation/process/cve.rst | works | kernel CVE process text; link docs.kernel.org/process/cve.html | 2026-11-07
+- Linux CNA records: stream cvelistV5 release zip, filter cveMetadata.assignerShortName == "Linux" (7,987 for 2026 in ~1 min) | works | kernel affected/CPE corpus stats | 2026-11-07
 ## Fails from the shell
+- git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | shell often 403; via WebFetch cve.org pages and NVD vulnerability-detail-pages return empty (JS) | cvelistV5/kev-data raw, cve-schema text, or WebSearch+WebFetch for cisa.gov | 2026-11-04
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-05 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-07 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
@@ -58,6 +61,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - security.access.redhat.com / access.redhat.com CSAF VEX files from shell | no connection (000) | describe from Red Hat blog posts via WebSearch (redhat.com/<locale>/blog/...); localized copies fetch fine | 2026-11-05
 - trivy.dev docs via WebFetch | /docs/latest works (v0.67), versioned /v0.50/ client_error 2026-11-05 | read docs source from raw.githubusercontent.com at a tag | 2026-11-05
 ## WebFetch (after WebSearch)
+- kernel.org/releases.html | works via WebSearch+WebFetch | longterm table, distro-kernel wording | 2026-11-07
+- riskbasedprioritization.github.io/epss/* | works | community guide quoting FIRST FAQ (qualify); first.org/epss/faq not returned by WebSearch (only proxy mirrors) | 2026-11-07
+- cisa.gov/known-exploited-vulnerabilities | works via WebSearch+WebFetch | KEV criteria verbatim | 2026-11-07
 - helpx.adobe.com/<region>/security/products/magento/apsb*.html (e.g. /au/) | works | the un-prefixed helpx URL 302s to adobe.com/trust/..., which hits PROVENANCE_REQUIRED; use a regional copy and mark QUALIFIED (check 'Last updated') | 2026-10-29
 - sansec.io/research/*, thehackernews.com/2026/* | works | Sansec = researcher (qualify); THN press | 2026-10-29
 - research.empiricalsecurity.com/research/* (EPSS V5 post), EIN Presswire syndications of Empirical releases | works via WebSearch+WebFetch | vendor claims; first.org has no v5 page in search results 2026-11-06 | 2026-11-06
