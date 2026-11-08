@@ -45,6 +45,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/aquasecurity/trivy/<tag>/{pkg/vex/*.go,docs/guide/supply-chain/vex/file.md} | works | docs moved from docs/docs/ to docs/guide/; git ls-remote --tags for latest tag | 2026-11-05; also raw openvex/go-vex/<tag>/pkg/vex/*.go (version from trivy go.mod) | 2026-11-06
 - raw.githubusercontent.com/torvalds/linux/master/Documentation/process/cve.rst | works | kernel CVE process text; link docs.kernel.org/process/cve.html | 2026-11-07
 - Linux CNA records: stream cvelistV5 release zip, filter cveMetadata.assignerShortName == "Linux" (7,987 for 2026 in ~1 min) | works | kernel affected/CPE corpus stats | 2026-11-07
+- raw.githubusercontent.com/CVEProject/cvelistV5/main/{cves/delta.json,cves/deltaLog.json (36.8 MB),.github/workflows/*.yml,.github/workflows/dist/index.js} | works | change feed + tooling source | 2026-11-08
+- github.com/CVEProject/cvelistV5/releases/download/cve_<date>_<HH>00Z/<date>_delta_CVEs_at_<HH>00Z.zip | works | hourly cumulative-since-midnight delta zip; git ls-remote --tags lists tags | 2026-11-08
+- Hugo v0.139.4 extended tarball from github releases | works | builds site (0.152.2 also works) | 2026-11-08
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -85,5 +88,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - wordpress.org/documentation/?p=<id> (release notes, e.g. 7.1.4) | works via WebSearch | primary for WP fixed/backport versions; wordfence.com advisory not returned by WebSearch (use CNA record) | 2026-11-04
 - securityweek.com /amp/ | client_error 2026-11-04 | THN / other outlet | 2026-11-04
 - gh.r-mj.com (GitHub releases mirror) | works | mirror only: QUALIFIED; confirm with git tag | 2026-11-04
+- therecord.media (homepage + articles), bleepingcomputer.com/news/security/<slug> (no www), cybersecuritynews.com | works | news-trial sourcing; homepage fetch lists last-7-day stories | 2026-11-08
+- bugzilla.mozilla.org CA incident bugs (e.g. 2084460) | not returned by WebSearch for new bugs | cite outlets that quote it; say primary not retrieved | 2026-11-08
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26

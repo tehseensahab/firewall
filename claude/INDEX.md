@@ -142,3 +142,5 @@ openvex-products-subcomponents-purl-matching-trivy | OpenVEX Products and Subcom
 epss-v5-score-shift-model-version-v2026-06-15 | EPSS v5: How Scores Shifted and What to Re-baseline | 2026-11-06 | ["security-operations"] | epss v5
 linux-kernel-cve-records-affected-versions-stable-branches | Linux Kernel CVE Records: Read Stable-Branch Affected Ranges | 2026-11-07 | ["appsec"] | linux kernel cve affected versions
 epss-scores-for-kev-cves-low-after-listing-threshold-audit | EPSS Scores for KEV CVEs: Why New Entries Score Low | 2026-11-07 | ["security-operations"] | epss kev
+cvelistv5-delta-json-deltalog-incremental-cve-sync | cvelistV5 delta.json and deltaLog.json: Sync CVE Changes | 2026-11-08 | ["security-operations"] | cvelistv5 deltalog.json
+digicert-data-breach-self-registration-archived-customer-data | DigiCert Data Breach: Self-Registered Accounts Read ID Files | 2026-11-08 | ["identity-access"] | digicert data breach [news]
