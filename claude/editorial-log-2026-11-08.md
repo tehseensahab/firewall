@@ -39,3 +39,6 @@ Both covers previewed (images.unsplash.com) before commit; ids not in covers.tsv
 2. [cluster] Detect when a CVE gains KEV or SSVC Exploitation: active from the cvelistV5 delta: diff the CISA-ADP container between versions | guide | turns today's sync into an alert; 244/299 sampled updates were CISA-ADP | deltaLog.json, cisagov/vulnrichment README, CVE record ADP containers | must not repeat cvelistv5-delta (today), cisa-vulnrichment, cve-adp-containers (link + hub)
 3. [cluster] OpenVEX in OCI attestations: trivy --vex oci, cosign attest --type openvex | guide | VEX that travels with the image | trivy docs/guide/supply-chain/vex (raw at tag), sigstore/cosign docs raw, openvex/spec | must not repeat openvex-products-subcomponents, cosign keyless (link both + hub)
 News (Article B, trial): pick fresh 72h story at run time; leads seen today: Mercado Bitcoin exchange attack (Nov 2), Michigan State incident (Nov 2), Queens Public Library ransomware (Nov 5), Revolve card breach (Oct 30) via therecord.media.
+
+## Publication status
+Pushed in 94cfd4f; fetch-covers workflow committed both cover.jpg files (693c006); rebuild after pull: zero errors, no dead /posts/ links. Live check: WebFetch of both URLs returned PROVENANCE_REQUIRED (not retried), so live not confirmed by this run; owner spot-check needed.
