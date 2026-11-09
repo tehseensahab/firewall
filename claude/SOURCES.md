@@ -42,13 +42,14 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/CVEProject/cvelistV5/main/{cves/delta.json,cves/deltaLog.json (36.8 MB),.github/workflows/*.yml,.github/workflows/dist/index.js} | works | change feed + tooling source | 2026-11-08
 - github.com/CVEProject/cvelistV5/releases/download/cve_<date>_<HH>00Z/<date>_delta_CVEs_at_<HH>00Z.zip | works | hourly cumulative-since-midnight delta zip; git ls-remote --tags lists tags | 2026-11-08
 - Hugo v0.139.4 extended tarball from github releases | works | builds site (0.152.2 also works) | 2026-11-08
+- github.com/CVEProject/cvelistV5/releases/download/cve_<date>_0000Z/<date>_all_CVEs_at_midnight.zip.zip | works (656 MB); the cve_<date>_at_end_of_day tag has no such asset (9-byte 404 body) | use the next day's _0000Z tag | 2026-11-09
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | shell often 403; via WebFetch cve.org pages and NVD vulnerability-detail-pages return empty (JS) | cvelistV5/kev-data raw, cve-schema text, or WebSearch+WebFetch for cisa.gov | 2026-11-04
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-08 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-09 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
@@ -80,5 +81,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - wordpress.org/documentation/?p=<id> (release notes, e.g. 7.1.4) | works via WebSearch | primary for WP fixed/backport versions; wordfence.com advisory not returned by WebSearch (use CNA record) | 2026-11-04
 - therecord.media (homepage + articles), bleepingcomputer.com/news/security/<slug> (no www), cybersecuritynews.com | works | news-trial sourcing; homepage fetch lists last-7-day stories | 2026-11-08
 - bugzilla.mozilla.org CA incident bugs (e.g. 2084460) | not returned by WebSearch for new bugs | cite outlets that quote it; say primary not retrieved | 2026-11-08
+- ic3.gov/CSA/<year>/<id>.pdf (joint CISA/FBI advisories) | works via WebSearch+WebFetch | primary text when the cisa.gov resource page is not returned | 2026-11-09
+- itv.com/news (AP copy), latintimes.com | works | AP copy carries retailer statements; Latin Times = unconfirmed, label it | 2026-11-09
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
