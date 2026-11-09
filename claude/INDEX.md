@@ -144,3 +144,5 @@ linux-kernel-cve-records-affected-versions-stable-branches | Linux Kernel CVE Re
 epss-scores-for-kev-cves-low-after-listing-threshold-audit | EPSS Scores for KEV CVEs: Why New Entries Score Low | 2026-11-07 | ["security-operations"] | epss kev
 cvelistv5-delta-json-deltalog-incremental-cve-sync | cvelistV5 delta.json and deltaLog.json: Sync CVE Changes | 2026-11-08 | ["security-operations"] | cvelistv5 deltalog.json
 digicert-data-breach-self-registration-archived-customer-data | DigiCert Data Breach: Self-Registered Accounts Read ID Files | 2026-11-08 | ["identity-access"] | digicert data breach [news]
+kev-time-to-listing-cve-published-to-dateadded-days-by-vendor | KEV Time to Listing: CVE datePublished to dateAdded | 2026-11-09 | ["security-operations"] | kev time to listing
+supermarket-freezer-hacks-refrigeration-controllers-cisa-fbi-warning | Supermarket Freezer Hacks: What the CISA-FBI Warning Says | 2026-11-09 | ["security-operations"] | supermarket freezer hack [news]
