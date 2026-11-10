@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "Vanderbilt University told students and staff on November 9 to shut down their devices and get off campus Wi-Fi while it contained a cybersecurity incident. A new ransomware group called BYOD claims it stole over a million SSNs, and it has hit Michigan State and UNM Health in the last month. What is confirmed, what is only claimed, and what engineers can take from the three incidents."
 description = "Vanderbilt ordered devices shut down on Nov 9 after a cyberattack claimed by the BYOD ransomware gang, its third US university in a month. Confirmed vs claimed."
 author = "John Marshall"
-imageAlt = "An empty university lecture hall seen from the back, with long white desks and rows of wooden and black seats facing the front under rows of ceiling lights"
+imageAlt = "A long, empty lecture hall with rows of wooden and black seats behind white desks, tall windows on the right and ceiling lights overhead"
 imageCredit = "Photo by [Zsófia Hajnal](https://unsplash.com/photos/empty-lecture-hall-with-rows-of-seats-I8PUo5Xk8DU) on Unsplash"
 takeaways = [
   "On November 9, 2026 Vanderbilt University told students and employees to shut down university devices and disconnect from campus Wi-Fi while it contained a cybersecurity incident. By that evening Wi-Fi was back but most systems and applications were still restricted.",

@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "CISA's KEV catalog marks each entry's ransomware use as Known or Unknown, and it changes that field without an announcement. We replayed every kev-data commit since January 2025: 114 entries flipped from Unknown to Known, none flipped back, and 25 of the 27 Known entries added in 2026 started as Unknown. Here is how often it happens, how long it takes, and a tested script to catch the next flip."
 description = "KEV knownRansomwareCampaignUse flips from Unknown to Known silently: 114 times since Jan 2025, none reversed. Lag data, vendors and a script to catch flips."
 author = "Craig Leslie"
-imageAlt = "A grey industrial control panel with a round ALARM indicator, a RESET button, a key switch and a column of small indicator lamps, one of them lit red"
+imageAlt = "Beside a large yellow circular panel, a grey industrial control panel with a round ALARM indicator, a RESET button, a key switch and a column of small indicator lamps, one of them lit red"
 imageCredit = "Photo by [Jason Leung](https://unsplash.com/photos/a-close-up-of-a-machine-with-buttons-and-buttons-YVSFMhXZAWw) on Unsplash"
 takeaways = [
   "knownRansomwareCampaignUse has two values. CISA's schema defines 'Known' as known to have been leveraged in a ransomware campaign and 'Unknown' as CISA lacking confirmation, so Unknown is not 'no'.",
