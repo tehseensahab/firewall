@@ -148,3 +148,5 @@ kev-time-to-listing-cve-published-to-dateadded-days-by-vendor | KEV Time to List
 supermarket-freezer-hacks-refrigeration-controllers-cisa-fbi-warning | Supermarket Freezer Hacks: What the CISA-FBI Warning Says | 2026-11-09 | ["security-operations"] | supermarket freezer hack [news]
 kev-knownransomwarecampaignuse-unknown-to-known-flips | KEV knownRansomwareCampaignUse: 114 Unknown-to-Known Flips | 2026-11-10 | ["security-operations"] | kev known ransomware campaign use
 vanderbilt-university-byod-ransomware-attack-what-we-know | Vanderbilt BYOD Ransomware Attack: What We Know So Far | 2026-11-10 | ["security-operations"] | vanderbilt ransomware attack [news]
+trivy-vex-oci-openvex-attestations-cosign-attest | Trivy --vex oci: OpenVEX Attestations on OCI Images | 2026-11-11 | ["cloud-security"] | trivy vex oci
+n-able-n-central-able2shell-zero-days-offline-what-we-know | N-able N-central Offline After Able2Shell Zero-Days | 2026-11-11 | ["security-operations"] | n-able n-central able2shell [news]
