@@ -44,6 +44,14 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - Hugo v0.139.4 extended tarball from github releases | works | builds site (0.152.2 also works) | 2026-11-08
 - github.com/CVEProject/cvelistV5/releases/download/cve_<date>_0000Z/<date>_all_CVEs_at_midnight.zip.zip | works (656 MB); the cve_<date>_at_end_of_day tag has no such asset (9-byte 404 body) | use the next day's _0000Z tag | 2026-11-09
 - github.com/cisagov/kev-data full git clone (3 MB, 6 s; default branch develop) | works | every catalog version since 2025-01-27 via git show <commit>:known_exploited_vulnerabilities.json; field-history replays | 2026-11-10
+- raw.githubusercontent.com/aquasecurity/trivy/v0.76.2/{docs/guide/supply-chain/vex/*.md,pkg/vex/oci/oci.go,pkg/oci/artifact.go} | works | VEX docs + OCI discovery source; link github.com blob at tag (trivy.dev URLs unverified) | 2026-11-11
+- github.com/aquasecurity/trivy blobless clone + git log/tag --contains | works; `git grep` on blobless clone hangs (fetches all blobs) | use raw for file contents | 2026-11-11
+- raw.githubusercontent.com/sigstore/cosign/v3.1.4/{CHANGELOG.md,doc/cosign_*.md,cmd/cosign/cli/options/*.go} | works | flag defaults, predicate type map | 2026-11-11
+- raw.githubusercontent.com/sigstore/docs/main/content/en/cosign/verifying/attestation.md | works | link docs.sigstore.dev/cosign/verifying/attestation/ | 2026-11-11
+- github.com HTML pages via curl | 403 from proxy | raw.githubusercontent.com for content | 2026-11-11
+- uptime.n-able.com status pages via WebFetch | approval prompt (PROVENANCE_REQUIRED) | use TechCrunch/Huntress quotes of the status page | 2026-11-11
+- huntress.com/blog, techcrunch.com, csoonline.com, cybersecuritynews.com via WebSearch+WebFetch | works | news-trial confirmation sources | 2026-11-11
+- unsplash.com photo pages via WebFetch | works; many results are Unsplash+ (premium, plus.unsplash.com) | check "Free to use under the Unsplash License" before adding to covers.tsv | 2026-11-11
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02

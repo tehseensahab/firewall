@@ -6,7 +6,7 @@ categories = ["security-operations"]
 summary = "A researcher published exploit code for what Huntress counts as 33 critical N-able N-central flaws on November 8. N-able took hosted N-central offline, told on-premises customers to shut their servers down, and on November 10 published seven CVEs and a hotfix. What is confirmed, what is not, and what MSPs and IT teams should check."
 description = "N-able pulled hosted N-central offline after Able2Shell exploits went public Nov 8. Seven CVEs, a hotfix, no confirmed customer compromise. What to check."
 author = "Craig Leslie"
-imageAlt = "Rows of server racks in a data center"
+imageAlt = "A long aisle between rows of open grey metal equipment cabinets under a steel-truss warehouse roof"
 imageCredit = "Photo by [İsmail Enes Ayhan](https://unsplash.com/photos/server-room-aisle-with-metal-equipment-racks-lVZjvw-u9V8) on Unsplash"
 takeaways = [
   "On Sunday, November 8, 2026 an independent researcher published exploit code on GitHub for flaws in N-able N-central, a remote monitoring and management (RMM) platform used by managed service providers. Huntress counts 33 critical vulnerabilities forming four exploit chains ('Able2Shell'): three to remote code execution, one to root.",

@@ -6,7 +6,7 @@ categories = ["cloud-security"]
 summary = "How Trivy's --vex oci finds an OpenVEX document attached to a container image: the three registry layouts it reads, the in-toto.io/predicate-type annotation, why it takes the first match, and the warning that matters most: Trivy does not verify the attestation's signature. Includes a verify-then-scan pattern with cosign verify-attestation."
 description = "Trivy --vex oci reads OpenVEX attestations from OCI referrers or cosign .att tags but does not verify signatures. How discovery works and how to verify first."
 author = "John Marshall"
-imageAlt = "Stacked shipping containers"
+imageAlt = "Aerial view of a container terminal: rows of red, blue, orange and white shipping containers stacked between numbered lanes, with yellow gantry cranes on the right"
 imageCredit = "Photo by [CHUTTERSNAP](https://unsplash.com/photos/assorted-shipping-containers-in-dock-Q4bmoSPJM18) on Unsplash"
 takeaways = [
   "cosign attest --predicate vex.json --type openvex <image> attaches an OpenVEX document to an image as an in-toto attestation with predicate type https://openvex.dev/ns (cosign v3.1.4 source). Since cosign v3 it is stored as an OCI 1.1 referrer by default.",
