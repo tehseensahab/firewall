@@ -65,3 +65,4 @@ News (Article B, trial): fresh 72h story at run time; N-able follow-up only if K
 - A: CHUTTERSNAP aerial container terminal (Q4bmoSPJM18). Small carrier names on container roofs are visible but tiny; tried a replacement (fBZOVyF-96w) and rejected it (large crane logo). Owner may swap.
 - B: İsmail Enes Ayhan, equipment-cabinet aisle (lVZjvw-u9V8). No logos.
 - imageAlt rewritten from the actual covers.
+- Live check: WebFetch of both live URLs needed approval (skipped); shell curl 403. Status: pushed (commits 5fb4b99, c31bd8f); live not confirmed.

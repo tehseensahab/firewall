@@ -53,6 +53,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - huntress.com/blog, techcrunch.com, csoonline.com, cybersecuritynews.com via WebSearch+WebFetch | works | news-trial confirmation sources | 2026-11-11
 - unsplash.com photo pages via WebFetch | works; many results are Unsplash+ (premium, plus.unsplash.com) | check "Free to use under the Unsplash License" before adding to covers.tsv | 2026-11-11
 ## Fails from the shell
+- firewallsync.com live-page check | WebFetch asked for approval (PROVENANCE_REQUIRED) 2026-11-11; shell curl 403 CONNECT | report 'pushed; live not confirmed' | 2026-11-11
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
