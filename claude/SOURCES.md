@@ -1,6 +1,7 @@
 # Source playbook
 
 One line per source: domain, page or data path | works / fails (how) | workaround | date checked
+(Trimmed 2026-11-12: one-off product sources for PHP, Magento, Ruby, Brotli, Palo Alto, Adobe, Ivanti, Cisco, GitLab, WordPress, Node advisories, PostgreSQL docs and old sandbox notes; see git history before 2026-11-12 if needed.)
 
 ## Works from the shell (curl)
 - raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json | works | KEV catalog incl. forensicTriage, notes, cwes | 2026-10-26
@@ -8,22 +9,14 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/kubernetes/website/main/content/en/docs/... | works | k8s docs source (audit.md, pod-security-standards.md, configure-service-account.md) | 2026-10-26
 - raw.githubusercontent.com/kubernetes/apiserver/master/pkg/apis/audit/v1/types.go | works | audit Event fields | 2026-10-26
 - raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json | works (55 MB) | ATT&CK IDs/names; parse with python | 2026-10-26
-- raw.githubusercontent.com/php/php-src/php-X.Y.Z/{NEWS,php.ini-production} | works | release notes per tag (CVE fix lines), production ini defaults | 2026-10-27
 - raw.githubusercontent.com/php/doc-en/master/... (appendices/ini.core.xml, reference/session/ini.xml, reference/filesystem/ini.xml, install/fpm/configuration.xml) | works | PHP manual source; strip XML tags with sed; link php.net/manual pages in posts (URLs confirmed via WebSearch) | 2026-10-27
 - images.unsplash.com/photo-<id>?w=1600&q=80&fm=jpg | works | preview a cover before committing; scripts/fetch-covers.sh runs locally if the workflow does not fire | 2026-10-27
-- Sandbox has php8.3-cli (Ubuntu 24.04) | works | test PHP behaviour with php -n / -d / -S | 2026-10-27
-- raw.githubusercontent.com/google/brotli/<tag>/{CHANGELOG.md,c/dec/decode.c}, nodejs/node/<tag>/deps/<lib>/..., andybalholm/brotli/<tag>/decode.go, envoyproxy/envoy/<tag>/bazel/repository_locations.bzl, urllib3/urllib3/main/... | works | diff fixed vs vulnerable tags; check bundled-dep versions per release | 2026-10-28
 - pypi.org/pypi/<pkg>/json | works | release versions + upload dates | 2026-10-28
 - raw.githubusercontent.com/OWASP/CheatSheetSeries/master/cheatsheets/*.md | works | link cheatsheetseries.owasp.org page in posts | 2026-10-28
-- raw.githubusercontent.com/php/doc-en/master/reference/session/security.xml (+ functions/session-regenerate-id.xml, network/functions/setcookie.xml) | works | session security chapter source; features/* paths 404 | 2026-10-28
 - Sandbox: node v22.23.4, pip venv (python3 -m venv) and npm install (express etc.) from registries | works | test runtime behaviour | 2026-10-29
-- raw.githubusercontent.com/magento/magento2/2.4-develop/{nginx.conf.sample,pub/media/*/.htaccess,app/code/Magento/*/etc/db_schema.xml} | works | stock server rules, table columns | 2026-10-29
 - raw.githubusercontent.com/nodejs/node/<vX.Y.Z>/doc/api/*.md | works | use the tag matching the tested runtime; main branch docs list unreleased versions | 2026-10-29
-- raw.githubusercontent.com/ruby/www.ruby-lang.org/master/en/news/_posts/<date>-<slug>.md | works | Ruby security advisories source; link www.ruby-lang.org/en/news/YYYY/MM/DD/<slug>/ | 2026-10-30
 - raw.githubusercontent.com/{google/re2/main/README.md, golang/go/master/src/regexp/regexp.go, rust-lang/regex/master/{README.md,src/lib.rs}, python/cpython/main/Doc/library/re.rst, dotnet/docs/main/docs/standard/base-types/*.md, v8/v8.dev/main/src/blog/*.md} | works | engine/runtime doc sources; link the rendered docs pages | 2026-10-31
 - cvelistV5 path for a KEV CVE with no CNA record yet (e.g. 2026/118xxx/CVE-2026-118527) | 404 | KEV shortDescription is then the only primary text; say so in the post | 2026-10-31
-- Sandbox PostgreSQL 16 (/usr/lib/postgresql/16/bin initdb + pg_ctl as a non-root user, unix socket in /tmp) | works | real SQL behaviour tests | 2026-11-01
-- Sandbox go 1.24.7, sqlite 3.53.1 (python sqlite3) | works | | 2026-11-01
 - Go module downloads (go get, GOPROXY=direct) | denied by the auto-mode classifier 2026-11-06; proxy.golang.org DNS fails | read library source via raw and port the logic to Python (label as a port) | 2026-11-06
 - github.com/empiricalsec/epss_scores partial clone (blob:none, no-checkout) + git checkout HEAD -- <year>/epss_scores-YYYY-MM-DD.csv.gz | works | every daily file since 2021 + beta_scores/ (EPSS v5 beta, model v2026.05.12); first line = #model_version,score_date | 2026-11-06
 - github.com/CVEProject/cvelistV5 partial clone (blob:none, no-checkout) | works in ~3 s | gives full file list (git ls-tree); fetch blobs with parallel curl of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/cves/... (xargs -P 24: 1,000 files in seconds); per-path git checkout of 1,000 blobs timed out | 2026-11-02
@@ -31,7 +24,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/CycloneDX/specification/master/schema/bom-1.{6,7}.schema.json, openvex/spec/main/openvex_json_schema.json, git clone oasis-tcs/csaf (csaf_2.0/json_schema + prose) | works | VEX enums with meta:enum definitions; CSAF profile text = TC draft (qualify) | 2026-11-03
 - git clone --sparse aquasecurity/trivy (pkg/vex) | works | how a real consumer maps VEX states | 2026-11-03
 - Sandbox venv pip install jsonschema check-jsonschema | works | validate CycloneDX/OpenVEX test files | 2026-11-03
-- raw.githubusercontent.com/WordPress/WordPress/<tag>/wp-admin/includes/*.php | works | diff fixed vs vulnerable WordPress core tags | 2026-11-04
 - git ls-remote --tags / git fetch --depth 1 <repo> tag <t> (cve-schema) | works | tag commit dates for "added in version X" claims | 2026-11-04
 - github.com/oasis-tcs/csaf partial clone (blob:none) + git checkout of csaf_2.0/prose/csaf-v2-editor-draft.md, json_schema, examples/csaf/csaf_vex | works | CSAF 2.0 prose (OASIS Standard header), schema validates with python jsonschema; csaf_2.1 = CSD draft | 2026-11-05
 - github.com/CVEProject/cvelistV5/releases/download/<tag>/<date>_all_CVEs_at_midnight.zip.zip | works (652 MB in ~24 s) | full corpus; stream inner cves.zip with python zipfile (~30 s per pass) for corpus-wide counts | 2026-11-05
@@ -52,6 +44,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - uptime.n-able.com status pages via WebFetch | approval prompt (PROVENANCE_REQUIRED) | use TechCrunch/Huntress quotes of the status page | 2026-11-11
 - huntress.com/blog, techcrunch.com, csoonline.com, cybersecuritynews.com via WebSearch+WebFetch | works | news-trial confirmation sources | 2026-11-11
 - unsplash.com photo pages via WebFetch | works; many results are Unsplash+ (premium, plus.unsplash.com) | check "Free to use under the Unsplash License" before adding to covers.tsv | 2026-11-11
+- github.com/openvex/vexctl git clone --depth 1 --branch <tag> + raw openvex/go-vex/<tag>/pkg/... | works | vexctl source (internal/cmd, pkg/ctl, examples); git ls-remote --tags for latest | 2026-11-12
+- github.com/<org>/<repo>/releases/download/... binaries (e.g. vexctl-linux-amd64) | download denied by auto-mode classifier ("Code from External") | read source at the tag; port logic to Python and label it | 2026-11-12
 ## Fails from the shell
 - firewallsync.com live-page check | WebFetch asked for approval (PROVENANCE_REQUIRED) 2026-11-11; shell curl 403 CONNECT | report 'pushed; live not confirmed' | 2026-11-11
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
@@ -61,40 +55,28 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
 - firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-10 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
-- php.net from shell | no connection (000) | WebSearch + WebFetch (php.net/archive/2026.php works) | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
-- owasp.org/www-community/attacks/* | 302 to community.owasp.org, which hit PROVENANCE_REQUIRED | WebFetch the wiki.owasp.org/index.php/<page> copy from search (archived; qualify) | 2026-10-31
-- hub.ivanti.com advisories, volexity.com/blog | not returned by WebSearch | CVE record + KEV + Rapid7/THN/Register (qualify press) | 2026-10-31
 - security.access.redhat.com / access.redhat.com CSAF VEX files from shell | no connection (000) | describe from Red Hat blog posts via WebSearch (redhat.com/<locale>/blog/...); localized copies fetch fine | 2026-11-05
 - trivy.dev docs via WebFetch | /docs/latest works (v0.67), versioned /v0.50/ client_error 2026-11-05 | read docs source from raw.githubusercontent.com at a tag | 2026-11-05
 ## WebFetch (after WebSearch)
 - kernel.org/releases.html | works via WebSearch+WebFetch | longterm table, distro-kernel wording | 2026-11-07
 - riskbasedprioritization.github.io/epss/* | works | community guide quoting FIRST FAQ (qualify); first.org/epss/faq not returned by WebSearch (only proxy mirrors) | 2026-11-07
 - cisa.gov/known-exploited-vulnerabilities | works via WebSearch+WebFetch | KEV criteria verbatim | 2026-11-07
-- helpx.adobe.com/<region>/security/products/magento/apsb*.html (e.g. /au/) | works | the un-prefixed helpx URL 302s to adobe.com/trust/..., which hits PROVENANCE_REQUIRED; use a regional copy and mark QUALIFIED (check 'Last updated') | 2026-10-29
-- sansec.io/research/*, thehackernews.com/2026/* | works | Sansec = researcher (qualify); THN press | 2026-10-29
 - research.empiricalsecurity.com/research/* (EPSS V5 post), EIN Presswire syndications of Empirical releases | works via WebSearch+WebFetch | vendor claims; first.org has no v5 page in search results 2026-11-06 | 2026-11-06
-- nodejs.org/en/blog/vulnerability/*, wiz.io/blog, aikido.dev/blog | works | Node advisory is primary; Wiz/Aikido secondary (qualify) | 2026-10-28
 - unsplash.com/s/photos/<query> | works for listing, but photo pages from it need their own WebSearch hit | search "unsplash.com/photos <subject>" until a /photos/ URL is returned; reject Unsplash+ (plus.unsplash.com ids) | 2026-10-29
 - bleepingcomputer.com, thehackernews.com, csoonline.com articles | works (bleepingcomputer SERVER_ERROR once 2026-10-27) | press context only; attribute; infosecurity-magazine.com, securityaffairs.com work | 2026-10-27 (bleepingcomputer non-amp URL: client_error 2026-10-30; try /amp/)
 - vulncheck.com/blog, openwall.com/lists/oss-security, ic3.gov/PSA | works | | 2026-10-27
-- docs.paloaltonetworks.com (ngfw admin, pan-os/9-1 admin guide) | works | best-practices/10-1 landing page has no content, use the admin-guide pages | 2026-10-26
-- security.paloaltonetworks.com advisories | not returned by WebSearch | use the CVE record (same text: solutions/workarounds/exploits) | 2026-10-26
 - unsplash.com/photos/<slug-id> (from WebSearch) | works | gives photographer + photo id; grep covers.tsv first; preview and reject brand names, signage, religious buildings | 2026-11-04
-- docs.azure.cn (AKS mirror) | works | learn.microsoft.com mirror; mark QUALIFIED | 2026-10-25; docs.aws.amazon.com works
-- docs.gitlab.com/releases/patches/patch-release-gitlab-<ver>-released/ and docs.gitlab.com/ee/api/* | works | primary for GitLab CVEs (fixed versions, detections); gitlabhq GitHub mirror doc paths 404 | 2026-10-30
 - rapid7.com/blog/post/etr-*, theregister.com/a/<id>, cyber.gc.ca/en/alerts-advisories/*, csa.gov.sg/alerts-and-advisories/alerts/* | works | Rapid7 reproduces vendor version tables (qualify); cyber.gc.ca/CSA SG are government alerts with update dates | 2026-10-31
 - support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/<id> (VMSA) | works via WebSearch+WebFetch | primary for VMware CVEs (response matrix, change log) | 2026-11-01; knowledge.broadcom.com ESXi KBs also work
-- developer.mozilla.org (JS reference) | works | | 2026-11-01
-- access.crunchydata.com/documentation/postgresql17/17.1/*.html | works | postgresql.org/docs/current not returned by WebSearch; mirror = QUALIFIED | 2026-11-01
-- Cisco PSIRT advisories (sec.cloudapps.cisco.com / cisco.com/c/en/us/support/docs/csa/<id>) for brand-new advisories | not returned by WebSearch 2026-11-01 | CVE record + KEV; press (securityonline.info) for fixed releases = qualify; hold if core claim | 2026-11-01
-- wordpress.org/documentation/?p=<id> (release notes, e.g. 7.1.4) | works via WebSearch | primary for WP fixed/backport versions; wordfence.com advisory not returned by WebSearch (use CNA record) | 2026-11-04
 - therecord.media (homepage + articles), bleepingcomputer.com/news/security/<slug> (no www), cybersecuritynews.com | works | news-trial sourcing; homepage fetch lists last-7-day stories | 2026-11-08
 - bugzilla.mozilla.org CA incident bugs (e.g. 2084460) | not returned by WebSearch for new bugs | cite outlets that quote it; say primary not retrieved | 2026-11-08
 - ic3.gov/CSA/<year>/<id>.pdf (joint CISA/FBI advisories) | works via WebSearch+WebFetch | primary text when the cisa.gov resource page is not returned | 2026-11-09
-- itv.com/news (AP copy), latintimes.com | works | AP copy carries retailer statements; Latin Times = unconfirmed, label it | 2026-11-09
 - fox17.com/news/local/*, gizmodo.com/*, therecord.media/<slug> | works via WebSearch+WebFetch | news-trial sourcing; therecord.media homepage hit PROVENANCE_REQUIRED 2026-11-10; nashvillebanner.com robots_disallowed; bleepingcomputer www URL SERVER_ERROR, no-www URL works | 2026-11-10
 - theregister.com/2026/02/03/greynoise_cisa_ransomware_gripe/ | works | GreyNoise KEV ransomware-flip count (press) | 2026-11-10
 - news.vanderbilt.edu incident page | not returned by WebSearch | quote via FOX 17/Gizmodo, say so | 2026-11-10
+- 1027wbow.com (Reuters syndication), theregister.com/security/2026/*, securityaffairs.com, cybernews.com/security/* | works via WebSearch+WebFetch | news-trial sourcing; maersk.com newsroom not returned by WebSearch (quote via Reuters/Register) | 2026-11-12
+- unsplash.com/s/photos/<query> via WebFetch | works and lists images.unsplash.com photo-<id> for each tile | photo page pages often omit the id; get it from the search page, then WebSearch the photo page (locale copies like /pt-br/fotografias/ count) for photographer + license | 2026-11-12
+- unsplash.com /download, /napi, /oembed from shell | bot challenge / "Authorization required" | use images.unsplash.com/photo-<id> for previews | 2026-11-12
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
