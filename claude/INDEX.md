@@ -150,3 +150,5 @@ kev-knownransomwarecampaignuse-unknown-to-known-flips | KEV knownRansomwareCampa
 vanderbilt-university-byod-ransomware-attack-what-we-know | Vanderbilt BYOD Ransomware Attack: What We Know So Far | 2026-11-10 | ["security-operations"] | vanderbilt ransomware attack [news]
 trivy-vex-oci-openvex-attestations-cosign-attest | Trivy --vex oci: OpenVEX Attestations on OCI Images | 2026-11-11 | ["cloud-security"] | trivy vex oci
 n-able-n-central-able2shell-zero-days-offline-what-we-know | N-able N-central Offline After Able2Shell Zero-Days | 2026-11-11 | ["security-operations"] | n-able n-central able2shell [news]
+vexctl-create-add-merge-attest-openvex-documents | vexctl: Create, Add, Merge and Attest OpenVEX Documents | 2026-11-12 | ["appsec"] | vexctl
+maersk-cyberattack-legacy-system-data-theft-what-we-know | Maersk Cyberattack: Data Stolen From Acquired Legacy System | 2026-11-12 | ["security-operations"] | maersk cyberattack [news]
