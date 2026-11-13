@@ -46,6 +46,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - unsplash.com photo pages via WebFetch | works; many results are Unsplash+ (premium, plus.unsplash.com) | check "Free to use under the Unsplash License" before adding to covers.tsv | 2026-11-11
 - github.com/openvex/vexctl git clone --depth 1 --branch <tag> + raw openvex/go-vex/<tag>/pkg/... | works | vexctl source (internal/cmd, pkg/ctl, examples); git ls-remote --tags for latest | 2026-11-12
 - github.com/<org>/<repo>/releases/download/... binaries (e.g. vexctl-linux-amd64) | download denied by auto-mode classifier ("Code from External") | read source at the tag; port logic to Python and label it | 2026-11-12
+- cvelistV5 release zip + Red Hat cvss lib 3.6 in venv | works; full 2026 metrics pass ~33 s | corpus CVSS/B-vs-BT recomputation | 2026-11-13
 ## Fails from the shell
 - firewallsync.com live-page check | WebFetch asked for approval (PROVENANCE_REQUIRED) 2026-11-11; shell curl 403 CONNECT | report 'pushed; live not confirmed' | 2026-11-11
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
@@ -53,7 +54,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | shell often 403; via WebFetch cve.org pages and NVD vulnerability-detail-pages return empty (JS) | cvelistV5/kev-data raw, cve-schema text, or WebSearch+WebFetch for cisa.gov | 2026-11-04
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED 2026-10-26 to 11-10 (not retried) | live check not possible in runs; owner spot-checks | 2026-10-28
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED every run 2026-10-26 to 11-13 (not retried) | live check not possible in runs; owner spot-checks | 2026-11-13
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
 - security.access.redhat.com / access.redhat.com CSAF VEX files from shell | no connection (000) | describe from Red Hat blog posts via WebSearch (redhat.com/<locale>/blog/...); localized copies fetch fine | 2026-11-05
@@ -78,5 +79,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - 1027wbow.com (Reuters syndication), theregister.com/security/2026/*, securityaffairs.com, cybernews.com/security/* | works via WebSearch+WebFetch | news-trial sourcing; maersk.com newsroom not returned by WebSearch (quote via Reuters/Register) | 2026-11-12
 - unsplash.com/s/photos/<query> via WebFetch | works and lists images.unsplash.com photo-<id> for each tile | photo page pages often omit the id; get it from the search page, then WebSearch the photo page (locale copies like /pt-br/fotografias/ count) for photographer + license | 2026-11-12
 - unsplash.com /download, /napi, /oembed from shell | bot challenge / "Authorization required" | use images.unsplash.com/photo-<id> for previews | 2026-11-12
+- notion.com/help/*, fireworks.ai/security/bulletins/*, securityweek.com, venturebeat.com/security/* | works via WebSearch+WebFetch | news-trial primaries; bleepingcomputer.com/news SERVER_ERROR 2026-11-13; cybersecurityhunter.com daily roundup lists the week's incidents | 2026-11-13
+- unsplash.com/s/photos/<query> typed directly (not from a search result) | denied by classifier / PROVENANCE_REQUIRED | only fetch /s/photos/ URLs that WebSearch returned | 2026-11-13
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
