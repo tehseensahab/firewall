@@ -152,3 +152,5 @@ trivy-vex-oci-openvex-attestations-cosign-attest | Trivy --vex oci: OpenVEX Atte
 n-able-n-central-able2shell-zero-days-offline-what-we-know | N-able N-central Offline After Able2Shell Zero-Days | 2026-11-11 | ["security-operations"] | n-able n-central able2shell [news]
 vexctl-create-add-merge-attest-openvex-documents | vexctl: Create, Add, Merge and Attest OpenVEX Documents | 2026-11-12 | ["appsec"] | vexctl
 maersk-cyberattack-legacy-system-data-theft-what-we-know | Maersk Cyberattack: Data Stolen From Acquired Legacy System | 2026-11-12 | ["security-operations"] | maersk cyberattack [news]
+cve-json-cvss-metrics-cvssv4-0-cvssv3-1-basescore-trap | CVE JSON CVSS Metrics: cvssV4_0, cvssV3_1, baseScore Trap | 2026-11-13 | ["security-operations"] | cve json cvss metrics
+notion-ai-chats-exposed-fireworks-ai-breach-what-we-know | Notion AI Chats Exposed in Fireworks AI Breach: What We Know | 2026-11-13 | ["ai-security"] | notion fireworks ai breach [news]
