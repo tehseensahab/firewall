@@ -47,6 +47,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - github.com/openvex/vexctl git clone --depth 1 --branch <tag> + raw openvex/go-vex/<tag>/pkg/... | works | vexctl source (internal/cmd, pkg/ctl, examples); git ls-remote --tags for latest | 2026-11-12
 - github.com/<org>/<repo>/releases/download/... binaries (e.g. vexctl-linux-amd64) | download denied by auto-mode classifier ("Code from External") | read source at the tag; port logic to Python and label it | 2026-11-12
 - cvelistV5 release zip + Red Hat cvss lib 3.6 in venv | works; full 2026 metrics pass ~33 s | corpus CVSS/B-vs-BT recomputation | 2026-11-13
+- cvelistV5 release cve_<date>_0000Z all-CVEs zip, full-corpus pass over every year (cvssV4_0 Supplemental fields) | works, 663 MB download ~20 s, pass ~50 s | | 2026-11-14
+- raw.githubusercontent.com/CERTCC/SSVC/main/src/ssvc/decision_points/ssvc/automatable.py, cve-schema schema/imports/cvss/cvss-v4.0.json | works | | 2026-11-14
 ## Fails from the shell
 - firewallsync.com live-page check | WebFetch asked for approval (PROVENANCE_REQUIRED) 2026-11-11; shell curl 403 CONNECT | report 'pushed; live not confirmed' | 2026-11-11
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
@@ -54,7 +56,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | shell often 403; via WebFetch cve.org pages and NVD vulnerability-detail-pages return empty (JS) | cvelistV5/kev-data raw, cve-schema text, or WebSearch+WebFetch for cisa.gov | 2026-11-04
 - firewallsync.com via curl | blocked by proxy | WebFetch | 2026-10-25
-- firewallsync.com via WebFetch | PROVENANCE_REQUIRED every run 2026-10-26 to 11-13 (not retried) | live check not possible in runs; owner spot-checks | 2026-11-13
+- firewallsync.com via WebFetch | PROVENANCE_REQUIRED every run 2026-10-26 to 11-14 (not retried) | live check not possible in runs; owner spot-checks | 2026-11-13
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
 - unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
 - security.access.redhat.com / access.redhat.com CSAF VEX files from shell | no connection (000) | describe from Red Hat blog posts via WebSearch (redhat.com/<locale>/blog/...); localized copies fetch fine | 2026-11-05
@@ -81,5 +83,7 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - unsplash.com /download, /napi, /oembed from shell | bot challenge / "Authorization required" | use images.unsplash.com/photo-<id> for previews | 2026-11-12
 - notion.com/help/*, fireworks.ai/security/bulletins/*, securityweek.com, venturebeat.com/security/* | works via WebSearch+WebFetch | news-trial primaries; bleepingcomputer.com/news SERVER_ERROR 2026-11-13; cybersecurityhunter.com daily roundup lists the week's incidents | 2026-11-13
 - unsplash.com/s/photos/<query> typed directly (not from a search result) | denied by classifier / PROVENANCE_REQUIRED | only fetch /s/photos/ URLs that WebSearch returned | 2026-11-13
+- first.org/cvss/v4.0/specification-document | works via WebSearch (allowed_domains first.org) + WebFetch; page is 138k chars, use offset 100000 for Supplemental Table 23 | | 2026-11-14
+- finwire.io (Reuters syndication), techcrunch.com/2026/* | works via WebSearch+WebFetch | news-trial sourcing; thehill.com, privacyguides.org/news, substack roundups client_error | 2026-11-14
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
