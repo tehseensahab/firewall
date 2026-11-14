@@ -154,3 +154,5 @@ vexctl-create-add-merge-attest-openvex-documents | vexctl: Create, Add, Merge an
 maersk-cyberattack-legacy-system-data-theft-what-we-know | Maersk Cyberattack: Data Stolen From Acquired Legacy System | 2026-11-12 | ["security-operations"] | maersk cyberattack [news]
 cve-json-cvss-metrics-cvssv4-0-cvssv3-1-basescore-trap | CVE JSON CVSS Metrics: cvssV4_0, cvssV3_1, baseScore Trap | 2026-11-13 | ["security-operations"] | cve json cvss metrics
 notion-ai-chats-exposed-fireworks-ai-breach-what-we-know | Notion AI Chats Exposed in Fireworks AI Breach: What We Know | 2026-11-13 | ["ai-security"] | notion fireworks ai breach [news]
+cvss-v4-supplemental-metrics-in-cve-records-automatable-provider-urgency | CVSS v4 Supplemental Metrics in CVE Records: Who Sets Them | 2026-11-14 | ["security-operations"] | cvss v4 supplemental metrics
+uber-driver-license-data-stolen-fireworks-ai-breach-what-we-know | Uber Driver License Data Stolen in Fireworks AI Breach | 2026-11-14 | ["ai-security"] | uber data breach fireworks ai [news]
