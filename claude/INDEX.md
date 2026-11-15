@@ -156,3 +156,5 @@ cve-json-cvss-metrics-cvssv4-0-cvssv3-1-basescore-trap | CVE JSON CVSS Metrics: 
 notion-ai-chats-exposed-fireworks-ai-breach-what-we-know | Notion AI Chats Exposed in Fireworks AI Breach: What We Know | 2026-11-13 | ["ai-security"] | notion fireworks ai breach [news]
 cvss-v4-supplemental-metrics-in-cve-records-automatable-provider-urgency | CVSS v4 Supplemental Metrics in CVE Records: Who Sets Them | 2026-11-14 | ["security-operations"] | cvss v4 supplemental metrics
 uber-driver-license-data-stolen-fireworks-ai-breach-what-we-know | Uber Driver License Data Stolen in Fireworks AI Breach | 2026-11-14 | ["ai-security"] | uber data breach fireworks ai [news]
+cve-problemtypes-cweid-cwe-from-cve-json | CVE problemTypes and cweId: Getting CWE From CVE JSON | 2026-11-15 | ["appsec"] | cve problemtypes cweid
+screenconnect-sckit-worm-rmm-plus-extension-what-we-know | ScreenConnect SCKit Worm via RMM+ Extension: What We Know | 2026-11-15 | ["security-operations"] | screenconnect sckit rmm+ [news]
