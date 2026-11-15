@@ -47,7 +47,8 @@ Removed before draft: CWE Top 25 2025 rank list (page did not expose ranks).
 | Isolation does not remove persistence; reinfection | Huntress (paraphrased; verbatim quote not obtainable) | | QUALIFIED → paraphrased in post | |
 
 ## Live check
-(see below)
+Both posts live at commit 37c3bd2 (covers committed by workflow): B confirmed via WebFetch (h1, opening, cover_hu webp); A WebFetch returned PROVENANCE_REQUIRED (not retried), confirmed via shell curl 200 with h1, 'Short answer' opening and cover_hu webp.
+Covers: previews of both Unsplash photos read before committing; alts describe the photos.
 
 ## Next-session candidates
 1. [cluster] Alert when a CVE gains KEV or SSVC Exploitation: active by diffing CISA-ADP containers in cvelistV5 delta | guide | turns delta sync into exploitation alerts | cvelistV5 delta.json/deltaLog.json, cisagov/vulnrichment README (ADP drops values when CNA adds them, confirmed today), kev-data git history | must not repeat cvelistv5-delta, cisa-vulnrichment, cve-adp-containers, kev flips
