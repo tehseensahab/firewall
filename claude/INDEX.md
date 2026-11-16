@@ -158,3 +158,5 @@ cvss-v4-supplemental-metrics-in-cve-records-automatable-provider-urgency | CVSS 
 uber-driver-license-data-stolen-fireworks-ai-breach-what-we-know | Uber Driver License Data Stolen in Fireworks AI Breach | 2026-11-14 | ["ai-security"] | uber data breach fireworks ai [news]
 cve-problemtypes-cweid-cwe-from-cve-json | CVE problemTypes and cweId: Getting CWE From CVE JSON | 2026-11-15 | ["appsec"] | cve problemtypes cweid
 screenconnect-sckit-worm-rmm-plus-extension-what-we-know | ScreenConnect SCKit Worm via RMM+ Extension: What We Know | 2026-11-15 | ["security-operations"] | screenconnect sckit rmm+ [news]
+cve-exploitation-alerts-cisa-adp-kev-ssvc-cvelistv5-diff | CVE Exploitation Alerts: Diff CISA-ADP KEV and SSVC Data | 2026-11-16 | ["security-operations"] | cve exploitation alerts cisa-adp
+maileva-data-breach-la-poste-22-million-addresses-what-we-know | Maileva Data Breach: La Poste Says 22 Million Hit | 2026-11-16 | ["identity-access"] | maileva data breach [news]
