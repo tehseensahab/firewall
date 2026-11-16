@@ -49,6 +49,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - cvelistV5 release zip corpus passes (stream inner cves.zip; filter by assignerShortName, problemTypes, metrics; venv cvss lib for recomputation) | works, 663 MB ~20 s, ~50 s per full pass | | 2026-11-15
 - cwe.mitre.org from shell (cwec_latest.xml.zip) | fails: proxy 403 CONNECT | WebSearch + WebFetch cwe.mitre.org/data/definitions/<n> and top25 archive pages (work) | 2026-11-15
 - raw.githubusercontent.com/cisagov/vulnrichment/develop/README.md | works | CISA-ADP CWE/CVSS enrichment rules verbatim | 2026-11-15
+- cvelistV5 tag-to-tag diff: blobless clone (~30 s) + git fetch --depth=1 origin tag <a> tag <b> + git diff --name-status, then curl --parallel -K cfg of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/<path> | works (46k files in ~2 min); ~2% return HTTP 429 text bodies at parallel 64: validate JSON and refetch at parallel 8 | 2026-11-16
+- cvelistV5 release asset <date>_all_CVEs_at_midnight.zip.zip for cve_2026-11-16_0000Z and cve_2026-10-16_0000Z | 404 (9-byte "Not Found") 2026-11-16 | use the tag-diff method above | 2026-11-16
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -78,5 +80,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - scworld.com/news/* | WebFetch client_error | use CyberScoop/The Register | 2026-11-15
 - cve.org CNA_Rules_v4.1.0.pdf | works via WebSearch+WebFetch | CNA rule text | 2026-11-15
 - unsplash.com/s/photos/<query> (from WebSearch) | works; lists images.unsplash.com photo-<id> + photographer per tile; free vs Unsplash+ must be checked | 2026-11-15
+- cyberattaque.org, fr.news.yahoo.com (Euronews/AFP), solutions-numeriques.com, moroccoworldnews.com, gdpr-info.eu/art-33-gdpr/ | works via WebSearch+WebFetch | French breach reporting; franceinfo.fr and ouest-france.fr fail (robots_disallowed) | 2026-11-16
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
