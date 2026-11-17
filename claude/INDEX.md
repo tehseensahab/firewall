@@ -160,3 +160,5 @@ cve-problemtypes-cweid-cwe-from-cve-json | CVE problemTypes and cweId: Getting C
 screenconnect-sckit-worm-rmm-plus-extension-what-we-know | ScreenConnect SCKit Worm via RMM+ Extension: What We Know | 2026-11-15 | ["security-operations"] | screenconnect sckit rmm+ [news]
 cve-exploitation-alerts-cisa-adp-kev-ssvc-cvelistv5-diff | CVE Exploitation Alerts: Diff CISA-ADP KEV and SSVC Data | 2026-11-16 | ["security-operations"] | cve exploitation alerts cisa-adp
 maileva-data-breach-la-poste-22-million-addresses-what-we-know | Maileva Data Breach: La Poste Says 22 Million Hit | 2026-11-16 | ["identity-access"] | maileva data breach [news]
+kev-in-cve-records-cisa-adp-kev-block-full-catalog-audit | KEV in CVE Records: Audit of All 1,781 CISA-ADP kev Blocks | 2026-11-17 | ["security-operations"] | kev in cve records
+coles-cyber-security-incident-what-we-know | Coles Cyber Incident: What the Supermarket Has Confirmed | 2026-11-17 | ["security-operations"] | coles cyber incident [news]
