@@ -51,6 +51,10 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/cisagov/vulnrichment/develop/README.md | works | CISA-ADP CWE/CVSS enrichment rules verbatim | 2026-11-15
 - cvelistV5 tag-to-tag diff: blobless clone (~30 s) + git fetch --depth=1 origin tag <a> tag <b> + git diff --name-status, then curl --parallel -K cfg of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/<path> | works (46k files in ~2 min); ~2% return HTTP 429 text bodies at parallel 64: validate JSON and refetch at parallel 8 | 2026-11-16
 - cvelistV5 release asset <date>_all_CVEs_at_midnight.zip.zip for cve_2026-11-16_0000Z and cve_2026-10-16_0000Z | 404 (9-byte "Not Found") 2026-11-16 | use the tag-diff method above | 2026-11-16
+- cvelistV5 release asset cve_2026-11-17_0000Z/2026-11-17_all_CVEs_at_midnight.zip.zip | works again (664 MB) 2026-11-17 | corpus scan ~20 s | 2026-11-17
+- raw cvelistV5 main records for all 1,781 KEV CVEs via curl --parallel-max 16 -K cfg | works, ~11 s, no 429s | 2026-11-17
+- forbes.com.au/news/*, ia.acs.org.au/article/*, insideretail.com.au/*, teiss.co.uk/news/*, sharkstriker.com/blog/data-breaches-in-<month>-<year>/ | works via WebSearch+WebFetch | news-trial sourcing (sharkstriker lists recent incidents); ASX announcement PDFs not returned by WebSearch for same-day news | 2026-11-17
+- konbriefing.com (robots_disallowed), thenewdaily.com.au and computerweekly.com/news (client_error), cyberdaily.au links with long ?token= (proxy: URL too long) | fail | use other outlets | 2026-11-17
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
