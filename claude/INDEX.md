@@ -162,3 +162,5 @@ cve-exploitation-alerts-cisa-adp-kev-ssvc-cvelistv5-diff | CVE Exploitation Aler
 maileva-data-breach-la-poste-22-million-addresses-what-we-know | Maileva Data Breach: La Poste Says 22 Million Hit | 2026-11-16 | ["identity-access"] | maileva data breach [news]
 kev-in-cve-records-cisa-adp-kev-block-full-catalog-audit | KEV in CVE Records: Audit of All 1,781 CISA-ADP kev Blocks | 2026-11-17 | ["security-operations"] | kev in cve records
 coles-cyber-security-incident-what-we-know | Coles Cyber Incident: What the Supermarket Has Confirmed | 2026-11-17 | ["security-operations"] | coles cyber incident [news]
+kev-duedate-days-after-dateadded-3-14-21-day-deadlines | KEV dueDate: 3, 14 or 21 Days After dateAdded, 2021-2026 | 2026-11-18 | ["security-operations"] | kev due date
+equinor-cyberattack-it-systems-what-we-know | Equinor Cyberattack: What the Energy Giant Has Confirmed | 2026-11-18 | ["security-operations"] | equinor cyberattack [news]
