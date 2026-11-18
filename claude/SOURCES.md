@@ -9,13 +9,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/kubernetes/website/main/content/en/docs/... | works | k8s docs source (audit.md, pod-security-standards.md, configure-service-account.md) | 2026-10-26
 - raw.githubusercontent.com/kubernetes/apiserver/master/pkg/apis/audit/v1/types.go | works | audit Event fields | 2026-10-26
 - raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json | works (55 MB) | ATT&CK IDs/names; parse with python | 2026-10-26
-- raw.githubusercontent.com/php/doc-en/master/... (appendices/ini.core.xml, reference/session/ini.xml, reference/filesystem/ini.xml, install/fpm/configuration.xml) | works | PHP manual source; strip XML tags with sed; link php.net/manual pages in posts (URLs confirmed via WebSearch) | 2026-10-27
 - images.unsplash.com/photo-<id>?w=1600&q=80&fm=jpg | works | preview a cover before committing; scripts/fetch-covers.sh runs locally if the workflow does not fire | 2026-10-27
-- pypi.org/pypi/<pkg>/json | works | release versions + upload dates | 2026-10-28
 - raw.githubusercontent.com/OWASP/CheatSheetSeries/master/cheatsheets/*.md | works | link cheatsheetseries.owasp.org page in posts | 2026-10-28
-- Sandbox: node v22.23.4, pip venv (python3 -m venv) and npm install (express etc.) from registries | works | test runtime behaviour | 2026-10-29
-- raw.githubusercontent.com/nodejs/node/<vX.Y.Z>/doc/api/*.md | works | use the tag matching the tested runtime; main branch docs list unreleased versions | 2026-10-29
-- raw.githubusercontent.com/{google/re2/main/README.md, golang/go/master/src/regexp/regexp.go, rust-lang/regex/master/{README.md,src/lib.rs}, python/cpython/main/Doc/library/re.rst, dotnet/docs/main/docs/standard/base-types/*.md, v8/v8.dev/main/src/blog/*.md} | works | engine/runtime doc sources; link the rendered docs pages | 2026-10-31
 - cvelistV5 path for a KEV CVE with no CNA record yet (e.g. 2026/118xxx/CVE-2026-118527) | 404 | KEV shortDescription is then the only primary text; say so in the post | 2026-10-31
 - Go module downloads (go get, GOPROXY=direct) | denied by the auto-mode classifier 2026-11-06; proxy.golang.org DNS fails | read library source via raw and port the logic to Python (label as a port) | 2026-11-06
 - github.com/empiricalsec/epss_scores partial clone (blob:none, no-checkout) + git checkout HEAD -- <year>/epss_scores-YYYY-MM-DD.csv.gz | works | every daily file since 2021 + beta_scores/ (EPSS v5 beta, model v2026.05.12); first line = #model_version,score_date | 2026-11-06
@@ -50,11 +45,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - cwe.mitre.org from shell (cwec_latest.xml.zip) | fails: proxy 403 CONNECT | WebSearch + WebFetch cwe.mitre.org/data/definitions/<n> and top25 archive pages (work) | 2026-11-15
 - raw.githubusercontent.com/cisagov/vulnrichment/develop/README.md | works | CISA-ADP CWE/CVSS enrichment rules verbatim | 2026-11-15
 - cvelistV5 tag-to-tag diff: blobless clone (~30 s) + git fetch --depth=1 origin tag <a> tag <b> + git diff --name-status, then curl --parallel -K cfg of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/<path> | works (46k files in ~2 min); ~2% return HTTP 429 text bodies at parallel 64: validate JSON and refetch at parallel 8 | 2026-11-16
-- cvelistV5 release asset <date>_all_CVEs_at_midnight.zip.zip for cve_2026-11-16_0000Z and cve_2026-10-16_0000Z | 404 (9-byte "Not Found") 2026-11-16 | use the tag-diff method above | 2026-11-16
-- cvelistV5 release asset cve_2026-11-17_0000Z/2026-11-17_all_CVEs_at_midnight.zip.zip | works again (664 MB) 2026-11-17 | corpus scan ~20 s | 2026-11-17
 - raw cvelistV5 main records for all 1,781 KEV CVEs via curl --parallel-max 16 -K cfg | works, ~11 s, no 429s | 2026-11-17
-- forbes.com.au/news/*, ia.acs.org.au/article/*, insideretail.com.au/*, teiss.co.uk/news/*, sharkstriker.com/blog/data-breaches-in-<month>-<year>/ | works via WebSearch+WebFetch | news-trial sourcing (sharkstriker lists recent incidents); ASX announcement PDFs not returned by WebSearch for same-day news | 2026-11-17
-- konbriefing.com (robots_disallowed), thenewdaily.com.au and computerweekly.com/news (client_error), cyberdaily.au links with long ?token= (proxy: URL too long) | fail | use other outlets | 2026-11-17
+- cvelistV5 release asset <date>_all_CVEs_at_midnight.zip.zip | intermittent: 404 on 2026-11-16, works 2026-11-17 | fall back to the tag-diff method | 2026-11-17
+- kev-data git history replay (git show <commit>:known_exploited_vulnerabilities.json for all 345 commits) | works, ~1 min | dueDate/forensicTriage edit audit; schema file known_exploited_vulnerabilities_schema.json has field descriptions | 2026-11-18
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -76,14 +69,13 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - ic3.gov/CSA/<year>/<id>.pdf (joint CISA/FBI advisories) | works via WebSearch+WebFetch | primary text when the cisa.gov resource page is not returned | 2026-11-09
 - 1027wbow.com (Reuters syndication), theregister.com/security/2026/*, securityaffairs.com, cybernews.com/security/* | works via WebSearch+WebFetch | news-trial sourcing; maersk.com newsroom not returned by WebSearch (quote via Reuters/Register) | 2026-11-12
 - unsplash.com /download, /napi, /oembed from shell | bot challenge / "Authorization required" | use images.unsplash.com/photo-<id> for previews | 2026-11-12
-- notion.com/help/*, fireworks.ai/security/bulletins/*, securityweek.com, venturebeat.com/security/* | works via WebSearch+WebFetch | news-trial primaries; bleepingcomputer.com/news SERVER_ERROR 2026-11-13; cybersecurityhunter.com daily roundup lists the week's incidents | 2026-11-13
 - unsplash.com/s/photos/<query> typed directly (not from a search result) | denied by classifier / PROVENANCE_REQUIRED | only fetch /s/photos/ URLs that WebSearch returned | 2026-11-13
 - first.org/cvss/v4.0/specification-document | works via WebSearch (allowed_domains first.org) + WebFetch; page is 138k chars, use offset 100000 for Supplemental Table 23 | | 2026-11-14
-- finwire.io (Reuters syndication), techcrunch.com/2026/* | works via WebSearch+WebFetch | news-trial sourcing; thehill.com, privacyguides.org/news, substack roundups client_error | 2026-11-14
 - huntress.com/blog/<slug>, cyberscoop.com/<slug>, theregister.com/security/2026/* | works via WebSearch+WebFetch (fetch prompt length limits verbatim quotes to ~125 chars) | news-trial sourcing | 2026-11-15
 - scworld.com/news/* | WebFetch client_error | use CyberScoop/The Register | 2026-11-15
 - cve.org CNA_Rules_v4.1.0.pdf | works via WebSearch+WebFetch | CNA rule text | 2026-11-15
 - unsplash.com/s/photos/<query> (from WebSearch) | works; lists images.unsplash.com photo-<id> + photographer per tile; free vs Unsplash+ must be checked | 2026-11-15
-- cyberattaque.org, fr.news.yahoo.com (Euronews/AFP), solutions-numeriques.com, moroccoworldnews.com, gdpr-info.eu/art-33-gdpr/ | works via WebSearch+WebFetch | French breach reporting; franceinfo.fr and ouest-france.fr fail (robots_disallowed) | 2026-11-16
+- equinor.com/news/*, thestar.com.my/tech (Reuters), globalbankingandfinance.com, ibtimes.sg, uio.no IT news, dnv.com/cyber | works via WebSearch+WebFetch | news-trial sourcing | 2026-11-18
+- cisa.gov BOD 26-04 page + implementation guidance, cisa.gov/news-events/alerts/2026/*, bleepingcomputer.com/news/security/*, upstreamonline.com | WebFetch client_error / robots_disallowed 2026-11-18 (cisa.gov BOD 22-01 page works) | cite earlier verified posts or other outlets | 2026-11-18
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
