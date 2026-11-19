@@ -164,3 +164,5 @@ kev-in-cve-records-cisa-adp-kev-block-full-catalog-audit | KEV in CVE Records: A
 coles-cyber-security-incident-what-we-know | Coles Cyber Incident: What the Supermarket Has Confirmed | 2026-11-17 | ["security-operations"] | coles cyber incident [news]
 kev-duedate-days-after-dateadded-3-14-21-day-deadlines | KEV dueDate: 3, 14 or 21 Days After dateAdded, 2021-2026 | 2026-11-18 | ["security-operations"] | kev due date
 equinor-cyberattack-it-systems-what-we-know | Equinor Cyberattack: What the Energy Giant Has Confirmed | 2026-11-18 | ["security-operations"] | equinor cyberattack [news]
+public-poc-cves-cisa-adp-ssvc-exploitation-poc-epss | Public PoC CVEs: Pull All 47,926 SSVC poc Records | 2026-11-19 | ["security-operations"] | public poc cve ssvc exploitation poc
+microsoft-agent-framework-pypi-compromise-1-26-1-1-26-2-what-we-know | Microsoft agent-framework PyPI Compromise: What We Know | 2026-11-19 | ["ai-security"] | agent-framework pypi compromise [news]
