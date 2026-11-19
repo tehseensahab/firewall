@@ -46,8 +46,10 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/cisagov/vulnrichment/develop/README.md | works | CISA-ADP CWE/CVSS enrichment rules verbatim | 2026-11-15
 - cvelistV5 tag-to-tag diff: blobless clone (~30 s) + git fetch --depth=1 origin tag <a> tag <b> + git diff --name-status, then curl --parallel -K cfg of raw.githubusercontent.com/CVEProject/cvelistV5/<commit>/<path> | works (46k files in ~2 min); ~2% return HTTP 429 text bodies at parallel 64: validate JSON and refetch at parallel 8 | 2026-11-16
 - raw cvelistV5 main records for all 1,781 KEV CVEs via curl --parallel-max 16 -K cfg | works, ~11 s, no 429s | 2026-11-17
-- cvelistV5 release asset <date>_all_CVEs_at_midnight.zip.zip | intermittent: 404 on 2026-11-16, works 2026-11-17 | fall back to the tag-diff method | 2026-11-17
+- cvelistV5 release asset <date>_all_CVEs_at_midnight.zip.zip | intermittent: 404 (9-byte body) on 2026-11-16 and for 2026-11-19 at 04:51Z; works 2026-11-17/18 | take the previous day's asset or the tag-diff method | 2026-11-19
 - kev-data git history replay (git show <commit>:known_exploited_vulnerabilities.json for all 345 commits) | works, ~1 min | dueDate/forensicTriage edit audit; schema file known_exploited_vulnerabilities_schema.json has field descriptions | 2026-11-18
+- pypi.org/pypi/<pkg>/json via curl | works | release list, upload times, yanked flags: primary record for PyPI compromises | 2026-11-19
+- raw.githubusercontent.com/python/cpython/main/Doc/library/site.rst | works | .pth semantics verbatim; link docs.python.org/3/library/site.html | 2026-11-19
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -77,5 +79,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - unsplash.com/s/photos/<query> (from WebSearch) | works; lists images.unsplash.com photo-<id> + photographer per tile; free vs Unsplash+ must be checked | 2026-11-15
 - equinor.com/news/*, thestar.com.my/tech (Reuters), globalbankingandfinance.com, ibtimes.sg, uio.no IT news, dnv.com/cyber | works via WebSearch+WebFetch | news-trial sourcing | 2026-11-18
 - cisa.gov BOD 26-04 page + implementation guidance, cisa.gov/news-events/alerts/2026/*, bleepingcomputer.com/news/security/*, upstreamonline.com | WebFetch client_error / robots_disallowed 2026-11-18 (cisa.gov BOD 22-01 page works) | cite earlier verified posts or other outlets | 2026-11-18
+- wiz.io/blog/*, chainguard.dev/unchained/*, securityweek.com/* | works via WebSearch+WebFetch | supply-chain news sourcing; bleepingcomputer.com article SERVER_ERROR twice 2026-11-19; labs.cloudsecurityalliance.org briefing client_error | 2026-11-19
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
