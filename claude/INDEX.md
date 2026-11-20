@@ -166,3 +166,5 @@ kev-duedate-days-after-dateadded-3-14-21-day-deadlines | KEV dueDate: 3, 14 or 2
 equinor-cyberattack-it-systems-what-we-know | Equinor Cyberattack: What the Energy Giant Has Confirmed | 2026-11-18 | ["security-operations"] | equinor cyberattack [news]
 public-poc-cves-cisa-adp-ssvc-exploitation-poc-epss | Public PoC CVEs: Pull All 47,926 SSVC poc Records | 2026-11-19 | ["security-operations"] | public poc cve ssvc exploitation poc
 microsoft-agent-framework-pypi-compromise-1-26-1-1-26-2-what-we-know | Microsoft agent-framework PyPI Compromise: What We Know | 2026-11-19 | ["ai-security"] | agent-framework pypi compromise [news]
+openvex-statement-fields-status-notes-action-statement-version-trivy | OpenVEX Statement Fields: What Trivy and go-vex Ignore | 2026-11-20 | ["appsec"] | openvex statement fields
+chase-visa-mastercard-third-party-vendor-breach-what-we-know | Chase, Visa, Mastercard Vendor Breach: What We Know | 2026-11-20 | ["security-operations"] | chase visa mastercard breach [news]
