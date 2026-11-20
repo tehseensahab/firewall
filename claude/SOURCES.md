@@ -35,7 +35,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/sigstore/cosign/v3.1.4/{CHANGELOG.md,doc/cosign_*.md,cmd/cosign/cli/options/*.go} | works | flag defaults, predicate type map | 2026-11-11
 - raw.githubusercontent.com/sigstore/docs/main/content/en/cosign/verifying/attestation.md | works | link docs.sigstore.dev/cosign/verifying/attestation/ | 2026-11-11
 - github.com HTML pages via curl | 403 from proxy | raw.githubusercontent.com for content | 2026-11-11
-- uptime.n-able.com status pages via WebFetch | approval prompt (PROVENANCE_REQUIRED) | use TechCrunch/Huntress quotes of the status page | 2026-11-11
 - unsplash.com photo pages via WebFetch | works; many results are Unsplash+ (premium, plus.unsplash.com) | check "Free to use under the Unsplash License" before adding to covers.tsv | 2026-11-11
 - github.com/openvex/vexctl git clone --depth 1 --branch <tag> + raw openvex/go-vex/<tag>/pkg/... | works | vexctl source (internal/cmd, pkg/ctl, examples); git ls-remote --tags for latest | 2026-11-12
 - github.com/<org>/<repo>/releases/download/... binaries (e.g. vexctl-linux-amd64) | download denied by auto-mode classifier ("Code from External") | read source at the tag; port logic to Python and label it | 2026-11-12
@@ -50,15 +49,14 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - kev-data git history replay (git show <commit>:known_exploited_vulnerabilities.json for all 345 commits) | works, ~1 min | dueDate/forensicTriage edit audit; schema file known_exploited_vulnerabilities_schema.json has field descriptions | 2026-11-18
 - pypi.org/pypi/<pkg>/json via curl | works | release list, upload times, yanked flags: primary record for PyPI compromises | 2026-11-19
 - raw.githubusercontent.com/python/cpython/main/Doc/library/site.rst | works | .pth semantics verbatim; link docs.python.org/3/library/site.html | 2026-11-19
+- raw openvex/go-vex/<tag>/pkg/vex/*.go + git clone --depth 1 go-vex main (pkg/validate) and vexctl main | works | statement struct, SortStatements, unreleased validator; local `go run` of stdlib-only programs works (Go 1.24.7) | 2026-11-20
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
 - api.first.org (EPSS API) | fails: proxy 403 CONNECT | use raw.githubusercontent.com/empiricalsec/epss_scores (README reachable) or WebSearch | 2026-10-26
 - cisa.gov, nvd.nist.gov, cve.org | shell often 403; via WebFetch cve.org pages and NVD vulnerability-detail-pages return empty (JS) | cvelistV5/kev-data raw, cve-schema text, or WebSearch+WebFetch for cisa.gov | 2026-11-04
 - api.github.com (GHSA advisories for repos outside session scope) | 403 | use the CNA's CVE record + vendor page via WebSearch | 2026-10-27
-- unsplash.com/photos pages found only inside a fetched search page | PROVENANCE_REQUIRED | WebSearch for the photo page first | 2026-10-27
 - security.access.redhat.com / access.redhat.com CSAF VEX files from shell | no connection (000) | describe from Red Hat blog posts via WebSearch (redhat.com/<locale>/blog/...); localized copies fetch fine | 2026-11-05
-- trivy.dev docs via WebFetch | /docs/latest works (v0.67), versioned /v0.50/ client_error 2026-11-05 | read docs source from raw.githubusercontent.com at a tag | 2026-11-05
 ## WebFetch (after WebSearch)
 - kernel.org/releases.html | works via WebSearch+WebFetch | longterm table, distro-kernel wording | 2026-11-07
 - cisa.gov/known-exploited-vulnerabilities | works via WebSearch+WebFetch | KEV criteria verbatim | 2026-11-07
@@ -67,18 +65,17 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - rapid7.com/blog/post/etr-*, theregister.com/a/<id>, cyber.gc.ca/en/alerts-advisories/*, csa.gov.sg/alerts-and-advisories/alerts/* | works | Rapid7 reproduces vendor version tables (qualify); cyber.gc.ca/CSA SG are government alerts with update dates | 2026-10-31
 - support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/<id> (VMSA) | works via WebSearch+WebFetch | primary for VMware CVEs (response matrix, change log) | 2026-11-01; knowledge.broadcom.com ESXi KBs also work
 - therecord.media (homepage + articles), bleepingcomputer.com/news/security/<slug> (no www), cybersecuritynews.com | works | news-trial sourcing; homepage fetch lists last-7-day stories | 2026-11-08
-- bugzilla.mozilla.org CA incident bugs (e.g. 2084460) | not returned by WebSearch for new bugs | cite outlets that quote it; say primary not retrieved | 2026-11-08
 - ic3.gov/CSA/<year>/<id>.pdf (joint CISA/FBI advisories) | works via WebSearch+WebFetch | primary text when the cisa.gov resource page is not returned | 2026-11-09
 - 1027wbow.com (Reuters syndication), theregister.com/security/2026/*, securityaffairs.com, cybernews.com/security/* | works via WebSearch+WebFetch | news-trial sourcing; maersk.com newsroom not returned by WebSearch (quote via Reuters/Register) | 2026-11-12
-- unsplash.com /download, /napi, /oembed from shell | bot challenge / "Authorization required" | use images.unsplash.com/photo-<id> for previews | 2026-11-12
 - unsplash.com/s/photos/<query> typed directly (not from a search result) | denied by classifier / PROVENANCE_REQUIRED | only fetch /s/photos/ URLs that WebSearch returned | 2026-11-13
 - first.org/cvss/v4.0/specification-document | works via WebSearch (allowed_domains first.org) + WebFetch; page is 138k chars, use offset 100000 for Supplemental Table 23 | | 2026-11-14
 - huntress.com/blog/<slug>, cyberscoop.com/<slug>, theregister.com/security/2026/* | works via WebSearch+WebFetch (fetch prompt length limits verbatim quotes to ~125 chars) | news-trial sourcing | 2026-11-15
-- scworld.com/news/* | WebFetch client_error | use CyberScoop/The Register | 2026-11-15
 - cve.org CNA_Rules_v4.1.0.pdf | works via WebSearch+WebFetch | CNA rule text | 2026-11-15
 - unsplash.com/s/photos/<query> (from WebSearch) | works; lists images.unsplash.com photo-<id> + photographer per tile; free vs Unsplash+ must be checked | 2026-11-15
 - equinor.com/news/*, thestar.com.my/tech (Reuters), globalbankingandfinance.com, ibtimes.sg, uio.no IT news, dnv.com/cyber | works via WebSearch+WebFetch | news-trial sourcing | 2026-11-18
 - cisa.gov BOD 26-04 page + implementation guidance, cisa.gov/news-events/alerts/2026/*, bleepingcomputer.com/news/security/*, upstreamonline.com | WebFetch client_error / robots_disallowed 2026-11-18 (cisa.gov BOD 22-01 page works) | cite earlier verified posts or other outlets | 2026-11-18
 - wiz.io/blog/*, chainguard.dev/unchained/*, securityweek.com/* | works via WebSearch+WebFetch | supply-chain news sourcing; bleepingcomputer.com article SERVER_ERROR twice 2026-11-19; labs.cloudsecurityalliance.org briefing client_error | 2026-11-19
+- WebFetch tool not exposed in some runs (2026-11-20) | use the web-fetch helper agent on WebSearch-returned URLs; theregister.com/security/2026/*, abcnews.com/US/*, finance.yahoo.com/markets/article/* and unsplash.com/photos/* all returned 200 | 2026-11-20
+- Unsplash container/port photos | most show carrier brand names (Maersk, ONE, Hapag-Lloyd) | preview images.unsplash.com before adding; prefer non-branded motifs | 2026-11-20
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
