@@ -168,3 +168,5 @@ public-poc-cves-cisa-adp-ssvc-exploitation-poc-epss | Public PoC CVEs: Pull All 
 microsoft-agent-framework-pypi-compromise-1-26-1-1-26-2-what-we-know | Microsoft agent-framework PyPI Compromise: What We Know | 2026-11-19 | ["ai-security"] | agent-framework pypi compromise [news]
 openvex-statement-fields-status-notes-action-statement-version-trivy | OpenVEX Statement Fields: What Trivy and go-vex Ignore | 2026-11-20 | ["appsec"] | openvex statement fields
 chase-visa-mastercard-third-party-vendor-breach-what-we-know | Chase, Visa, Mastercard Vendor Breach: What We Know | 2026-11-20 | ["security-operations"] | chase visa mastercard breach [news]
+csaf-vex-remediations-threats-category-product-ids-trivy | CSAF VEX Remediations and Threats: What Trivy Gets Wrong | 2026-11-21 | ["appsec"] | csaf vex remediations
+european-commission-ai-cyberattack-what-we-know | European Commission AI Cyberattack: What It Has Confirmed | 2026-11-21 | ["ai-security"] | european commission cyberattack [news]
