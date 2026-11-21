@@ -50,6 +50,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - pypi.org/pypi/<pkg>/json via curl | works | release list, upload times, yanked flags: primary record for PyPI compromises | 2026-11-19
 - raw.githubusercontent.com/python/cpython/main/Doc/library/site.rst | works | .pth semantics verbatim; link docs.python.org/3/library/site.html | 2026-11-19
 - raw openvex/go-vex/<tag>/pkg/vex/*.go + git clone --depth 1 go-vex main (pkg/validate) and vexctl main | works | statement struct, SortStatements, unreleased validator; local `go run` of stdlib-only programs works (Go 1.24.7) | 2026-11-20
+- git clone --depth 1 --branch <tag> gocsaf/csaf + copy csaf/{advisory,models,cvss*enums,util}.go, internal/misc, util NWriter into a scratch module (module github.com/gocsaf/csaf/v3), GOPROXY=off go build | works | runs the exact decoder Trivy uses without go get | 2026-11-21
+- git clone --filter=blob:none oasis-tcs/csaf + checkout csaf_2.0/referenced_schema (FIRST cvss schemas) | works | offline CSAF 2.0 schema validation via referencing.Registry; csaf_2.1/prose/share/csaf-v2.1-draft.md = CS01 2026-11-09 | 2026-11-21
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -77,5 +79,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - wiz.io/blog/*, chainguard.dev/unchained/*, securityweek.com/* | works via WebSearch+WebFetch | supply-chain news sourcing; bleepingcomputer.com article SERVER_ERROR twice 2026-11-19; labs.cloudsecurityalliance.org briefing client_error | 2026-11-19
 - WebFetch tool not exposed in some runs (2026-11-20) | use the web-fetch helper agent on WebSearch-returned URLs; theregister.com/security/2026/*, abcnews.com/US/*, finance.yahoo.com/markets/article/* and unsplash.com/photos/* all returned 200 | 2026-11-20
 - Unsplash container/port photos | most show carrier brand names (Maersk, ONE, Hapag-Lloyd) | preview images.unsplash.com before adding; prefer non-branded motifs | 2026-11-20
+- helpnetsecurity.com/2026/*, securityweek.com/*, sentinelone.com/blog/*, darkreading.com/* | works via web-fetch agent on WebSearch URLs (WebFetch tool not exposed again) | news-trial sourcing; cert.europa.eu/blog listing stale (no Oct/Nov posts) | 2026-11-21
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
