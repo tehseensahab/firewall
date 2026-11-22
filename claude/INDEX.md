@@ -170,3 +170,5 @@ openvex-statement-fields-status-notes-action-statement-version-trivy | OpenVEX S
 chase-visa-mastercard-third-party-vendor-breach-what-we-know | Chase, Visa, Mastercard Vendor Breach: What We Know | 2026-11-20 | ["security-operations"] | chase visa mastercard breach [news]
 csaf-vex-remediations-threats-category-product-ids-trivy | CSAF VEX Remediations and Threats: What Trivy Gets Wrong | 2026-11-21 | ["appsec"] | csaf vex remediations
 european-commission-ai-cyberattack-what-we-know | European Commission AI Cyberattack: What It Has Confirmed | 2026-11-21 | ["ai-security"] | european commission cyberattack [news]
+csaf-2-1-vs-2-0-what-changes-for-vex-consumers | CSAF 2.1 vs 2.0: Field Changes VEX Consumers Must Handle | 2026-11-22 | ["appsec"] | csaf 2.1
+usda-cyberattack-farm-payment-systems-what-we-know | USDA Cyberattack Hits Farm Payment Systems: What We Know | 2026-11-22 | ["security-operations"] | usda cyberattack [news]
