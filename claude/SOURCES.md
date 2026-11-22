@@ -52,6 +52,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw openvex/go-vex/<tag>/pkg/vex/*.go + git clone --depth 1 go-vex main (pkg/validate) and vexctl main | works | statement struct, SortStatements, unreleased validator; local `go run` of stdlib-only programs works (Go 1.24.7) | 2026-11-20
 - git clone --depth 1 --branch <tag> gocsaf/csaf + copy csaf/{advisory,models,cvss*enums,util}.go, internal/misc, util NWriter into a scratch module (module github.com/gocsaf/csaf/v3), GOPROXY=off go build | works | runs the exact decoder Trivy uses without go get | 2026-11-21
 - git clone --filter=blob:none oasis-tcs/csaf + checkout csaf_2.0/referenced_schema (FIRST cvss schemas) | works | offline CSAF 2.0 schema validation via referencing.Registry; csaf_2.1/prose/share/csaf-v2.1-draft.md = CS01 2026-11-09 | 2026-11-21
+- git clone --filter=blob:none oasis-tcs/csaf + checkout csaf_2.1/{prose/edit/src,prose/share,json_schema,referenced_schema,examples} | works | CS01 prose split by section (conformance-01-cls-18 converter, distributing-04 transition, profiles, tests-01-mndtr-*); offline 2.1 validation: register referenced_schema/first/*.json under https://www.first.org/cvss/<file> and certcc under certcc.github.io/SSVC/data/schema/v2/<file> | 2026-11-22
+- git clone --depth 1 --branch 'v5.0.0-pre.1+20261105' gocsaf/csaf | works | first gocsaf tag with CSAF 2.1 (README, docs/csaf_downloader.md); v3.7.1 still 2.0-only | 2026-11-22
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -80,5 +82,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - WebFetch tool not exposed in some runs (2026-11-20) | use the web-fetch helper agent on WebSearch-returned URLs; theregister.com/security/2026/*, abcnews.com/US/*, finance.yahoo.com/markets/article/* and unsplash.com/photos/* all returned 200 | 2026-11-20
 - Unsplash container/port photos | most show carrier brand names (Maersk, ONE, Hapag-Lloyd) | preview images.unsplash.com before adding; prefer non-branded motifs | 2026-11-20
 - helpnetsecurity.com/2026/*, securityweek.com/*, sentinelone.com/blog/*, darkreading.com/* | works via web-fetch agent on WebSearch URLs (WebFetch tool not exposed again) | news-trial sourcing; cert.europa.eu/blog listing stale (no Oct/Nov posts) | 2026-11-21
+- dtnpf.com/agriculture/web/ag/columns/washington-insider/*, nextgov.com/cybersecurity/2026/*, abcnews.com/GMA/*, komonews.com/news/nation-world/*, agweb.com | works via web-fetch agent on WebSearch URLs | news sourcing (USDA); agweb Russian-speaking-hackers page is 2023, not current; english.gujaratsamachar.com is an AI-summary aggregator (do not cite); konbriefing cyber-attacks list stale (2025 only) | 2026-11-22
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
