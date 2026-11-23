@@ -53,3 +53,6 @@ Qualifies: KEV dateAdded 2026-11-20 (3 days ago), widely deployed product, prima
 1. [cluster] SSVC Exploitation poc->active lag before KEV listing, from cisagov/vulnrichment git history | guide | engineers want to know how early SSVC "active" precedes KEV | cisagov/vulnrichment git log, cisagov/kev-data history, cvelistV5 | must not repeat public-poc-cves-cisa-adp-ssvc-exploitation-poc-epss, kev-time-to-listing, kev-duedate
 2. [spec] SSVC Selection List 2.0.0: namespaces, keys, versions and how to validate a selection against CERT/CC decision points | guide | CSAF 2.1 and other producers now emit SelectionList; consumers need test 6.1.48 logic | CERTCC/SSVC data/schema/v2 + decision_points src, oasis-tcs/csaf tests 6.1.46-48, 6.2.34-37 | must not repeat cisa-vulnrichment-how-to-read-ssvc, csaf-2-1-metrics-epss-ssvc-cvss-v4-per-product
 3. [cluster] KEV catalog vs CISA-ADP kev block: live mismatch monitor (only if distinct from 11-17 audit) | guide | cvelistV5 users | kev-data, cvelistV5 | must not repeat kev-in-cve-records-cisa-adp-kev-block-full-catalog-audit
+
+## Live QA
+Both posts live (HTTP 200, h1 and opening paragraph present) at ?v=4ef9e4f, checked via curl ~05:35Z. No hero images (placeholder).
