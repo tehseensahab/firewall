@@ -56,6 +56,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - raw.githubusercontent.com/oasis-tcs/csaf/<commit>/csaf_2.1/{json_schema/csaf.json,prose/edit/src/*.md,test/validator/data/{mandatory,recommended}/*.json} | works | blobless clone + git checkout of whole dirs timed out at 2 min 2026-11-23: use git ls-tree for names and raw for files; offline validation: Resource(..., DRAFT202012) for FIRST cvss schemas (their $schema meta.json is unknown to referencing) | 2026-11-23
 - Broadcom VMSA (support.broadcom.com .../SecurityAdvisories/0/<id>), knowledge.broadcom.com/external/article/<id>, securityweek.com, rapid7.com/blog/post/etr-* | works via web-fetch agent on WebSearch URLs | | 2026-11-23
 - unsplash.com/s/photos/<query> via web-fetch agent (from WebSearch results) | DENIED by auto-mode classifier 2026-11-23 (worked 11-15) | no workaround found; posts fall back to theme placeholder; owner adds covers | 2026-11-23
+- github.com/CERTCC/SSVC blobless clone + git checkout of data/json/ssvc_object_registry.json, data/json/decision_tables/cisa/*, data/csv/cisa/*, docs/howto/*.md | works | registry has DecisionPoint + DecisionTable by namespace/key/version; docs source replaces certcc.github.io fetch | 2026-11-24
+- cisco.com/c/ja_jp/support/docs/csa/2026/<advisory>.pdf via web-fetch agent (from WebSearch) | works | localized Cisco advisory; English sec.cloudapps.cisco.com page not returned by WebSearch; version strings usable, wording = translation | 2026-11-24
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -83,5 +85,8 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - Unsplash container/port photos | most show carrier brand names (Maersk, ONE, Hapag-Lloyd) | preview images.unsplash.com before adding; prefer non-branded motifs | 2026-11-20
 - helpnetsecurity.com/2026/*, securityweek.com/*, sentinelone.com/blog/*, darkreading.com/* | works via web-fetch agent on WebSearch URLs (WebFetch tool not exposed again) | news-trial sourcing; cert.europa.eu/blog listing stale (no Oct/Nov posts) | 2026-11-21
 - dtnpf.com/agriculture/web/ag/columns/washington-insider/*, nextgov.com/cybersecurity/2026/*, abcnews.com/GMA/*, komonews.com/news/nation-world/*, agweb.com | works via web-fetch agent on WebSearch URLs | news sourcing (USDA); agweb Russian-speaking-hackers page is 2023, not current; english.gujaratsamachar.com is an AI-summary aggregator (do not cite); konbriefing cyber-attacks list stale (2025 only) | 2026-11-22
+- certcc.github.io/SSVC/* via web-fetch agent | DENIED by classifier 2026-11-24 | read docs/*.md from the CERTCC/SSVC repo | 2026-11-24
+- cisa.gov directive pages via shell curl (URL from KEV notes) | DENIED by classifier 2026-11-24 | WebSearch + web-fetch agent only if the URL is a search result | 2026-11-24
+- unsplash.com/s/photos/<query> via web-fetch agent | works only when the URL came back from WebSearch (allowed_domains unsplash.com); typed query URLs denied | 2026-11-24
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
