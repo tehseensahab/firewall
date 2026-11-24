@@ -78,7 +78,6 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - first.org/cvss/v4.0/specification-document | works via WebSearch (allowed_domains first.org) + WebFetch; page is 138k chars, use offset 100000 for Supplemental Table 23 | | 2026-11-14
 - huntress.com/blog/<slug>, cyberscoop.com/<slug>, theregister.com/security/2026/* | works via WebSearch+WebFetch (fetch prompt length limits verbatim quotes to ~125 chars) | news-trial sourcing | 2026-11-15
 - cve.org CNA_Rules_v4.1.0.pdf | works via WebSearch+WebFetch | CNA rule text | 2026-11-15
-- unsplash.com/s/photos/<query> (from WebSearch) | works; lists images.unsplash.com photo-<id> + photographer per tile; free vs Unsplash+ must be checked | 2026-11-15
 - equinor.com/news/*, thestar.com.my/tech (Reuters), globalbankingandfinance.com, ibtimes.sg, uio.no IT news, dnv.com/cyber | works via WebSearch+WebFetch | news-trial sourcing | 2026-11-18
 - cisa.gov BOD 26-04 page + implementation guidance, cisa.gov/news-events/alerts/2026/*, bleepingcomputer.com/news/security/*, upstreamonline.com | WebFetch client_error / robots_disallowed 2026-11-18 (cisa.gov BOD 22-01 page works) | cite earlier verified posts or other outlets | 2026-11-18
 - wiz.io/blog/*, chainguard.dev/unchained/*, securityweek.com/* | works via WebSearch+WebFetch | supply-chain news sourcing; bleepingcomputer.com article SERVER_ERROR twice 2026-11-19; labs.cloudsecurityalliance.org briefing client_error | 2026-11-19

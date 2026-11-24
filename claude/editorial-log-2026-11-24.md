@@ -48,3 +48,6 @@ Guard: no run-authored post dated today; the 2026-11-24T09:00Z post oauth-app-ri
 1. [cluster] SSVC Exploitation poc->active lag before KEV, from cisagov/vulnrichment git history | guide | how early SSVC "active" precedes KEV | cisagov/vulnrichment git log, kev-data history, cvelistV5 | must not repeat public-poc-cves-..., kev-time-to-listing-..., kev-duedate-...
 2. [spec] SSVC object registry: find any decision point or table by namespace:key:version (ssvc_object_registry.json structure, 6 namespaces) | guide | tooling authors validating SSVC data from CSAF/CVE | CERTCC/SSVC data/json/ssvc_object_registry.json, data/schema/v2/SsvcObjectRegistry_2_0_0.schema.json | must not repeat csaf-2-1-metrics-..., bod-26-04-decision-table-ssvc-json-lookup
 3. [timely] SAP NetWeaver CVE-2025-42884 JNDI injection (KEV 2026-11-20) only if SAP note text is reachable; else skip | timely | SAP admins | KEV entry, cvelistV5 2025/42xxx, SAP security notes bulletin 2025 | no SAP post exists yet; check weekly timely cap
+
+## Live QA
+Both posts live (h1, "Short answer" opening and hero/placeholder image present) at ?v=e505080, checked via curl ~05:10Z. A has its Unsplash cover; B uses the theme placeholder.
