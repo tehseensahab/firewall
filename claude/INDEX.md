@@ -174,3 +174,5 @@ csaf-2-1-vs-2-0-what-changes-for-vex-consumers | CSAF 2.1 vs 2.0: Field Changes 
 usda-cyberattack-farm-payment-systems-what-we-know | USDA Cyberattack Hits Farm Payment Systems: What We Know | 2026-11-22 | ["security-operations"] | usda cyberattack [news]
 csaf-2-1-metrics-epss-ssvc-cvss-v4-per-product | CSAF 2.1 metrics: Read EPSS, SSVC and CVSS v4 per Product | 2026-11-23 | ["appsec"] | csaf 2.1 metrics
 vmware-vcenter-cve-2026-123890-vmdir-auth-bypass-kev | vCenter CVE-2026-123890: KEV Auth Bypass, Fixed Versions | 2026-11-23 | ["security-operations"] | cve-2026-123890
+bod-26-04-decision-table-ssvc-json-lookup | BOD 26-04 Decision Table: All 16 Rows in SSVC JSON | 2026-11-24 | appsec | BOD 26-04 decision table
+cisco-expressway-cve-2026-76466-kev-root-rce-fixed-release | Cisco Expressway CVE-2026-76466: KEV Root RCE, Fix X15.5.20 | 2026-11-24 | security-operations | CVE-2026-76466
