@@ -58,6 +58,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - unsplash.com/s/photos/<query> via web-fetch agent (from WebSearch results) | DENIED by auto-mode classifier 2026-11-23 (worked 11-15) | no workaround found; posts fall back to theme placeholder; owner adds covers | 2026-11-23
 - github.com/CERTCC/SSVC blobless clone + git checkout of data/json/ssvc_object_registry.json, data/json/decision_tables/cisa/*, data/csv/cisa/*, docs/howto/*.md | works | registry has DecisionPoint + DecisionTable by namespace/key/version; docs source replaces certcc.github.io fetch | 2026-11-24
 - cisco.com/c/ja_jp/support/docs/csa/2026/<advisory>.pdf via web-fetch agent (from WebSearch) | works | localized Cisco advisory; English sec.cloudapps.cisco.com page not returned by WebSearch; version strings usable, wording = translation | 2026-11-24
+- github.com/cisagov/vulnrichment blobless clone (7 s, 13k commits) + git log -- <path> per CVE (139 paths ~25 s) + curl --parallel -K raw.githubusercontent.com/cisagov/vulnrichment/<sha>/<path> (1,083 files ~8 s, no 429s) | works | SSVC history replay | 2026-11-25
+- cvelistV5 release asset cve_2026-11-25_0000Z/2026-11-25_all_CVEs_at_midnight.zip.zip | works (674 MB); census pass ~36 s | | 2026-11-25
+- unsplash.com/photos/<page> download URL via shell | 401 (bot wall) | get photo id via web-fetch agent on WebSearch result page, then images.unsplash.com/photo-<id> works | 2026-11-25
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
@@ -72,20 +75,15 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - bleepingcomputer.com, thehackernews.com, csoonline.com articles | works (bleepingcomputer SERVER_ERROR once 2026-10-27) | press context only; attribute; infosecurity-magazine.com, securityaffairs.com work | 2026-10-27 (bleepingcomputer non-amp URL: client_error 2026-10-30; try /amp/)
 - rapid7.com/blog/post/etr-*, theregister.com/a/<id>, cyber.gc.ca/en/alerts-advisories/*, csa.gov.sg/alerts-and-advisories/alerts/* | works | Rapid7 reproduces vendor version tables (qualify); cyber.gc.ca/CSA SG are government alerts with update dates | 2026-10-31
 - support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/<id> (VMSA) | works via WebSearch+WebFetch | primary for VMware CVEs (response matrix, change log) | 2026-11-01; knowledge.broadcom.com ESXi KBs also work
-- therecord.media (homepage + articles), bleepingcomputer.com/news/security/<slug> (no www), cybersecuritynews.com | works | news-trial sourcing; homepage fetch lists last-7-day stories | 2026-11-08
 - ic3.gov/CSA/<year>/<id>.pdf (joint CISA/FBI advisories) | works via WebSearch+WebFetch | primary text when the cisa.gov resource page is not returned | 2026-11-09
-- 1027wbow.com (Reuters syndication), theregister.com/security/2026/*, securityaffairs.com, cybernews.com/security/* | works via WebSearch+WebFetch | news-trial sourcing; maersk.com newsroom not returned by WebSearch (quote via Reuters/Register) | 2026-11-12
 - first.org/cvss/v4.0/specification-document | works via WebSearch (allowed_domains first.org) + WebFetch; page is 138k chars, use offset 100000 for Supplemental Table 23 | | 2026-11-14
-- huntress.com/blog/<slug>, cyberscoop.com/<slug>, theregister.com/security/2026/* | works via WebSearch+WebFetch (fetch prompt length limits verbatim quotes to ~125 chars) | news-trial sourcing | 2026-11-15
 - cve.org CNA_Rules_v4.1.0.pdf | works via WebSearch+WebFetch | CNA rule text | 2026-11-15
-- equinor.com/news/*, thestar.com.my/tech (Reuters), globalbankingandfinance.com, ibtimes.sg, uio.no IT news, dnv.com/cyber | works via WebSearch+WebFetch | news-trial sourcing | 2026-11-18
 - cisa.gov BOD 26-04 page + implementation guidance, cisa.gov/news-events/alerts/2026/*, bleepingcomputer.com/news/security/*, upstreamonline.com | WebFetch client_error / robots_disallowed 2026-11-18 (cisa.gov BOD 22-01 page works) | cite earlier verified posts or other outlets | 2026-11-18
 - wiz.io/blog/*, chainguard.dev/unchained/*, securityweek.com/* | works via WebSearch+WebFetch | supply-chain news sourcing; bleepingcomputer.com article SERVER_ERROR twice 2026-11-19; labs.cloudsecurityalliance.org briefing client_error | 2026-11-19
 - Unsplash container/port photos | most show carrier brand names (Maersk, ONE, Hapag-Lloyd) | preview images.unsplash.com before adding; prefer non-branded motifs | 2026-11-20
-- helpnetsecurity.com/2026/*, securityweek.com/*, sentinelone.com/blog/*, darkreading.com/* | works via web-fetch agent on WebSearch URLs (WebFetch tool not exposed again) | news-trial sourcing; cert.europa.eu/blog listing stale (no Oct/Nov posts) | 2026-11-21
-- dtnpf.com/agriculture/web/ag/columns/washington-insider/*, nextgov.com/cybersecurity/2026/*, abcnews.com/GMA/*, komonews.com/news/nation-world/*, agweb.com | works via web-fetch agent on WebSearch URLs | news sourcing (USDA); agweb Russian-speaking-hackers page is 2023, not current; english.gujaratsamachar.com is an AI-summary aggregator (do not cite); konbriefing cyber-attacks list stale (2025 only) | 2026-11-22
 - certcc.github.io/SSVC/* via web-fetch agent | DENIED by classifier 2026-11-24 | read docs/*.md from the CERTCC/SSVC repo | 2026-11-24
 - cisa.gov directive pages via shell curl (URL from KEV notes) | DENIED by classifier 2026-11-24 | WebSearch + web-fetch agent only if the URL is a search result | 2026-11-24
 - unsplash.com/s/photos/<query> via web-fetch agent | works only when the URL came back from WebSearch (allowed_domains unsplash.com); typed query URLs denied | 2026-11-24
+- News outlets (therecord.media, theregister.com, securityweek.com, helpnetsecurity.com, huntress.com, cyberscoop.com, wiz.io, darkreading.com, Reuters syndications) | works via WebSearch + web-fetch agent | news trial ended 2026-11-22; details in git history | 2026-11-25
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
