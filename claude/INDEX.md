@@ -176,3 +176,5 @@ csaf-2-1-metrics-epss-ssvc-cvss-v4-per-product | CSAF 2.1 metrics: Read EPSS, SS
 vmware-vcenter-cve-2026-123890-vmdir-auth-bypass-kev | vCenter CVE-2026-123890: KEV Auth Bypass, Fixed Versions | 2026-11-23 | ["security-operations"] | cve-2026-123890
 bod-26-04-decision-table-ssvc-json-lookup | BOD 26-04 Decision Table: All 16 Rows in SSVC JSON | 2026-11-24 | ["appsec"] | BOD 26-04 decision table
 cisco-expressway-cve-2026-76466-kev-root-rce-fixed-release | Cisco Expressway CVE-2026-76466: KEV Root RCE, Fix X15.5.20 | 2026-11-24 | ["security-operations"] | CVE-2026-76466
+ssvc-object-registry-namespace-key-version-lookup | SSVC Object Registry: Resolve namespace:key:version IDs | 2026-11-25 | ["appsec"] | ssvc object registry
+ssvc-exploitation-before-kev-listing-vulnrichment-history | SSVC Exploitation Before KEV: Only 8 of 138 Read poc | 2026-11-25 | ["security-operations"] | ssvc exploitation before kev
