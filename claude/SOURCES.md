@@ -61,6 +61,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - github.com/cisagov/vulnrichment blobless clone (7 s, 13k commits) + git log -- <path> per CVE (139 paths ~25 s) + curl --parallel -K raw.githubusercontent.com/cisagov/vulnrichment/<sha>/<path> (1,083 files ~8 s, no 429s) | works | SSVC history replay | 2026-11-25
 - cvelistV5 release asset cve_2026-11-25_0000Z/2026-11-25_all_CVEs_at_midnight.zip.zip | works (674 MB); census pass ~36 s | | 2026-11-25
 - unsplash.com/photos/<page> download URL via shell | 401 (bot wall) | get photo id via web-fetch agent on WebSearch result page, then images.unsplash.com/photo-<id> works | 2026-11-25
+- github.com/cisagov/kev-data full clone, head 51e0a77, 350 first-parent JSON commits (15200f9 invalid JSON: skip on JSONDecodeError) | works, replay ~4 s | text-field edit audit | 2026-11-26
+- cvelistV5 release cve_2026-11-26_0000Z all_CVEs zip | works (675 MB, 20 s; census ~27 s) | | 2026-11-26
+- Second web-fetch agent / SendMessage to fetch unsplash.com/s/photos/<query> (URL from WebSearch) | DENIED by classifier 2026-11-26; single photo pages from WebSearch worked in first agent call | use photo pages only, one agent call; preview images.unsplash.com for brand text | 2026-11-26
 ## Fails from the shell
 - git.kernel.org (vulns.git, stable) from shell | fails: proxy 403 CONNECT | use cvelistV5 records (references list the stable fix commits) | 2026-11-07
 - epss.empiricalsecurity.com/epss_scores-current.csv.gz | fails: proxy 403 CONNECT 2026-11-02 (worked 2026-10-16) | git clone empiricalsec/epss_scores (above) | 2026-11-02
