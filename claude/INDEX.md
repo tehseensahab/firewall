@@ -178,3 +178,5 @@ bod-26-04-decision-table-ssvc-json-lookup | BOD 26-04 Decision Table: All 16 Row
 cisco-expressway-cve-2026-76466-kev-root-rce-fixed-release | Cisco Expressway CVE-2026-76466: KEV Root RCE, Fix X15.5.20 | 2026-11-24 | ["security-operations"] | CVE-2026-76466
 ssvc-object-registry-namespace-key-version-lookup | SSVC Object Registry: Resolve namespace:key:version IDs | 2026-11-25 | ["appsec"] | ssvc object registry
 ssvc-exploitation-before-kev-listing-vulnrichment-history | SSVC Exploitation Before KEV: Only 8 of 138 Read poc | 2026-11-25 | ["security-operations"] | ssvc exploitation before kev
+kev-catalog-changes-field-edits-removals-kev-data-history | KEV Catalog Changes: 157 Field Edits and 4 Removals | 2026-11-26 | ["security-operations"] | kev catalog changes
+ssvc-automatable-technical-impact-vs-cvss-vector-cisa-adp | SSVC Automatable vs CVSS: What Predicts CISA's Call | 2026-11-26 | ["appsec"] | ssvc automatable
