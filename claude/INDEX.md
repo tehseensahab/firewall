@@ -180,3 +180,5 @@ ssvc-object-registry-namespace-key-version-lookup | SSVC Object Registry: Resolv
 ssvc-exploitation-before-kev-listing-vulnrichment-history | SSVC Exploitation Before KEV: Only 8 of 138 Read poc | 2026-11-25 | ["security-operations"] | ssvc exploitation before kev
 kev-catalog-changes-field-edits-removals-kev-data-history | KEV Catalog Changes: 157 Field Edits and 4 Removals | 2026-11-26 | ["security-operations"] | kev catalog changes
 ssvc-automatable-technical-impact-vs-cvss-vector-cisa-adp | SSVC Automatable vs CVSS: What Predicts CISA's Call | 2026-11-26 | ["appsec"] | ssvc automatable
+kev-notes-field-parse-links-vendor-advisory-bod-26-04-nvd | KEV notes Field: Parse 3,606 Links Into Ticket Fields | 2026-11-27 | ["security-operations"] | kev notes field
+cve-no-cvss-score-cisa-ssvc-only-records-epss-fallback | CVE No CVSS Score: 12,528 Records Carry Only CISA SSVC | 2026-11-27 | ["appsec"] | cve no cvss score
