@@ -93,3 +93,9 @@ One line per source: domain, page or data path | works / fails (how) | workaroun
 - News outlets (therecord.media, theregister.com, securityweek.com, helpnetsecurity.com, huntress.com, cyberscoop.com, wiz.io, darkreading.com, Reuters syndications) | works via WebSearch + web-fetch agent | news trial ended 2026-11-22; details in git history | 2026-11-25
 ## Not available to these runs
 - gsc-wizard / Google Search Console | do not use | | 2026-10-26
+- cvelistV5 release asset cve_2026-11-28_0000Z all_CVEs zip | works at 04:52Z (676 MB); full-corpus reference pass ~50 s | | 2026-11-28
+- raw.githubusercontent.com/CVEProject/cve-schema/main/schema/{tags/reference-tags.json,CVE_Record_Format.json} | works | reference tag enum + definitions | 2026-11-28
+- web-fetch agent for cisa.gov + unsplash.com/s/photos/<query> in one call (URLs from WebSearch) | DENIED by classifier ("Undermining Oversight") 2026-11-28 | do not retry; use WebSearch result titles + prior verified posts; posts use theme placeholder | 2026-11-28
+- WebSearch allowed_domains unsplash.com "card catalog" | the 4 free card-catalog photo ids returned are all already in covers.tsv | pick other motifs | 2026-11-28
+- firewallsync.com/posts/<slug>/?v=<commit> via curl -m 20 | works ~3 min after push | live QA (never use sleep >100 s in one call: 2 min tool timeout) | 2026-11-28
+
