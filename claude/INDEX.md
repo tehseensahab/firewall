@@ -182,3 +182,5 @@ kev-catalog-changes-field-edits-removals-kev-data-history | KEV Catalog Changes:
 ssvc-automatable-technical-impact-vs-cvss-vector-cisa-adp | SSVC Automatable vs CVSS: What Predicts CISA's Call | 2026-11-26 | ["appsec"] | ssvc automatable
 kev-notes-field-parse-links-vendor-advisory-bod-26-04-nvd | KEV notes Field: Parse 3,606 Links Into Ticket Fields | 2026-11-27 | ["security-operations"] | kev notes field
 cve-no-cvss-score-cisa-ssvc-only-records-epss-fallback | CVE No CVSS Score: 12,528 Records Carry Only CISA SSVC | 2026-11-27 | ["appsec"] | cve no cvss score
+kev-requiredaction-text-variants-ticket-actions-bod-26-04 | KEV requiredAction: Map 45 Text Variants to Ticket Actions | 2026-11-28 | ["security-operations"] | kev requiredaction
+cve-reference-tags-patch-vendor-advisory-fix-link-cvelistv5 | CVE Reference Tags: Only 5% of Records Tag a patch Link | 2026-11-28 | ["appsec"] | cve reference tags
