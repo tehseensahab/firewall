@@ -4,7 +4,7 @@ date = 2026-11-28T04:45:00Z
 tags = ["cisa kev", "kev requiredaction", "bod 26-04", "bod 22-01", "vulnerability management", "ticket automation", "end-of-life"]
 categories = ["security-operations"]
 summary = "The KEV catalog's requiredAction field holds 45 distinct strings across 1,808 entries, but the wording tracks when CISA added an entry, not whether a patch exists. A census of catalog 2026.11.27, a classifier that maps every string to five ticket actions, and the end-of-life signal that moved to shortDescription."
-description = "KEV requiredAction: 45 strings across 1,808 entries map to 5 ticket actions. The wording follows CISA's template era, not patch status; EoL flags moved to shortDescription."
+description = "KEV requiredAction: 45 strings in 1,808 entries map to 5 ticket actions. Wording follows CISA's template era, not patch status; EoL moved to shortDescription."
 author = "John Marshall"
 takeaways = [
   "In KEV catalog 2026.11.27, the 1,808 requiredAction values reduce to 45 distinct strings, and four templates cover 1,666 entries (92%).",
